@@ -8,15 +8,16 @@
 
 <style>
 
-/* PREVENT HORIZONTAL SCROLL */
+/* PREVENT SCROLL */
 html, body {
     overflow-x: hidden;
 }
 
 /* COLORS */
 :root {
-    --bg-main: #f4efe8;
-    --bg-alt: #ffffff;
+    --bg-main: #f3ebe2;
+    --bg-soft: #f7f1ea;
+    --bg-alt: #fffaf5;
     --navy: #1f2a33;
     --gold: #c6a768;
     --rose: #8a4f5c;
@@ -29,38 +30,52 @@ body {
     font-family: Georgia, "Times New Roman", serif;
     background: linear-gradient(
         to bottom,
-        #f6f1ea 0%,
-        #f4efe8 50%,
-        #f2ebe3 100%
+        #f6efe7 0%,
+        #f3ebe2 40%,
+        #f1e7dd 100%
     );
 }
 
-/* HERO (FULL WIDTH FIXED) */
+/* HERO */
 .hero {
     width: 100%;
+    position: relative;
 }
 
 .hero img {
     width: 100%;
-    max-width: 100%;
     display: block;
+}
+
+/* HERO BLEND */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #f3ebe2);
 }
 
 /* SECTION */
 .section {
     width: 100%;
-    padding: 45px 20px;
+    padding: 50px 20px;
+}
+
+/* ALT SECTION */
+.section.alt {
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.6),
+        rgba(255,255,255,0.3)
+    );
 }
 
 /* INNER */
 .section-inner {
     max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* ALT BACKGROUND */
-.section.alt {
-    background: rgba(255,255,255,0.6);
+    margin: auto;
 }
 
 /* HEADINGS */
@@ -80,17 +95,25 @@ body {
     margin: 12px auto 0;
 }
 
-/* ABOUT BANNER (CENTERED + SAFE) */
+/* ABOUT */
 .about-banner {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    position: relative;
 }
 
 .about-banner img {
     width: 100%;
-    max-width: 1400px;
     display: block;
+}
+
+/* ABOUT BLEND */
+.about-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #fffaf5);
 }
 
 /* FEATURED */
@@ -111,8 +134,8 @@ body {
     background: #fffaf5;
     padding: 20px;
     border-radius: 16px;
-    border: 1px solid #eee3d6;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    border: 1px solid #eadfce;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.04);
     text-align: center;
     transition: 0.25s ease;
 }
@@ -121,13 +144,12 @@ body {
     transform: translateY(-5px);
 }
 
-/* LINK FIX (CONSISTENT EVERYWHERE) */
+/* LINKS */
 .card a {
     text-decoration: none;
     color: var(--rose);
     font-weight: bold;
     font-size: 15px;
-    display: inline-block;
 }
 
 .card a:hover {
@@ -143,7 +165,7 @@ body {
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 35px 20px;
+    padding: 40px 20px;
     font-size: 13px;
     color: var(--text-soft);
 }
@@ -164,14 +186,14 @@ body {
 
 <!-- HERO -->
 <div class="hero">
-    <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Bradley Hobbs Banner">
+    <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Banner">
 </div>
 
 <!-- ABOUT -->
 <div class="section alt">
 
     <div class="about-banner">
-        <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
+        <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About">
     </div>
 
     <div class="section-inner"></div>
@@ -204,15 +226,15 @@ body {
 
             <div class="card"><a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a><p>Reflections on silence and healing.</p></div>
 
-            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a><p>A message of grace and compassion.</p></div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a><p>Grace and compassion.</p></div>
 
-            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers LGBTQIA+</a><p>Affirming love restoring dignity and belonging.</p></div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers LGBTQIA+</a><p>Affirming love and belonging.</p></div>
 
-            <div class="card"><a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a><p>A journey through identity and pressure.</p></div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a><p>Identity and perseverance.</p></div>
 
-            <div class="card"><a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a><p>Exploring truth and meaning.</p></div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a><p>Truth and meaning.</p></div>
 
-            <div class="card"><a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a><p>Consecration and transformation.</p></div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a><p>Transformation journey.</p></div>
 
             <div class="card"><a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a><p>Loving God through people.</p></div>
 
