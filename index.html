@@ -39,7 +39,7 @@ body {
     );
 }
 
-/* BANNERS (UNIFIED SYSTEM) */
+/* BANNERS */
 .hero,
 .about-banner {
     display: flex;
@@ -72,7 +72,7 @@ body {
     padding-top: 0;
 }
 
-/* ALT BACKGROUND */
+/* ALT */
 .section.alt {
     background: rgba(255,255,255,0.5);
 }
@@ -122,12 +122,18 @@ body {
     transform: translateY(-4px);
 }
 
-/* LINKS */
-.card a {
+/* LINKS (GLOBAL STYLE MATCH) */
+.card a,
+.footer a {
     text-decoration: none;
     color: var(--rose);
     font-weight: bold;
     font-size: 14px;
+}
+
+.card a:hover,
+.footer a:hover {
+    text-decoration: underline;
 }
 
 .card p {
@@ -142,6 +148,10 @@ body {
     padding: 30px 20px;
     font-size: 12.5px;
     color: var(--text-soft);
+}
+
+.footer p {
+    margin: 6px 0;
 }
 
 /* MOBILE */
