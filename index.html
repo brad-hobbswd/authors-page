@@ -1,32 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bradley Hobbs | Author</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f8f6f3;
+    color: #2f2f2f;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px 70px;
+    background: linear-gradient(to bottom, #ffffff, #efe7ea);
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.hero .identity {
+    font-size: 16px;
+    color: #6b6b6b;
+    margin-bottom: 15px;
+}
+
+.hero .tagline {
+    font-style: italic;
+    color: #8a4f5c;
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* SECTION */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    border-top: 1px solid #ececec;
+}
+
+.section:first-of-type {
+    border-top: none;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card a {
+    text-decoration: none;
+    color: #8a4f5c;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* FEATURED */
+.featured {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* LINKS */
+.links {
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #8a4f5c;
+    font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer a {
+    color: #8a4f5c;
+    text-decoration: none;
+    font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+
 <!-- HERO -->
 <div class="hero">
     <h1>Bradley Hobbs</h1>
-    <p>
-        Dad, singer, songwriter, child of God, worshiper and praiser, reverent minister. 
-        Serving in all things with a heart to help others, to bring people toward one another, 
-        and to lead hearts to know Christ.
+
+    <div class="identity">
+        Dad • Singer • Songwriter • Child of God • Worshiper • Praiser • Reverent Minister
+    </div>
+
+    <div class="tagline">
+        As Jesus is, a servant in all things, seeking to help the world, bring people toward one another, 
+        and lead hearts to know Christ.
+    </div>
+
+    <p class="tagline" style="margin-top:10px;">
+        Writing to heal, restore, and reveal Christ through every word.
     </p>
 </div>
 
 <!-- ABOUT -->
 <div class="section">
-    <h2>About the Author</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-        Bradley Hobbs writes devotionals, reflections, and personal works centered on healing, identity, 
-        and truth. His writing flows from lived experience, faith, and a deep desire to see people restored, 
-        seen, and strengthened. Each work is created to help others grow in understanding, reconnect with 
-        purpose, and come to know Christ more deeply.
+    <h2>About</h2>
+
+    <div class="about">
+        Bradley Hobbs writes devotionals, reflections, and personal works centered on healing, identity, and truth. 
+        His writing is shaped by lived experience, faith, and a deep desire to see people restored, strengthened, 
+        and truly seen. Each work carries a purpose, to help others grow, reconnect, and come to know Christ more deeply.
+    </div>
+
+    <p style="text-align:center; font-style:italic; margin-top:20px; color:#8a4f5c;">
+        Every word carries purpose. Every message is written to reach someone who thought they were unseen.
     </p>
 </div>
 
-<!-- OTHER LINKS (Corrected Attribution) -->
+<!-- FEATURED -->
+<div class="section">
+    <h2>Featured Work</h2>
+
+    <div class="featured">
+        <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">
+            Whispers in the Pew
+        </a>
+        <p>
+            A devotional journey through silence, healing, and being seen.
+        </p>
+    </div>
+</div>
+
+<!-- BOOKS -->
+<div class="section">
+    <h2>Books</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a>
+            <p>Reflections on silence, healing, and rediscovering voice.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a>
+            <p>A message of grace, compassion, and enduring love.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers LGBTQIA+</a>
+            <p>Affirming love that restores dignity, identity, and belonging.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a>
+            <p>A memoir journey through pressure, identity, and perseverance.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a>
+            <p>Exploring language, truth, and what truly carries meaning.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a>
+            <p>A deeper look into consecration, identity, and transformation.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a>
+            <p>Learning to love God through the people we encounter daily.</p>
+        </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:30px; color:#666;">
+        More works are being added as they are written and released.
+    </p>
+</div>
+
+<!-- OTHER WORK -->
 <div class="section">
     <h2>Other Work</h2>
 
-    <div class="links" style="text-align:center;">
+    <div class="links">
         <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a>
         <a href="https://www.bapbi.net/">BAPBI Website (Designed by Bradley Hobbs)</a>
         <a href="https://brad-hobbswd.github.io/about-me/">Personal Website (Coming Soon)</a>
+    </div>
+</div>
+
+<!-- AFFILIATION -->
+<div class="section">
+    <h2>Faith Community</h2>
+
+    <div class="links">
         <a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a>
     </div>
 </div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 Bradley Hobbs</p>
+    <p>
+        Designed by 
+        <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Brad Hobbs Web Design</a>
+    </p>
+    <p>
+        <a href="https://www.facebook.com/profile.php?id=61580865290507">Follow on Facebook</a>
+    </p>
+</div>
+
+</body>
+</html>
