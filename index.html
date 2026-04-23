@@ -10,7 +10,7 @@
 
 /* COLOR SYSTEM */
 :root {
-    --bg-main: #f8f6f3;
+    --bg-main: #f4efe8;
     --navy: #1f2a33;
     --gold: #c6a768;
     --rose: #8a4f5c;
@@ -21,123 +21,113 @@
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    background: var(--bg-main);
+    background: linear-gradient(
+        to bottom,
+        #f6f1ea 0%,
+        #f4efe8 40%,
+        #f2ebe3 100%
+    );
 }
 
 /* HERO */
 .hero-banner {
     text-align: center;
-    padding: 15px 0 5px;
+    padding: 10px 0 0;
 }
 
 .hero-banner img {
     width: 100%;
-    max-width: 950px;
+    max-width: 900px;
     margin: auto;
     display: block;
     border-radius: 12px;
 }
 
-/* SECTION (TIGHTENED) */
+/* SECTION (TIGHTER + CLEAN) */
 .section {
     max-width: 1000px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 25px 20px;
     position: relative;
 }
 
-/* DIVIDER (TIGHTER) */
+/* DIVIDER (STRONGER + CLEAN) */
 .section::before {
     content: "";
     display: block;
-    width: 70px;
+    width: 60px;
     height: 2px;
     background: var(--gold);
-    margin: 0 auto 15px;
+    margin: 0 auto 12px;
+    opacity: 0.8;
 }
 
 .section:first-of-type::before {
     display: none;
 }
 
-/* HEADINGS (TIGHTER) */
+/* HEADINGS */
 .section h2 {
     text-align: center;
-    margin-bottom: 12px;
-    font-size: 26px;
+    margin-bottom: 10px;
+    font-size: 25px;
     color: var(--navy);
 }
 
-/* ABOUT BANNER */
-.about-banner {
-    text-align: center;
-}
-
+/* ABOUT */
 .about-banner img {
     width: 100%;
-    max-width: 950px;
+    max-width: 900px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
-/* FEATURED spacing tightened */
+/* FEATURED */
 .featured {
     max-width: 420px;
-    margin: 10px auto 0;
+    margin: 8px auto 0;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
 }
 
 /* CARD */
 .card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 16px;
+    background: #fffaf5;
+    padding: 18px;
+    border-radius: 14px;
     border: 1px solid #eee3d6;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
     text-align: center;
-    transition: 0.25s ease;
+    transition: 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .card a {
     text-decoration: none;
     color: var(--rose);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .card p {
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--text-soft);
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
-/* LINKS */
-.links {
-    text-align: center;
-}
-
-.links a {
-    display: block;
-    margin: 8px 0;
-    text-decoration: none;
-    color: var(--rose);
-}
-
-/* FOOTER (TIGHTENED) */
+/* FOOTER */
 .footer {
     text-align: center;
-    padding: 25px 20px;
-    font-size: 13px;
+    padding: 20px 20px;
+    font-size: 12.5px;
     color: var(--text-soft);
 }
 
@@ -158,11 +148,9 @@ body {
 
 <!-- ABOUT -->
 <div class="section">
-
     <div class="about-banner">
         <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
     </div>
-
 </div>
 
 <!-- FEATURED -->
@@ -174,9 +162,7 @@ body {
             <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">
                 Whispers in the Pew
             </a>
-            <p>
-                A devotional journey through silence, healing, and being seen.
-            </p>
+            <p>A devotional journey through silence, healing, and being seen.</p>
         </div>
     </div>
 </div>
@@ -224,28 +210,42 @@ body {
 
     </div>
 
-    <p style="text-align:center; margin-top:10px; color:var(--text-soft);">
+    <p style="text-align:center; margin-top:8px; color:var(--text-soft);">
         More works are being added as they are written and released.
     </p>
 </div>
 
-<!-- OTHER WORK -->
+<!-- OTHER WORK (NOW CARDS) -->
 <div class="section">
     <h2>Other Work</h2>
 
-    <div class="links">
-        <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a>
-        <a href="https://www.bapbi.net/">BAPBI Website (Designed by Bradley Hobbs)</a>
-        <a href="https://brad-hobbswd.github.io/about-me/">Personal Website (Coming Soon)</a>
+    <div class="grid">
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a>
+            <p>Creative and functional web design projects.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://www.bapbi.net/">BAPBI Website</a>
+            <p>Official ministry website designed and developed.</p>
+        </div>
+
+        <div class="card">
+            <a href="https://brad-hobbswd.github.io/about-me/">Personal Website</a>
+            <p>More about Bradley Hobbs. Coming soon.</p>
+        </div>
     </div>
 </div>
 
-<!-- AFFILIATION -->
+<!-- FAITH COMMUNITY (NOW CARD) -->
 <div class="section">
     <h2>Faith Community</h2>
 
-    <div class="links">
-        <a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a>
+    <div class="grid">
+        <div class="card">
+            <a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a>
+            <p>A place of worship, growth, and community.</p>
+        </div>
     </div>
 </div>
 
