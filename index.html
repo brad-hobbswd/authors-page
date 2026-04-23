@@ -7,106 +7,113 @@
 <title>Bradley Hobbs | Author</title>
 
 <style>
+
+/* COLOR SYSTEM */
+:root {
+    --bg-main: #f8f6f3;
+    --navy: #1f2a33;
+    --gold: #c6a768;
+    --rose: #8a4f5c;
+    --text-soft: #6b6b6b;
+}
+
+/* BASE */
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    background: #f8f6f3;
-    color: #2f2f2f;
+    background: var(--bg-main);
+}
+
+/* HIDE TEXT BUT KEEP FOR SEO */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 100px 20px 70px;
-    background: linear-gradient(to bottom, #ffffff, #efe7ea);
+    padding: 0;
 }
 
-.hero h1 {
-    font-size: 46px;
-    margin-bottom: 10px;
-}
-
-.hero .identity {
-    font-size: 16px;
-    color: #6b6b6b;
-    margin-bottom: 15px;
-}
-
-.hero .tagline {
-    font-style: italic;
-    color: #8a4f5c;
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
+.hero-banner img {
+    width: 100%;
+    display: block;
 }
 
 /* SECTION */
 .section {
     max-width: 1100px;
     margin: auto;
-    padding: 60px 20px;
-    border-top: 1px solid #ececec;
-}
-
-.section:first-of-type {
-    border-top: none;
+    padding: 80px 20px;
 }
 
 .section h2 {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: var(--navy);
 }
 
-/* ABOUT */
-.about {
-    text-align: center;
-    max-width: 750px;
-    margin: auto;
-    line-height: 1.7;
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 12px auto 0;
+}
+
+/* ABOUT BANNER */
+.about-banner img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 /* CARD */
 .card {
     background: #ffffff;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #eee3d6;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     text-align: center;
     transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
 }
 
 .card a {
     text-decoration: none;
-    color: #8a4f5c;
+    color: var(--rose);
     font-weight: bold;
-    font-size: 16px;
 }
 
 .card p {
     font-size: 13px;
-    color: #666;
-    margin-top: 10px;
+    color: var(--text-soft);
 }
 
 /* FEATURED */
 .featured {
     background: #ffffff;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    max-width: 500px;
+    padding: 45px;
+    border-radius: 22px;
+    border: 1px solid #e8dccb;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    max-width: 520px;
     margin: auto;
     text-align: center;
 }
@@ -118,25 +125,24 @@ body {
 
 .links a {
     display: block;
-    margin: 12px 0;
+    margin: 14px 0;
     text-decoration: none;
-    color: #8a4f5c;
-    font-weight: 500;
+    color: var(--rose);
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
     font-size: 14px;
-    color: #777;
+    color: var(--text-soft);
 }
 
 .footer a {
-    color: #8a4f5c;
+    color: var(--rose);
     text-decoration: none;
-    font-weight: 500;
 }
+
 </style>
 </head>
 
@@ -144,35 +150,39 @@ body {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Bradley Hobbs</h1>
-
-    <div class="identity">
-        Dad • Singer • Songwriter • Child of God • Worshiper • Praiser • Reverent Minister
+    <div class="hero-banner">
+        <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Bradley Hobbs Author Banner">
     </div>
 
-    <div class="tagline">
-        As Jesus is, a servant in all things, seeking to help the world, bring people toward one another, 
-        and lead hearts to know Christ.
+    <!-- Hidden SEO text -->
+    <div class="visually-hidden">
+        <h1>Bradley Hobbs</h1>
+        <p>Dad • Singer • Songwriter • Child of God • Worshiper • Praiser • Reverent Minister</p>
+        <p>As Jesus is, a servant in all things, seeking to help the world, bring people toward one another, and lead hearts to know Christ.</p>
+        <p>Writing to heal, restore, and reveal Christ through every word.</p>
     </div>
-
-    <p class="tagline" style="margin-top:10px;">
-        Writing to heal, restore, and reveal Christ through every word.
-    </p>
 </div>
 
 <!-- ABOUT -->
 <div class="section">
     <h2>About</h2>
 
-    <div class="about">
-        Bradley Hobbs writes devotionals, reflections, and personal works centered on healing, identity, and truth. 
-        His writing is shaped by lived experience, faith, and a deep desire to see people restored, strengthened, 
-        and truly seen. Each work carries a purpose, to help others grow, reconnect, and come to know Christ more deeply.
+    <div class="about-banner">
+        <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
     </div>
 
-    <p style="text-align:center; font-style:italic; margin-top:20px; color:#8a4f5c;">
+    <!-- Hidden SEO text -->
+    <div class="visually-hidden">
+        <p>
+        Bradley Hobbs writes devotionals, reflections, and personal works centered on healing, identity, and truth.
+        His writing is shaped by lived experience, faith, and a deep desire to see people restored, strengthened, and truly seen.
+        Each work carries a purpose, to help others grow, reconnect, and come to know Christ more deeply.
+        </p>
+
+        <p>
         Every word carries purpose. Every message is written to reach someone who thought they were unseen.
-    </p>
+        </p>
+    </div>
 </div>
 
 <!-- FEATURED -->
@@ -232,7 +242,7 @@ body {
 
     </div>
 
-    <p style="text-align:center; margin-top:30px; color:#666;">
+    <p style="text-align:center; margin-top:30px; color:var(--text-soft);">
         More works are being added as they are written and released.
     </p>
 </div>
