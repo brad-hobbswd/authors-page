@@ -8,7 +8,7 @@
 
 <style>
 
-/* PREVENT SCROLL */
+/* GLOBAL FIX */
 html, body {
     overflow-x: hidden;
 }
@@ -31,7 +31,7 @@ body {
     background: linear-gradient(
         to bottom,
         #f6efe7 0%,
-        #f3ebe2 40%,
+        #f3ebe2 50%,
         #f1e7dd 100%
     );
 }
@@ -39,7 +39,6 @@ body {
 /* HERO */
 .hero {
     width: 100%;
-    position: relative;
 }
 
 .hero img {
@@ -47,29 +46,20 @@ body {
     display: block;
 }
 
-/* HERO BLEND */
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), #f3ebe2);
-}
-
 /* SECTION */
 .section {
     width: 100%;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
-/* ALT SECTION */
+/* ABOUT FIX */
+.section.about-section {
+    padding-top: 0;
+}
+
+/* ALT */
 .section.alt {
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.6),
-        rgba(255,255,255,0.3)
-    );
+    background: rgba(255,255,255,0.5);
 }
 
 /* INNER */
@@ -81,8 +71,8 @@ body {
 /* HEADINGS */
 .section h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 18px;
     color: var(--navy);
 }
 
@@ -92,37 +82,20 @@ body {
     width: 60px;
     height: 2px;
     background: var(--gold);
-    margin: 12px auto 0;
+    margin: 10px auto 0;
 }
 
-/* ABOUT */
+/* ABOUT BANNER */
 .about-banner {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
 }
 
 .about-banner img {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     display: block;
-}
-
-/* ABOUT BLEND */
-.about-banner::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0),
-        rgba(255,250,245,1)
-    );
 }
 
 /* FEATURED */
@@ -134,23 +107,23 @@ body {
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
 }
 
 /* CARD */
 .card {
     background: #fffaf5;
-    padding: 20px;
-    border-radius: 16px;
+    padding: 18px;
+    border-radius: 14px;
     border: 1px solid #eadfce;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
     text-align: center;
-    transition: 0.25s ease;
+    transition: 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 /* LINKS */
@@ -158,7 +131,7 @@ body {
     text-decoration: none;
     color: var(--rose);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .card a:hover {
@@ -166,30 +139,37 @@ body {
 }
 
 .card p {
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--text-soft);
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 40px 20px;
-    font-size: 13px;
+    padding: 30px 20px;
+    font-size: 12.5px;
     color: var(--text-soft);
 }
 
-.footer a {
-    color: var(--rose);
-    text-decoration: none;
-}
+/* MOBILE */
+@media (max-width: 768px) {
 
-.footer a:hover {
-    text-decoration: underline;
-}
+    .section {
+        padding: 30px 15px;
+    }
 
-    .section.about-section {
-    padding-top: 0;
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-banner img {
+        max-width: 100%;
+    }
 }
 
 </style>
@@ -271,7 +251,7 @@ body {
     </div>
 </div>
 
-<!-- FAITH -->
+<!-- FAITH COMMUNITY -->
 <div class="section alt">
     <div class="section-inner">
 
