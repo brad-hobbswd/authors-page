@@ -27,7 +27,7 @@ body {
 /* HERO */
 .hero-banner {
     text-align: center;
-    padding: 20px 0 10px;
+    padding: 15px 0 5px;
 }
 
 .hero-banner img {
@@ -38,33 +38,32 @@ body {
     border-radius: 12px;
 }
 
-/* SECTION */
+/* SECTION (TIGHTENED) */
 .section {
     max-width: 1000px;
     margin: auto;
-    padding: 45px 20px;
+    padding: 30px 20px;
     position: relative;
 }
 
-/* DIVIDER LINE */
+/* DIVIDER (TIGHTER) */
 .section::before {
     content: "";
     display: block;
     width: 70px;
     height: 2px;
     background: var(--gold);
-    margin: 0 auto 25px;
+    margin: 0 auto 15px;
 }
 
-/* REMOVE FIRST DIVIDER */
 .section:first-of-type::before {
     display: none;
 }
 
-/* HEADINGS */
+/* HEADINGS (TIGHTER) */
 .section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 26px;
     color: var(--navy);
 }
@@ -81,17 +80,23 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* FEATURED spacing tightened */
+.featured {
+    max-width: 420px;
+    margin: 10px auto 0;
+}
+
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 18px;
 }
 
-/* CARD (USED EVERYWHERE NOW) */
+/* CARD */
 .card {
     background: #ffffff;
-    padding: 22px;
+    padding: 20px;
     border-radius: 16px;
     border: 1px solid #eee3d6;
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
@@ -113,13 +118,7 @@ body {
 .card p {
     font-size: 13px;
     color: var(--text-soft);
-    margin-top: 8px;
-}
-
-/* FEATURED now matches cards */
-.featured {
-    max-width: 420px;
-    margin: auto;
+    margin-top: 6px;
 }
 
 /* LINKS */
@@ -129,15 +128,15 @@ body {
 
 .links a {
     display: block;
-    margin: 10px 0;
+    margin: 8px 0;
     text-decoration: none;
     color: var(--rose);
 }
 
-/* FOOTER */
+/* FOOTER (TIGHTENED) */
 .footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 25px 20px;
     font-size: 13px;
     color: var(--text-soft);
 }
@@ -157,7 +156,7 @@ body {
     <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Bradley Hobbs Banner">
 </div>
 
-<!-- ABOUT (NO TITLE NOW) -->
+<!-- ABOUT -->
 <div class="section">
 
     <div class="about-banner">
@@ -225,7 +224,7 @@ body {
 
     </div>
 
-    <p style="text-align:center; margin-top:20px; color:var(--text-soft);">
+    <p style="text-align:center; margin-top:10px; color:var(--text-soft);">
         More works are being added as they are written and released.
     </p>
 </div>
