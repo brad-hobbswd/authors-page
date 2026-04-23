@@ -30,18 +30,16 @@ body {
     );
 }
 
-/* HERO */
+/* HERO (FULL WIDTH) */
 .hero {
-    text-align: center;
-    padding: 30px 20px 10px;
+    width: 100%;
+    padding: 20px 0 0;
 }
 
 .hero img {
     width: 100%;
-    max-width: 900px;
-    margin: auto;
+    height: auto;
     display: block;
-    border-radius: 14px;
 }
 
 /* FULL WIDTH SECTION */
@@ -56,7 +54,7 @@ body {
     margin: auto;
 }
 
-/* ALTERNATING BACKGROUNDS */
+/* ALTERNATING BACKGROUND */
 .section.alt {
     background: rgba(255,255,255,0.6);
 }
@@ -67,10 +65,8 @@ body {
     font-size: 32px;
     margin-bottom: 20px;
     color: var(--navy);
-    position: relative;
 }
 
-/* DIVIDER */
 .section h2::after {
     content: "";
     display: block;
@@ -80,18 +76,16 @@ body {
     margin: 12px auto 0;
 }
 
-/* ABOUT */
+/* ABOUT BANNER (FULL WIDTH) */
 .about-banner {
-    text-align: center;
+    width: 100%;
 }
 
 .about-banner img {
     width: 100%;
-    max-width: 900px;
-    margin: auto;
+    height: auto;
     display: block;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border-bottom: 1px solid #e9e1d8;
 }
 
 /* FEATURED */
@@ -158,15 +152,17 @@ body {
     <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Bradley Hobbs Banner">
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT (FULL WIDTH BANNER FIRST) -->
 <div class="section alt">
-    <div class="section-inner">
 
-        <div class="about-banner">
-            <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
-        </div>
-
+    <div class="about-banner">
+        <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
     </div>
+
+    <div class="section-inner">
+        <!-- space intentionally kept for flow -->
+    </div>
+
 </div>
 
 <!-- FEATURED -->
