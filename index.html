@@ -38,12 +38,12 @@ body {
 .hero-banner img {
     width: 100%;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
     display: block;
     border-radius: 12px;
 }
 
-/* SECTION (TIGHTER + CLEAN) */
+/* SECTION */
 .section {
     max-width: 1000px;
     margin: auto;
@@ -51,7 +51,7 @@ body {
     position: relative;
 }
 
-/* DIVIDER (STRONGER + CLEAN) */
+/* DIVIDER */
 .section::before {
     content: "";
     display: block;
@@ -74,10 +74,17 @@ body {
     color: var(--navy);
 }
 
-/* ABOUT */
+/* ABOUT (FIXED CENTERING) */
+.about-banner {
+    display: flex;
+    justify-content: center;
+}
+
 .about-banner img {
     width: 100%;
     max-width: 900px;
+    display: block;
+    margin: 0 auto;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
@@ -215,7 +222,7 @@ body {
     </p>
 </div>
 
-<!-- OTHER WORK (NOW CARDS) -->
+<!-- OTHER WORK -->
 <div class="section">
     <h2>Other Work</h2>
 
@@ -237,7 +244,7 @@ body {
     </div>
 </div>
 
-<!-- FAITH COMMUNITY (NOW CARD) -->
+<!-- FAITH COMMUNITY -->
 <div class="section">
     <h2>Faith Community</h2>
 
