@@ -8,6 +8,11 @@
 
 <style>
 
+/* PREVENT HORIZONTAL SCROLL */
+html, body {
+    overflow-x: hidden;
+}
+
 /* COLORS */
 :root {
     --bg-main: #f4efe8;
@@ -30,31 +35,30 @@ body {
     );
 }
 
-/* HERO (FULL WIDTH) */
+/* HERO (FULL WIDTH FIXED) */
 .hero {
     width: 100%;
-    padding: 20px 0 0;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
+    max-width: 100%;
     display: block;
 }
 
-/* FULL WIDTH SECTION */
+/* SECTION */
 .section {
     width: 100%;
-    padding: 50px 20px;
+    padding: 45px 20px;
 }
 
-/* INNER CONTENT */
+/* INNER */
 .section-inner {
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-/* ALTERNATING BACKGROUND */
+/* ALT BACKGROUND */
 .section.alt {
     background: rgba(255,255,255,0.6);
 }
@@ -76,16 +80,17 @@ body {
     margin: 12px auto 0;
 }
 
-/* ABOUT BANNER (FULL WIDTH) */
+/* ABOUT BANNER (CENTERED + SAFE) */
 .about-banner {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .about-banner img {
     width: 100%;
-    height: auto;
+    max-width: 1400px;
     display: block;
-    border-bottom: 1px solid #e9e1d8;
 }
 
 /* FEATURED */
@@ -116,11 +121,17 @@ body {
     transform: translateY(-5px);
 }
 
+/* LINK FIX (CONSISTENT EVERYWHERE) */
 .card a {
     text-decoration: none;
     color: var(--rose);
     font-weight: bold;
     font-size: 15px;
+    display: inline-block;
+}
+
+.card a:hover {
+    text-decoration: underline;
 }
 
 .card p {
@@ -132,7 +143,7 @@ body {
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 35px 20px;
     font-size: 13px;
     color: var(--text-soft);
 }
@@ -140,6 +151,10 @@ body {
 .footer a {
     color: var(--rose);
     text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 </style>
@@ -152,16 +167,14 @@ body {
     <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Bradley Hobbs Banner">
 </div>
 
-<!-- ABOUT (FULL WIDTH BANNER FIRST) -->
+<!-- ABOUT -->
 <div class="section alt">
 
     <div class="about-banner">
         <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
     </div>
 
-    <div class="section-inner">
-        <!-- space intentionally kept for flow -->
-    </div>
+    <div class="section-inner"></div>
 
 </div>
 
@@ -189,40 +202,19 @@ body {
 
         <div class="grid">
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a>
-                <p>Reflections on silence, healing, and rediscovering voice.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a><p>Reflections on silence and healing.</p></div>
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a>
-                <p>A message of grace, compassion, and enduring love.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a><p>A message of grace and compassion.</p></div>
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers (LGBTQIA+ Edition)</a>
-                <p>Affirming love that restores dignity, identity, and belonging.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers LGBTQIA+</a><p>Affirming love restoring dignity and belonging.</p></div>
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a>
-                <p>A memoir journey through pressure, identity, and perseverance.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a><p>A journey through identity and pressure.</p></div>
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a>
-                <p>Exploring language, truth, and what truly carries meaning.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a><p>Exploring truth and meaning.</p></div>
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a>
-                <p>A deeper look into consecration, identity, and transformation.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a><p>Consecration and transformation.</p></div>
 
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a>
-                <p>Learning to love God through the people we encounter daily.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a><p>Loving God through people.</p></div>
 
         </div>
 
@@ -236,36 +228,22 @@ body {
         <h2>Other Work</h2>
 
         <div class="grid">
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a>
-                <p>Creative and functional web design projects.</p>
-            </div>
-
-            <div class="card">
-                <a href="https://www.bapbi.net/">BAPBI Website</a>
-                <p>Official ministry website designed and developed.</p>
-            </div>
-
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/about-me/">Personal Website</a>
-                <p>More about Bradley Hobbs. Coming soon.</p>
-            </div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a><p>Creative web projects.</p></div>
+            <div class="card"><a href="https://www.bapbi.net/">BAPBI Website</a><p>Ministry site.</p></div>
+            <div class="card"><a href="https://brad-hobbswd.github.io/about-me/">Personal Website</a><p>More about Bradley.</p></div>
         </div>
 
     </div>
 </div>
 
-<!-- FAITH COMMUNITY -->
+<!-- FAITH -->
 <div class="section alt">
     <div class="section-inner">
 
         <h2>Faith Community</h2>
 
         <div class="grid">
-            <div class="card">
-                <a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a>
-                <p>A place of worship, growth, and community.</p>
-            </div>
+            <div class="card"><a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a><p>A place of worship and growth.</p></div>
         </div>
 
     </div>
@@ -274,13 +252,8 @@ body {
 <!-- FOOTER -->
 <div class="footer">
     <p>© 2026 Bradley Hobbs</p>
-    <p>
-        Designed by 
-        <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Brad Hobbs Web Design</a>
-    </p>
-    <p>
-        <a href="https://www.facebook.com/profile.php?id=61580865290507">Follow on Facebook</a>
-    </p>
+    <p>Designed by <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Brad Hobbs Web Design</a></p>
+    <p><a href="https://www.facebook.com/profile.php?id=61580865290507">Follow on Facebook</a></p>
 </div>
 
 </body>
