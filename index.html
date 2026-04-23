@@ -8,9 +8,10 @@
 
 <style>
 
-/* COLOR SYSTEM */
+/* COLORS */
 :root {
     --bg-main: #f4efe8;
+    --bg-alt: #ffffff;
     --navy: #1f2a33;
     --gold: #c6a768;
     --rose: #8a4f5c;
@@ -24,117 +25,121 @@ body {
     background: linear-gradient(
         to bottom,
         #f6f1ea 0%,
-        #f4efe8 40%,
+        #f4efe8 50%,
         #f2ebe3 100%
     );
 }
 
 /* HERO */
-.hero-banner {
+.hero {
     text-align: center;
-    padding: 10px 0 0;
+    padding: 30px 20px 10px;
 }
 
-.hero-banner img {
+.hero img {
     width: 100%;
     max-width: 900px;
-    margin: 0 auto;
-    display: block;
-    border-radius: 12px;
-}
-
-/* SECTION */
-.section {
-    max-width: 1000px;
     margin: auto;
-    padding: 25px 20px;
-    position: relative;
-}
-
-/* DIVIDER */
-.section::before {
-    content: "";
     display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
-    margin: 0 auto 12px;
-    opacity: 0.8;
+    border-radius: 14px;
 }
 
-.section:first-of-type::before {
-    display: none;
+/* FULL WIDTH SECTION */
+.section {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+/* INNER CONTENT */
+.section-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ALTERNATING BACKGROUNDS */
+.section.alt {
+    background: rgba(255,255,255,0.6);
 }
 
 /* HEADINGS */
 .section h2 {
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 32px;
+    margin-bottom: 20px;
     color: var(--navy);
+    position: relative;
 }
 
-/* ABOUT (FIXED CENTERING) */
+/* DIVIDER */
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 12px auto 0;
+}
+
+/* ABOUT */
 .about-banner {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .about-banner img {
     width: 100%;
     max-width: 900px;
+    margin: auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 /* FEATURED */
 .featured {
     max-width: 420px;
-    margin: 8px auto 0;
+    margin: 10px auto 0;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 /* CARD */
 .card {
     background: #fffaf5;
-    padding: 18px;
-    border-radius: 14px;
+    padding: 20px;
+    border-radius: 16px;
     border: 1px solid #eee3d6;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
     text-align: center;
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 
 .card a {
     text-decoration: none;
     color: var(--rose);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .card p {
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--text-soft);
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 20px 20px;
-    font-size: 12.5px;
+    padding: 40px 20px;
+    font-size: 13px;
     color: var(--text-soft);
 }
 
@@ -149,110 +154,124 @@ body {
 <body>
 
 <!-- HERO -->
-<div class="hero-banner">
+<div class="hero">
     <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Bradley Hobbs Banner">
 </div>
 
 <!-- ABOUT -->
-<div class="section">
-    <div class="about-banner">
-        <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
+<div class="section alt">
+    <div class="section-inner">
+
+        <div class="about-banner">
+            <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About Bradley Hobbs">
+        </div>
+
     </div>
 </div>
 
 <!-- FEATURED -->
 <div class="section">
-    <h2>Featured Work</h2>
+    <div class="section-inner">
 
-    <div class="featured">
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">
-                Whispers in the Pew
-            </a>
-            <p>A devotional journey through silence, healing, and being seen.</p>
+        <h2>Featured Work</h2>
+
+        <div class="featured">
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a>
+                <p>A devotional journey through silence, healing, and being seen.</p>
+            </div>
         </div>
+
     </div>
 </div>
 
 <!-- BOOKS -->
-<div class="section">
-    <h2>Books</h2>
+<div class="section alt">
+    <div class="section-inner">
 
-    <div class="grid">
+        <h2>Books</h2>
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a>
-            <p>Reflections on silence, healing, and rediscovering voice.</p>
-        </div>
+        <div class="grid">
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a>
-            <p>A message of grace, compassion, and enduring love.</p>
-        </div>
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a>
+                <p>Reflections on silence, healing, and rediscovering voice.</p>
+            </div>
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers (LGBTQIA+ Edition)</a>
-            <p>Affirming love that restores dignity, identity, and belonging.</p>
-        </div>
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a>
+                <p>A message of grace, compassion, and enduring love.</p>
+            </div>
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a>
-            <p>A memoir journey through pressure, identity, and perseverance.</p>
-        </div>
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers (LGBTQIA+ Edition)</a>
+                <p>Affirming love that restores dignity, identity, and belonging.</p>
+            </div>
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a>
-            <p>Exploring language, truth, and what truly carries meaning.</p>
-        </div>
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a>
+                <p>A memoir journey through pressure, identity, and perseverance.</p>
+            </div>
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a>
-            <p>A deeper look into consecration, identity, and transformation.</p>
-        </div>
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a>
+                <p>Exploring language, truth, and what truly carries meaning.</p>
+            </div>
 
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a>
-            <p>Learning to love God through the people we encounter daily.</p>
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a>
+                <p>A deeper look into consecration, identity, and transformation.</p>
+            </div>
+
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a>
+                <p>Learning to love God through the people we encounter daily.</p>
+            </div>
+
         </div>
 
     </div>
-
-    <p style="text-align:center; margin-top:8px; color:var(--text-soft);">
-        More works are being added as they are written and released.
-    </p>
 </div>
 
 <!-- OTHER WORK -->
 <div class="section">
-    <h2>Other Work</h2>
+    <div class="section-inner">
 
-    <div class="grid">
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a>
-            <p>Creative and functional web design projects.</p>
+        <h2>Other Work</h2>
+
+        <div class="grid">
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a>
+                <p>Creative and functional web design projects.</p>
+            </div>
+
+            <div class="card">
+                <a href="https://www.bapbi.net/">BAPBI Website</a>
+                <p>Official ministry website designed and developed.</p>
+            </div>
+
+            <div class="card">
+                <a href="https://brad-hobbswd.github.io/about-me/">Personal Website</a>
+                <p>More about Bradley Hobbs. Coming soon.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <a href="https://www.bapbi.net/">BAPBI Website</a>
-            <p>Official ministry website designed and developed.</p>
-        </div>
-
-        <div class="card">
-            <a href="https://brad-hobbswd.github.io/about-me/">Personal Website</a>
-            <p>More about Bradley Hobbs. Coming soon.</p>
-        </div>
     </div>
 </div>
 
 <!-- FAITH COMMUNITY -->
-<div class="section">
-    <h2>Faith Community</h2>
+<div class="section alt">
+    <div class="section-inner">
 
-    <div class="grid">
-        <div class="card">
-            <a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a>
-            <p>A place of worship, growth, and community.</p>
+        <h2>Faith Community</h2>
+
+        <div class="grid">
+            <div class="card">
+                <a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a>
+                <p>A place of worship, growth, and community.</p>
+            </div>
         </div>
+
     </div>
 </div>
 
