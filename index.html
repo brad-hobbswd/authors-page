@@ -2,274 +2,648 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bradley Hobbs | Author</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Bradley Hobbs | Author
+</title>
 
 <style>
 
-/* GLOBAL */
-* {
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-html, body {
-    margin: 0;
-    overflow-x: hidden;
+:root{
+
+--bg-main:#f3ebe2;
+--bg-alt:#fffaf5;
+--navy:#1f2a33;
+--gold:#c6a768;
+--rose:#8a4f5c;
+--soft:#6b6b6b;
+
 }
 
-/* COLORS */
-:root {
-    --bg-main: #f3ebe2;
-    --bg-alt: #fffaf5;
-    --navy: #1f2a33;
-    --gold: #c6a768;
-    --rose: #8a4f5c;
-    --text-soft: #6b6b6b;
+body{
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+background:
+linear-gradient(
+to bottom,
+#f6efe7,
+#f3ebe2,
+#f1e7dd
+);
+
+overflow-x:hidden;
+
+color:var(--navy);
+
 }
 
-/* BASE */
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: linear-gradient(
-        to bottom,
-        #f6efe7 0%,
-        #f3ebe2 50%,
-        #f1e7dd 100%
-    );
-}
 
-/* BANNERS */
+/* banners */
+
 .hero,
-.about-banner {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.about-banner{
+
+display:flex;
+
+justify-content:center;
+
+width:100%;
 }
 
 .hero img,
-.about-banner img {
-    width: 100%;
-    max-width: 1400px;
-    display: block;
+.about-banner img{
+
+width:100%;
+
+max-width:1400px;
+
+display:block;
 }
 
-/* SECTION */
-.section {
-    width: 100%;
-    padding: 40px 0;
+
+/* sections */
+
+.section{
+
+padding:55px 0;
 }
 
-/* INNER */
-.section-inner {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+.alt{
+
+background:
+rgba(
+255,
+255,
+255,
+.45
+);
+
 }
 
-/* ABOUT FIX */
-.section.about-section {
-    padding-top: 0;
+.section-inner{
+
+max-width:1150px;
+
+margin:auto;
+
+padding:0 20px;
 }
 
-/* ALT */
-.section.alt {
-    background: rgba(255,255,255,0.5);
+
+.section h2{
+
+text-align:center;
+
+font-size:32px;
+
+margin-bottom:15px;
 }
 
-/* HEADINGS */
-.section h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 18px;
-    color: var(--navy);
+
+.section h2:after{
+
+content:"";
+
+display:block;
+
+width:70px;
+height:2px;
+
+background:var(--gold);
+
+margin:
+12px auto 0;
 }
 
-.section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
-    margin: 10px auto 0;
+
+.sectionText{
+
+max-width:700px;
+
+margin:
+0 auto 35px;
+
+text-align:center;
+
+color:var(--soft);
 }
 
-/* FEATURED */
-.featured {
-    max-width: 420px;
-    margin: 10px auto 0;
+
+/* featured */
+
+.featured{
+
+max-width:500px;
+
+margin:auto;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
+
+/* cards */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(
+250px,
+1fr
+)
+);
+
+gap:20px;
 }
 
-/* CARD */
-.card {
-    background: #fffaf5;
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid #eadfce;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
-    text-align: center;
-    transition: 0.2s ease;
+
+.card{
+
+background:#fffaf5;
+
+padding:25px;
+
+border-radius:20px;
+
+border:
+1px solid #eadfce;
+
+box-shadow:
+0 8px 18px rgba(0,0,0,.05);
+
+text-align:center;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+transition:.3s;
 }
 
-.card:hover {
-    transform: translateY(-4px);
+
+.card:hover{
+
+transform:
+translateY(-8px);
+
+box-shadow:
+0 12px 25px rgba(0,0,0,.08);
+
 }
 
-/* LINKS (GLOBAL STYLE MATCH) */
-.card a,
-.footer a {
-    text-decoration: none;
-    color: var(--rose);
-    font-weight: bold;
-    font-size: 14px;
+
+.card h3{
+
+font-size:18px;
+
+margin-bottom:10px;
+
+line-height:1.5;
 }
 
-.card a:hover,
-.footer a:hover {
-    text-decoration: underline;
+
+.card p{
+
+font-size:13px;
+
+line-height:1.7;
+
+color:var(--soft);
+
+margin-bottom:20px;
 }
 
-.card p {
-    font-size: 12.5px;
-    color: var(--text-soft);
-    margin-top: 5px;
+
+.view{
+
+display:inline-block;
+
+padding:
+10px 18px;
+
+border-radius:999px;
+
+background:var(--rose);
+
+color:white;
+
+font-weight:bold;
+
+font-size:13px;
+
+text-decoration:none;
+
+transition:.3s;
 }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 12.5px;
-    color: var(--text-soft);
+
+.view:hover{
+
+transform:scale(1.05);
+
+opacity:.9;
+
 }
 
-.footer p {
-    margin: 6px 0;
+
+/* footer */
+
+.footer{
+
+text-align:center;
+
+padding:50px 20px;
+
+color:var(--soft);
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
 
-    .section-inner {
-        padding: 0 15px;
-    }
+.footerLinks{
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
+display:flex;
 
-    .section h2 {
-        font-size: 24px;
-    }
+justify-content:center;
+
+gap:20px;
+
+margin:20px 0;
+
+flex-wrap:wrap;
+}
+
+
+.footerLinks a{
+
+text-decoration:none;
+
+color:var(--rose);
+
+font-weight:bold;
+}
+
+
+.footer p{
+
+margin:8px;
+}
+
+
+@media(max-width:768px){
+
+.section h2{
+
+font-size:25px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
+
+
 <div class="hero">
-    <img src="YOUR-BANNER-IMAGE-1.jpg" alt="Banner">
-</div>
 
-<!-- ABOUT -->
-<div class="section alt about-section">
-
-    <div class="about-banner">
-        <img src="YOUR-BANNER-IMAGE-2.jpg" alt="About">
-    </div>
-
-    <div class="section-inner"></div>
+<img
+src="YOUR-BANNER-IMAGE-1.jpg"
+alt="Author Banner">
 
 </div>
 
-<!-- FEATURED -->
-<div class="section">
-    <div class="section-inner">
 
-        <h2>Featured Work</h2>
 
-        <div class="featured">
-            <div class="card">
-                <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a>
-                <p>A devotional journey through silence, healing, and being seen.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- BOOKS -->
 <div class="section alt">
-    <div class="section-inner">
 
-        <h2>Books</h2>
+<div class="about-banner">
 
-        <div class="grid">
+<img
+src="YOUR-BANNER-IMAGE-2.jpg"
+alt="About Banner">
 
-            <div class="card"><a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Whispers in the Pew</a><p>Reflections on silence and healing.</p></div>
-
-            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers/">Love That Covers</a><p>Grace and compassion.</p></div>
-
-            <div class="card"><a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Love That Covers LGBTQIA+</a><p>Affirming love and belonging.</p></div>
-
-            <div class="card"><a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Ignore Overwhelmed</a><p>Identity and perseverance.</p></div>
-
-            <div class="card"><a href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Words That Sound Good</a><p>Truth and meaning.</p></div>
-
-            <div class="card"><a href="https://brad-hobbswd.github.io/sanctified/">Sanctified</a><p>Transformation journey.</p></div>
-
-            <div class="card"><a href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Loving the God We Cannot See</a><p>Loving God through people.</p></div>
-
-<div class="card"><a href="https://brad-hobbswd.github.io/seventy-times-seven/">Seven Times Seventy</a><p>Forgiveness That Break Chains and Teveal Jesus</p></div>
-
-        </div>
-
-    </div>
 </div>
 
-<!-- OTHER WORK -->
+</div>
+
+
+
 <div class="section">
-    <div class="section-inner">
 
-        <h2>Other Work</h2>
+<div class="section-inner">
 
-        <div class="grid">
-            <div class="card"><a href="https://brad-hobbswd.github.io/brad-hobbswd/">Web Design Portfolio</a><p>Creative web projects.</p></div>
-            <div class="card"><a href="https://www.bapbi.net/">BAPBI Website</a><p>Ministry site.</p></div>
-            <div class="card"><a href="https://brad-hobbswd.github.io/about-me/">Personal Website</a><p>More about Bradley.</p></div>
-        </div>
+<h2>
 
-    </div>
+Featured Work
+
+</h2>
+
+<div class="featured">
+
+<div class="card">
+
+<h3>
+
+Whispers in the Pew
+
+</h3>
+
+<p>
+
+A devotional journey through silence, healing, and finding your voice.
+
+</p>
+
+<a
+class="view"
+href="https://brad-hobbswd.github.io/whispers-in-the-pew/">
+
+Read More
+
+</a>
+
 </div>
 
-<!-- FAITH COMMUNITY -->
+</div>
+
+</div>
+
+</div>
+
+
+
 <div class="section alt">
-    <div class="section-inner">
 
-        <h2>Faith Community</h2>
+<div class="section-inner">
 
-        <div class="grid">
-            <div class="card"><a href="https://www.mercyforyou.org/">Bethesda Tabernacle</a><p>A place of worship and growth.</p></div>
-        </div>
+<h2>
 
-    </div>
+Books
+
+</h2>
+
+<p class="sectionText">
+
+Stories, devotionals, memoirs, healing journeys, and faith centered writing experiences.
+
+</p>
+
+
+<div class="grid">
+
+<div class="card">
+<h3>Born of Spirit and Truth</h3>
+<p>Faith centered reflections and spiritual truth.</p>
+<a class="view" href="https://brad-hobbswd.github.io/bornofspirit-and-truth/">Explore</a>
 </div>
 
-<!-- FOOTER -->
+<div class="card">
+<h3>Bruise Reeds: How Gossip Became Violence in the Church</h3>
+<p>Thoughts on healing and difficult voices.</p>
+<a class="view" href="https://brad-hobbswd.github.io/bruise-reeds-gossip-violence/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Bruise Reeds When Holiness Became a Weapon</h3>
+<p>Faith reflections and spiritual growth.</p>
+<a class="view" href="https://brad-hobbswd.github.io/bruise-reeds-holiness-weapon/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Fear Is Not Your Voice</h3>
+<p>Healing, identity, and overcoming fear.</p>
+<a class="view" href="https://brad-hobbswd.github.io/fear-is-not-your-voice/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Fragments of Grace</h3>
+<p>Finding grace inside broken places.</p>
+<a class="view" href="https://brad-hobbswd.github.io/fragments-of-grace/">Explore</a>
+</div>
+
+<div class="card">
+<h3>I Am Not Ignoring You, I'm Overwhelmed</h3>
+<p>Identity and perseverance journey.</p>
+<a class="view" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Love That Covers</h3>
+<p>Grace and compassion.</p>
+<a class="view" href="https://brad-hobbswd.github.io/love-that-covers/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Love That Covers (LGBTQIA+ Edition)</h3>
+<p>Affirming love and belonging.</p>
+<a class="view" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Loving the God We Cannot See</h3>
+<p>Loving God through people and faith.</p>
+<a class="view" href="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/">Explore</a>
+</div>
+
+<div class="card">
+<h3>No Condemnation</h3>
+<p>Grace, healing, and freedom.</p>
+<a class="view" href="https://brad-hobbswd.github.io/no-condemnation/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Rivers in the Dark</h3>
+<p>Walking through difficult seasons.</p>
+<a class="view" href="https://brad-hobbswd.github.io/rivers-in-the-dark/">Explore</a>
+</div>
+
+<div class="card">
+<h3>The Room With No Windows</h3>
+<p>Reflections through difficult spaces.</p>
+<a class="view" href="https://brad-hobbswd.github.io/room-with-no-windows/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Sanctified</h3>
+<p>Transformation journey.</p>
+<a class="view" href="https://brad-hobbswd.github.io/sanctified/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Seven Times Seventy</h3>
+<p>Forgiveness that reveals Jesus.</p>
+<a class="view" href="https://brad-hobbswd.github.io/seventy-times-seven/">Explore</a>
+</div>
+
+<div class="card">
+<h3>What They Said About You</h3>
+<p>Healing words and identity journey.</p>
+<a class="view" href="https://brad-hobbswd.github.io/what-they-said-about-you/">Explore</a>
+</div>
+
+<div class="card">
+<h3>What Love Isn't</h3>
+<p>Truth that heals the heart.</p>
+<a class="view" href="https://brad-hobbswd.github.io/whatLoveisnt-truthhealedtheheart/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Whispers in the Pew</h3>
+<p>Reflections on silence and healing.</p>
+<a class="view" href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Explore</a>
+</div>
+
+<div class="card">
+<h3>Words That Sound Good</h3>
+<p>Truth and meaning.</p>
+<a class="view" href="https://brad-hobbswd.github.io/Words-That-Sound-Good/">Explore</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<div class="section-inner">
+
+<h2>
+
+Creative World
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+Brad Hobbs Web Design
+
+</h3>
+
+<p>
+
+Client portfolio and showcase.
+
+</p>
+
+<a
+class="view"
+href="https://brad-hobbswd.github.io/clients/">
+
+Visit
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+
+BAPBI
+
+</h3>
+
+<p>
+
+Bible institute and ministry work.
+
+</p>
+
+<a
+class="view"
+href="https://www.bapbi.net/">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
 <div class="footer">
-    <p>© 2026 Bradley Hobbs</p>
-    <p>Designed by <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Brad Hobbs Web Design</a></p>
-    <p><a href="https://www.facebook.com/profile.php?id=61580865290507">Follow on Facebook</a></p>
+
+<p>
+
+© <span id="year"></span>
+Bradley Hobbs
+
+</p>
+
+<div class="footerLinks">
+
+<a href="https://brad-hobbswd.github.io/clients/">
+
+Portfolio
+
+</a>
+
+<a href="https://brad-hobbswd.github.io/about-me/">
+
+About
+
+</a>
+
 </div>
+
+</div>
+
+
+
+<script>
+
+document
+.getElementById(
+"year"
+)
+
+.textContent=
+
+new Date()
+
+.getFullYear();
+
+</script>
 
 </body>
 </html>
