@@ -265,13 +265,38 @@ opacity:.9;
 
 /* footer */
 
+/* FOOTER */
+
 .footer{
+
+margin-top:20px;
+
+padding:60px 20px;
 
 text-align:center;
 
-padding:50px 20px;
+background:
+rgba(
+255,
+255,
+255,
+.35
+);
 
-color:var(--soft);
+border-top:
+1px solid #eadfce;
+}
+
+
+.footerBrand{
+
+font-size:1.3rem;
+
+font-weight:bold;
+
+color:var(--navy);
+
+margin-bottom:10px;
 }
 
 
@@ -281,9 +306,9 @@ display:flex;
 
 justify-content:center;
 
-gap:20px;
+gap:25px;
 
-margin:20px 0;
+margin:22px 0;
 
 flex-wrap:wrap;
 }
@@ -296,12 +321,22 @@ text-decoration:none;
 color:var(--rose);
 
 font-weight:bold;
+
+transition:.3s;
+}
+
+
+.footerLinks a:hover{
+
+opacity:.7;
 }
 
 
 .footer p{
 
 margin:8px;
+
+color:var(--soft);
 }
 
 
@@ -548,7 +583,7 @@ Creative World
 
 <h3>
 
-Brad Hobbs Web Design
+Brad Hobbs Web Portfolio
 
 </h3>
 
@@ -603,28 +638,44 @@ Visit
 
 <div class="footer">
 
+<div class="footerBrand">
+
+Brad Hobbs Web Design
+
+</div>
+
 <p>
 
-© <span id="year"></span>
-Bradley Hobbs
+Designed with creativity, storytelling, and purpose.
 
 </p>
 
 <div class="footerLinks">
 
-<a href="https://brad-hobbswd.github.io/clients/">
+<a
+href="https://brad-hobbswd.github.io/brad-hobbs/">
 
-Portfolio
+Visit Brad Hobbs Web Design
 
 </a>
 
-<a href="https://brad-hobbswd.github.io/about-me/">
+<a
+href="https://www.facebook.com/profile.php?id=61580865290507">
 
-About
+Follow on Facebook
 
 </a>
 
 </div>
+
+
+<p>
+
+© <span id="year"></span>
+
+Bradley Hobbs
+
+</p>
 
 </div>
 
