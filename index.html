@@ -62,6 +62,12 @@ display:flex;
 justify-content:center;
 
 width:100%;
+
+line-height:0;
+
+margin:0;
+padding:0;
+
 }
 
 .hero img,
@@ -72,6 +78,43 @@ width:100%;
 max-width:1400px;
 
 display:block;
+
+margin:0;
+padding:0;
+
+}
+
+/* blend effect */
+
+.hero{
+
+position:relative;
+
+}
+
+.hero:after{
+
+content:"";
+
+position:absolute;
+
+bottom:-1px;
+
+left:0;
+
+width:100%;
+
+height:40px;
+
+background:
+linear-gradient(
+to bottom,
+transparent,
+rgba(243,235,226,.5)
+);
+
+pointer-events:none;
+
 }
 
 
@@ -374,15 +417,11 @@ alt="Author Banner">
 
 
 
-<div class="section alt">
-
 <div class="about-banner">
 
 <img
 src="YOUR-BANNER-IMAGE-2.jpg"
 alt="About Banner">
-
-</div>
 
 </div>
 
