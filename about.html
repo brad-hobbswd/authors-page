@@ -47,7 +47,7 @@ background:
 
 radial-gradient(
 circle at top,
-rgba(198,167,104,.15),
+rgba(198,167,104,.08),
 transparent 25%
 ),
 
@@ -79,16 +79,16 @@ line-height:0;
 
 overflow:hidden;
 
-margin:0 0 60px 0;
+margin:0;
 
 padding:0;
 
 box-shadow:
-0 20px 40px rgba(
+0 15px 30px rgba(
 0,
 0,
 0,
-.08
+.05
 );
 
 }
@@ -110,13 +110,13 @@ margin:0 auto;
 
 .divider{
 
-width:180px;
+width:120px;
 
 height:2px;
 
 margin:
-0 auto
-80px;
+35px auto
+35px;
 
 background:
 
@@ -131,15 +131,40 @@ position:relative;
 
 }
 
+.divider:after{
+
+content:"✦";
+
+position:absolute;
+
+left:50%;
+
+top:-14px;
+
+transform:
+translateX(-50%);
+
+padding:0 8px;
+
+background:#f3ebe2;
+
+color:var(--gold);
+
+font-size:.8rem;
+
+}
+
 
 /* CONTENT */
 
 .section{
 
 padding:
+0
 20px
-20px
-90px;
+70px;
+
+margin-top:0;
 
 }
 
@@ -200,9 +225,9 @@ font-family:
 "Cinzel",
 serif;
 
-margin-bottom:25px;
+font-size:2.3rem;
 
-font-size:2rem;
+margin-bottom:30px;
 
 }
 
@@ -210,9 +235,9 @@ font-size:2rem;
 
 line-height:2;
 
-color:var(--soft);
-
 font-size:1.05rem;
+
+color:var(--soft);
 
 margin-bottom:25px;
 
@@ -236,7 +261,7 @@ minmax(
 
 gap:25px;
 
-margin-top:50px;
+margin-top:35px;
 
 }
 
@@ -268,7 +293,7 @@ transition:.35s;
 .card:hover{
 
 transform:
-translateY(-10px);
+translateY(-8px);
 
 box-shadow:
 0 20px 40px rgba(
@@ -302,8 +327,6 @@ margin-bottom:15px;
 
 line-height:1.8;
 
-font-size:.95rem;
-
 color:var(--soft);
 
 }
@@ -313,9 +336,9 @@ color:var(--soft);
 
 .quote{
 
-margin-top:70px;
+margin-top:45px;
 
-padding:70px;
+padding:55px;
 
 border-radius:35px;
 
@@ -323,8 +346,8 @@ background:
 
 linear-gradient(
 135deg,
-rgba(198,167,104,.12),
-rgba(255,255,255,.5)
+rgba(198,167,104,.10),
+rgba(255,255,255,.55)
 );
 
 text-align:center;
@@ -333,11 +356,11 @@ text-align:center;
 
 .quote p{
 
-font-size:1.4rem;
-
-font-style:italic;
+font-size:1.35rem;
 
 line-height:2;
+
+font-style:italic;
 
 }
 
@@ -348,7 +371,7 @@ line-height:2;
 
 position:relative;
 
-margin-top:80px;
+margin-top:50px;
 
 padding:90px 25px;
 
@@ -435,9 +458,9 @@ top:-14px;
 transform:
 translateX(-50%);
 
-background:#fffaf5;
-
 padding:0 10px;
+
+background:#fffaf5;
 
 color:var(--gold);
 
@@ -449,8 +472,6 @@ font-size:2.3rem;
 
 font-weight:bold;
 
-margin-bottom:10px;
-
 }
 
 .footerTag{
@@ -459,17 +480,17 @@ font-size:.8rem;
 
 letter-spacing:4px;
 
-color:var(--rose);
-
 text-transform:uppercase;
 
-margin-bottom:30px;
+margin:20px 0;
+
+color:var(--rose);
 
 }
 
 .footerDescription{
 
-max-width:650px;
+max-width:700px;
 
 margin:auto;
 
@@ -477,7 +498,7 @@ line-height:2;
 
 color:var(--soft);
 
-margin-bottom:30px;
+margin-bottom:35px;
 
 }
 
@@ -529,19 +550,21 @@ translateY(-5px);
 .footerDivider{
 
 width:70%;
+
+max-width:500px;
+
 height:1px;
 
-margin:35px auto;
+margin:
+35px auto;
 
 background:
 rgba(
 198,
 167,
 104,
-.18
+.2
 );
-
-max-width:500px;
 
 }
 
@@ -557,33 +580,34 @@ margin-bottom:25px;
 
 .footerCopyright{
 
-font-size:.9rem;
-
 color:var(--soft);
 
-opacity:.8;
-
 }
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 
 .storyCard{
-padding:35px;
+
+padding:30px;
+
 }
 
 .quote{
+
 padding:35px;
-}
 
-.aboutBanner{
-
-margin-bottom:35px;
+margin-top:40px;
 
 }
 
 .divider{
 
-margin-bottom:50px;
+margin:
+20px auto
+25px;
 
 }
 
@@ -598,7 +622,6 @@ align-items:center;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -607,7 +630,7 @@ align-items:center;
 
 <img
 src="YOUR-BANNER-IMAGE-2.jpg"
-alt="Bradley Hobbs Banner">
+alt="About Bradley Hobbs">
 
 </section>
 
@@ -699,13 +722,11 @@ Author • Storyteller • Creator
 
 </div>
 
-<p class="footerDescription">
+<div class="footerDescription">
 
-Stories centered on healing, restoration, grace, revival, and hope.
+Stories centered on healing, restoration, grace, revival, and hope. Creative spaces built with purpose and designed to encourage hearts.
 
-Creative spaces built with purpose and designed to encourage hearts.
-
-</p>
+</div>
 
 <div class="footerLinks">
 
@@ -729,9 +750,7 @@ Creative spaces built with purpose and designed to encourage hearts.
 
 <div class="footerCopyright">
 
-© <span id="year"></span>
-
-Bradley Hobbs
+© <span id="year"></span> Bradley Hobbs
 
 </div>
 
