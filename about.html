@@ -83,14 +83,6 @@ margin:0;
 
 padding:0;
 
-box-shadow:
-0 15px 30px rgba(
-0,
-0,
-0,
-.05
-);
-
 }
 
 .aboutBanner img{
@@ -100,8 +92,6 @@ width:100%;
 max-width:1400px;
 
 display:block;
-
-margin:0 auto;
 
 }
 
@@ -115,8 +105,8 @@ width:120px;
 height:2px;
 
 margin:
-35px auto
-35px;
+25px auto
+25px;
 
 background:
 
@@ -162,9 +152,7 @@ font-size:.8rem;
 padding:
 0
 20px
-70px;
-
-margin-top:0;
+45px;
 
 }
 
@@ -248,16 +236,11 @@ margin-bottom:25px;
 
 .grid{
 
-display:grid;
+display:flex;
 
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(
-240px,
-1fr
-)
-);
+flex-wrap:wrap;
+
+justify-content:center;
 
 gap:25px;
 
@@ -266,6 +249,8 @@ margin-top:35px;
 }
 
 .card{
+
+width:280px;
 
 background:#fffaf5;
 
@@ -336,9 +321,9 @@ color:var(--soft);
 
 .quote{
 
-margin-top:45px;
+margin-top:30px;
 
-padding:55px;
+padding:45px;
 
 border-radius:35px;
 
@@ -371,13 +356,14 @@ font-style:italic;
 
 position:relative;
 
-margin-top:50px;
+margin-top:25px;
 
-padding:90px 25px;
+padding:
+55px
+25px
+50px;
 
 text-align:center;
-
-overflow:hidden;
 
 background:
 
@@ -430,7 +416,7 @@ height:2px;
 
 margin:
 0 auto
-35px;
+25px;
 
 background:
 
@@ -480,9 +466,7 @@ font-size:.8rem;
 
 letter-spacing:4px;
 
-text-transform:uppercase;
-
-margin:20px 0;
+margin:15px 0;
 
 color:var(--rose);
 
@@ -494,11 +478,11 @@ max-width:700px;
 
 margin:auto;
 
-line-height:2;
+line-height:1.8;
 
 color:var(--soft);
 
-margin-bottom:35px;
+margin-bottom:20px;
 
 }
 
@@ -512,7 +496,7 @@ gap:15px;
 
 flex-wrap:wrap;
 
-margin-bottom:35px;
+margin-bottom:20px;
 
 }
 
@@ -556,7 +540,7 @@ max-width:500px;
 height:1px;
 
 margin:
-35px auto;
+20px auto;
 
 background:
 rgba(
@@ -574,7 +558,7 @@ font-style:italic;
 
 color:var(--gold);
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
@@ -583,9 +567,6 @@ margin-bottom:25px;
 color:var(--soft);
 
 }
-
-
-/* MOBILE */
 
 @media(max-width:768px){
 
@@ -599,29 +580,12 @@ padding:30px;
 
 padding:35px;
 
-margin-top:40px;
-
-}
-
-.divider{
-
-margin:
-20px auto
-25px;
-
-}
-
-.footerLinks{
-
-flex-direction:column;
-
-align-items:center;
-
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -650,7 +614,7 @@ The Story Behind The Stories
 
 <p>
 
-Stories often begin where pain, silence, rejection, and difficult seasons leave people searching for hope. Bradley Hobbs creates books and devotionals centered around restoration and the transforming love of Jesus.
+Stories often begin where pain, silence, rejection, and difficult seasons leave people searching for hope.
 
 </p>
 
@@ -724,7 +688,7 @@ Author • Storyteller • Creator
 
 <div class="footerDescription">
 
-Stories centered on healing, restoration, grace, revival, and hope. Creative spaces built with purpose and designed to encourage hearts.
+Stories centered on healing, restoration, grace, revival, and hope.
 
 </div>
 
