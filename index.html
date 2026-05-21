@@ -306,58 +306,138 @@ opacity:.9;
 }
 
 
-/* footer */
-
 /* FOOTER */
 
 .footer{
 
-margin-top:20px;
+position:relative;
 
-padding:60px 20px;
+margin-top:80px;
+
+padding:90px 25px;
 
 text-align:center;
 
+overflow:hidden;
+
 background:
-rgba(
-255,
-255,
-255,
-.35
+
+linear-gradient(
+to bottom,
+rgba(255,255,255,.65),
+#fffaf5
 );
 
 border-top:
 1px solid #eadfce;
+
 }
 
+.footerGlow{
+
+position:absolute;
+
+top:-220px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
+width:700px;
+
+height:700px;
+
+background:
+
+radial-gradient(
+circle,
+rgba(
+198,
+167,
+104,
+.12
+),
+transparent 70%
+);
+
+pointer-events:none;
+
+}
 
 .footerBrand{
 
-font-size:1.3rem;
+position:relative;
+
+font-size:2.4rem;
 
 font-weight:bold;
 
 color:var(--navy);
 
-margin-bottom:10px;
+margin-bottom:8px;
+
 }
 
+.footerTag{
+
+position:relative;
+
+font-size:.75rem;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:var(--rose);
+
+margin-bottom:30px;
+
+}
+
+.footerDescription{
+
+position:relative;
+
+max-width:650px;
+
+margin:auto;
+
+line-height:1.9;
+
+font-size:1rem;
+
+color:var(--soft);
+
+margin-bottom:35px;
+
+}
 
 .footerLinks{
+
+position:relative;
 
 display:flex;
 
 justify-content:center;
 
-gap:25px;
-
-margin:22px 0;
+gap:15px;
 
 flex-wrap:wrap;
+
+margin-bottom:35px;
+
 }
 
-
 .footerLinks a{
+
+padding:12px 24px;
+
+border-radius:999px;
+
+background:white;
+
+border:1px solid #eadfce;
 
 text-decoration:none;
 
@@ -365,35 +445,68 @@ color:var(--rose);
 
 font-weight:bold;
 
-transition:.3s;
-}
+box-shadow:
+0 5px 15px rgba(
+0,
+0,
+0,
+.05
+);
 
+transition:.35s;
+
+}
 
 .footerLinks a:hover{
 
-opacity:.7;
+transform:
+translateY(-5px);
+
+background:var(--rose);
+
+color:white;
+
 }
 
+.footerQuote{
 
-.footer p{
+position:relative;
 
-margin:8px;
+max-width:700px;
+
+margin:auto;
+
+font-style:italic;
+
+font-size:1.1rem;
+
+color:var(--gold);
+
+margin-bottom:30px;
+
+line-height:1.7;
+
+}
+
+.footerCopyright{
+
+position:relative;
+
+font-size:.9rem;
 
 color:var(--soft);
-}
 
+opacity:.7;
+
+}
 
 @media(max-width:768px){
 
-.section h2{
+.footerLinks{
 
-font-size:25px;
+flex-direction:column;
 
-}
-
-.grid{
-
-grid-template-columns:1fr;
+align-items:center;
 
 }
 
@@ -967,44 +1080,66 @@ Visit
 
 <div class="footer">
 
+<div class="footerGlow"></div>
+
 <div class="footerBrand">
 
-Bradley Hobbs, Author
+Bradley Hobbs
 
 </div>
 
-<p>
+<div class="footerTag">
 
-Designed with creativity, storytelling, and purpose.
+Author • Storyteller • Creator
+
+</div>
+
+<p class="footerDescription">
+
+Designed with creativity, storytelling, faith, and purpose.
+
+Stories centered on healing, restoration, grace, and hope.
 
 </p>
 
 <div class="footerLinks">
 
 <a
-href="https://brad-hobbswd.github.io/brad-hobbs/">
+href="https://brad-hobbswd.github.io/brad-hobbswd/">
 
-Visit Brad Hobbs Web Design
+Web Design
 
 </a>
 
 <a
 href="https://www.facebook.com/profile.php?id=61580865290507">
 
-Follow on Facebook
+Facebook
+
+</a>
+
+<a
+href="about.html">
+
+About
 
 </a>
 
 </div>
 
+<div class="footerQuote">
 
-<p>
+"Grace often begins writing beautiful stories in places others stopped looking."
+
+</div>
+
+<div class="footerCopyright">
 
 © <span id="year"></span>
 
 Bradley Hobbs
 
-</p>
+</div>
 
 </div>
 
