@@ -251,6 +251,94 @@ box-shadow:
 
 }
 
+.new-release-card{
+
+position:relative;
+
+border:1px solid rgba(198,167,104,.45);
+
+background:
+linear-gradient(
+135deg,
+#fffdf9,
+#fff8ee
+);
+
+box-shadow:
+0 0 20px rgba(198,167,104,.18),
+0 0 40px rgba(198,167,104,.12);
+
+animation:newReleaseCardGlow 3s ease-in-out infinite;
+
+}
+
+.new-release-card:before{
+
+content:"NEW";
+
+position:absolute;
+
+top:15px;
+
+right:15px;
+
+padding:5px 10px;
+
+border-radius:999px;
+
+background:var(--gold);
+
+color:white;
+
+font-size:.65rem;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+box-shadow:
+0 0 12px rgba(198,167,104,.6);
+
+}
+
+.new-release-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 30px rgba(198,167,104,.35),
+0 0 60px rgba(198,167,104,.18);
+
+}
+
+@keyframes newReleaseCardGlow{
+
+0%{
+
+box-shadow:
+0 0 15px rgba(198,167,104,.15),
+0 0 30px rgba(198,167,104,.08);
+
+}
+
+50%{
+
+box-shadow:
+0 0 28px rgba(198,167,104,.3),
+0 0 55px rgba(198,167,104,.15);
+
+}
+
+100%{
+
+box-shadow:
+0 0 15px rgba(198,167,104,.15),
+0 0 30px rgba(198,167,104,.08);
+
+}
+
+}
+
 
 .card h3{
 
@@ -892,7 +980,7 @@ Stories, devotionals, memoirs, healing journeys, and faith centered writing expe
 
 <div class="grid">
     
-<div class="card">
+<div class="card new-release-card">
 
 <h3>
 Fear Before Fear: Understanding How Fear Begins Before We Feel It
