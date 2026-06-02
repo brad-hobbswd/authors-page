@@ -606,7 +606,27 @@ opacity:.7;
 
 
 
-/* FEATURED BOOK */
+/* FEATURED BOOKS */
+
+.featured-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(450px,1fr)
+);
+
+gap:25px;
+
+max-width:1150px;
+
+margin:auto;
+
+padding:0 20px;
+
+}
 
 .featured-book{
 
@@ -624,12 +644,12 @@ rgba(246,236,222,.95)
 border:
 1px solid rgba(198,167,104,.22);
 
-border-radius:38px;
+border-radius:28px;
 
-padding:48px;
+padding:30px;
 
 box-shadow:
-0 18px 45px rgba(0,0,0,.06);
+0 12px 30px rgba(0,0,0,.05);
 
 }
 
@@ -640,13 +660,13 @@ position:absolute;
 top:-120px;
 right:-120px;
 
-width:320px;
-height:320px;
+width:260px;
+height:260px;
 
 border-radius:50%;
 
 background:
-rgba(198,167,104,.10);
+rgba(198,167,104,.08);
 
 filter:blur(50px);
 
@@ -670,7 +690,7 @@ text-transform:uppercase;
 
 color:#8a4f5c;
 
-margin-bottom:24px;
+margin-bottom:18px;
 
 }
 
@@ -683,9 +703,9 @@ z-index:2;
 display:grid;
 
 grid-template-columns:
-1.1fr .75fr;
+1fr 260px;
 
-gap:45px;
+gap:30px;
 
 align-items:center;
 
@@ -694,11 +714,11 @@ align-items:center;
 .featured-text h2{
 
 font-size:
-clamp(3rem,5vw,4.6rem);
+clamp(2rem,3vw,3rem);
 
-line-height:.92;
+line-height:1;
 
-margin-bottom:24px;
+margin-bottom:18px;
 
 color:#1f2a33;
 
@@ -706,30 +726,27 @@ color:#1f2a33;
 
 .featured-text p{
 
-font-size:1rem;
+font-size:.95rem;
 
-line-height:1.95;
+line-height:1.75;
 
 color:#6b6b6b;
 
-margin-bottom:22px;
-
-max-width:650px;
+margin-bottom:16px;
 
 }
 
 .featured-quote{
 
-font-size:1.1rem;
+font-size:1rem;
 
-line-height:1.8;
+line-height:1.7;
 
 font-style:italic;
 
 color:#8a4f5c;
 
-margin:
-30px 0;
+margin:20px 0;
 
 }
 
@@ -742,7 +759,7 @@ align-items:center;
 justify-content:center;
 
 padding:
-15px 30px;
+14px 28px;
 
 border-radius:999px;
 
@@ -752,12 +769,12 @@ color:white;
 
 text-decoration:none;
 
-font-size:.92rem;
+font-size:.9rem;
 
 font-weight:700;
 
 box-shadow:
-0 12px 24px rgba(138,79,92,.24);
+0 10px 20px rgba(138,79,92,.22);
 
 transition:.3s ease;
 
@@ -782,12 +799,12 @@ justify-content:center;
 
 width:100%;
 
-max-width:340px;
+max-width:260px;
 
-border-radius:28px;
+border-radius:20px;
 
 box-shadow:
-0 20px 45px rgba(0,0,0,.12);
+0 15px 35px rgba(0,0,0,.12);
 
 border:
 1px solid rgba(0,0,0,.06);
@@ -795,6 +812,12 @@ border:
 }
 
 @media(max-width:980px){
+
+.featured-grid{
+
+grid-template-columns:1fr;
+
+}
 
 .featured-content{
 
@@ -814,18 +837,6 @@ margin-right:auto;
 .featured-cover{
 
 margin-top:10px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.footerLinks{
-
-flex-direction:column;
-
-align-items:center;
 
 }
 
@@ -861,7 +872,7 @@ alt="About Banner">
 
 <section class="section">
 
-<div class="grid">
+<div class="featured-grid">
 
 <div class="featured-book">
 
@@ -973,6 +984,7 @@ alt="A Love Older Than Fear">
 </div>
 
 </div>
+
 </section>
 
 
