@@ -424,11 +424,6 @@ padding:30px;
 cursor:pointer;
 width:100%;
 
-}
-
-.collection-header{
-
-min-height:180px;
 
 }
 
@@ -449,10 +444,7 @@ line-height:1.2;
 .collection-header p{
 
 margin:0;
-
 line-height:1.5;
-
-min-height:48px;
 
 }
 
