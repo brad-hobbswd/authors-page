@@ -424,6 +424,36 @@ cursor:pointer;
 
 }
 
+.collection-header{
+
+min-height:180px;
+
+}
+
+.collection-header > div{
+
+flex:1;
+
+}
+
+.collection-header h3{
+
+margin:0 0 12px 0;
+
+line-height:1.2;
+
+}
+
+.collection-header p{
+
+margin:0;
+
+line-height:1.5;
+
+min-height:48px;
+
+}
+
 .collection-content{
 
 display:none;
@@ -963,7 +993,6 @@ box-shadow:
 
 }
 
-}
 
 .support-section h2{
 
