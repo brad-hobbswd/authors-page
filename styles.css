@@ -909,11 +909,16 @@ border-bottom:
 
 .new-release-grid{
 
-display:flex;
+display:grid;
 
-flex-wrap:wrap;
-
-justify-content:center;
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(
+320px,
+1fr
+)
+);
 
 gap:20px;
 
@@ -921,15 +926,15 @@ gap:20px;
 
 .new-release-grid .card{
 
-width:320px;
+width:auto;
 
 }
 
 .support-section{
 
-max-width:900px;
+max-width:1150px;
 
-margin:0 auto 80px;
+margin:0 auto;
 
 padding:50px 40px;
 
@@ -955,6 +960,8 @@ box-shadow:
 0,
 .05
 );
+
+}
 
 }
 
