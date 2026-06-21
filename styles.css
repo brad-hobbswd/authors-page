@@ -401,6 +401,7 @@ margin:0 0 24px 0;
 max-width:1150px;
 margin-left:auto;
 margin-right:auto;
+width:100%;
 
 background:#fffaf5;
 border:1px solid #eadfce;
@@ -421,6 +422,7 @@ align-items:center;
 padding:30px;
 
 cursor:pointer;
+width:100%;
 
 }
 
@@ -430,7 +432,7 @@ min-height:180px;
 
 }
 
-.collection-header > div{
+.collection-header > div:first-child{
 
 flex:1;
 
