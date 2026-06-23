@@ -123,8 +123,7 @@ border-radius:28px;
 
 padding:28px;
 
-border:
-1px solid #eadfce;
+border:1px solid #eadfce;
 
 box-shadow:
 0 8px 18px rgba(
@@ -136,7 +135,11 @@ box-shadow:
 
 position:relative;
 
-margin-bottom:14px;
+overflow:hidden; /* add this */
+
+margin:0 auto 18px;
+
+max-width:900px;
 
 }
 
@@ -146,18 +149,15 @@ content:"";
 
 position:absolute;
 
-left:0;
-
 top:0;
+bottom:0;
+left:0;
 
 width:6px;
 
-height:100%;
-
 background:var(--gold);
 
-border-radius:
-28px 0 0 28px;
+border-radius:0; /* remove radius */
 
 }
 
