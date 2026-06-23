@@ -315,11 +315,22 @@ border-top:
 
 .footerBrand{
 
-font-size:2rem;
+font-family:
+"Cinzel",
+serif;
 
-font-weight:bold;
+font-size:
+clamp(
+2rem,
+5vw,
+2.8rem
+);
+
+font-weight:700;
 
 margin-bottom:8px;
+
+color:var(--navy);
 
 }
 
@@ -394,5 +405,128 @@ margin-bottom:10px;
 .footerCopyright{
 
 color:var(--soft);
+
+}
+
+/* Smooth Card Animations */
+
+.card,
+.storyCard{
+
+transition:
+transform .3s ease,
+box-shadow .3s ease;
+
+}
+
+.card:hover,
+.storyCard:hover{
+
+transform:
+translateY(-4px);
+
+box-shadow:
+0 14px 28px rgba(
+0,
+0,
+0,
+.08
+);
+
+}
+
+/* Better Story Section */
+
+.storyCard{
+
+max-width:900px;
+
+margin:
+0 auto
+18px;
+
+}
+
+.storyCard h2{
+
+font-size:
+clamp(
+1.8rem,
+4vw,
+2.5rem
+);
+
+line-height:1.2;
+
+}
+
+.storyCard p{
+
+font-size:1.05rem;
+
+}
+
+/* Improve Card Icons */
+
+.icon{
+
+font-size:2.3rem;
+
+margin-bottom:12px;
+
+}
+
+/* Footer Links Hover */
+
+.footerLinks a{
+
+transition:
+all .3s ease;
+
+}
+
+.footerLinks a:hover{
+
+transform:
+translateY(-2px);
+
+background:
+var(--gold);
+
+color:white;
+
+border-color:
+var(--gold);
+
+}
+
+/* Quote Enhancement */
+
+.quote{
+
+box-shadow:
+0 8px 20px rgba(
+0,
+0,
+0,
+.04
+);
+
+}
+
+.quote p{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+/* Banner Refinement */
+
+.aboutBanner img{
+
+border-radius:
+0 0 20px 20px;
 
 }
