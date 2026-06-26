@@ -1796,3 +1796,59 @@ margin-top:10px;
 }
 
 }
+
+/* ===========================
+   SEO CONTENT
+=========================== */
+
+.seo-intro{
+
+font-size:1.15rem;
+
+line-height:1.9;
+
+margin-bottom:28px;
+
+color:#374151;
+
+}
+
+.featured-book-image{
+
+margin:35px auto;
+
+text-align:center;
+
+max-width:900px;
+
+}
+
+.featured-book-image img{
+
+width:100%;
+
+display:block;
+
+border-radius:24px;
+
+}
+
+.featured-book-image figcaption{
+
+margin-top:18px;
+
+font-size:.96rem;
+
+line-height:1.7;
+
+color:#6b7280;
+
+font-style:italic;
+
+max-width:760px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
