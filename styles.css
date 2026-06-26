@@ -604,17 +604,44 @@ opacity:.9;
 
 .new-release{
 
-background:linear-gradient(
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:14px 28px;
+
+border-radius:999px;
+
+background:
+
+linear-gradient(
 135deg,
-#d8bc7f,
-#c6a768
+var(--gold),
+#b38f46
 );
 
-box-shadow:
-0 0 12px rgba(198,167,104,.7),
-0 0 25px rgba(198,167,104,.5);
+color:white;
 
-animation:newReleaseGlow 2.5s ease-in-out infinite;
+font-weight:700;
+
+text-decoration:none;
+
+box-shadow:
+0 10px 24px rgba(198,167,104,.30);
+
+transition:.35s;
+
+}
+
+.new-release:hover{
+
+transform:
+translateY(-4px);
+
+box-shadow:
+0 20px 38px rgba(198,167,104,.45);
 
 }
 
@@ -1482,37 +1509,149 @@ width:260px;
 }
 }
 
+/* ===========================
+   NEW RELEASES
+=========================== */
+
 .new-releases{
 
 background:
+
 linear-gradient(
 180deg,
-rgba(255,255,255,.55),
-rgba(255,250,245,.85)
+#fffefc,
+#f8f1e7
 );
 
-border-top:
-1px solid rgba(198,167,104,.15);
+border-radius:38px;
 
-border-bottom:
-1px solid rgba(198,167,104,.15);
+padding:80px 50px;
+
+box-shadow:
+0 18px 45px rgba(0,0,0,.06);
+
+position:relative;
+
+overflow:hidden;
 
 }
 
-.new-release-grid{
+.new-releases::before{
 
-display:grid;
+content:"";
 
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(
-320px,
-1fr
-)
+position:absolute;
+
+top:0;
+left:0;
+right:0;
+
+height:6px;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+var(--gold),
+transparent
 );
 
-gap:20px;
+}
+
+.new-release-card{
+
+position:relative;
+
+padding:34px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+180deg,
+#ffffff,
+#fffaf2
+);
+
+border:1px solid rgba(198,167,104,.22);
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.06);
+
+transition:
+transform .35s ease,
+box-shadow .35s ease;
+
+}
+
+.new-release-card:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 28px 60px rgba(0,0,0,.12);
+
+}
+
+.new-release-card::before{
+
+content:"NEW";
+
+position:absolute;
+
+top:20px;
+
+right:-38px;
+
+width:140px;
+
+text-align:center;
+
+padding:6px 0;
+
+background:var(--gold);
+
+color:white;
+
+font-size:.7rem;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+transform:rotate(45deg);
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.18);
+
+}
+
+.new-release-card h3{
+
+font-size:1.55rem;
+
+line-height:1.4;
+
+margin-bottom:18px;
+
+color:var(--navy);
+
+}
+
+.new-release-card p{
+
+font-size:1rem;
+
+line-height:1.9;
+
+margin-bottom:25px;
+
+color:var(--soft);
 
 }
 
