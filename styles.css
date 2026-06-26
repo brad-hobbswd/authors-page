@@ -990,25 +990,6 @@ color:white;
 
 }
 
-.footerQuote{
-
-position:relative;
-
-max-width:700px;
-
-margin:auto;
-
-font-style:italic;
-
-font-size:1.1rem;
-
-color:var(--gold);
-
-margin-bottom:30px;
-
-line-height:1.7;
-
-}
 
 .footerCopyright{
 
