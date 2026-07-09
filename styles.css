@@ -2022,3 +2022,11 @@ color:var(--soft);
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
+.series-banner{
+    display:block;
+    width:100%;
+    margin:2.5rem auto;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+}
