@@ -2018,24 +2018,19 @@ line-height:1.9;
 
 .series-banner{
 
-display:block;
+    display:block;
 
-width:100%;
+    width:100%;
 
-max-width:1100px;
+    max-width:100%;
 
-margin:2.5rem auto;
+    height:auto;
 
-border-radius:24px;
+    margin:2rem auto;
 
-overflow:hidden;
+    border-radius:24px;
 
-border:1px solid rgba(198,167,104,.18);
-
-box-shadow:
-0 25px 60px rgba(0,0,0,.15);
-
-transition:.35s ease;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
 
 }
 
