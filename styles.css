@@ -3540,6 +3540,15 @@ h3 {
         gap: 14px;
 
     }
+     .author-banner img {
+
+        width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+
+    }
 
 }
 
