@@ -1,6 +1,6 @@
-# Bradley Hobbs | Official Author Website
-Welcome to the official author website of **Bradley Hobbs**, a Christian author, teacher, and storyteller dedicated to creating books that encourage spiritual growth, healing, redemption, and a deeper relationship with Jesus Christ.
-This website serves as the central hub for Bradley Hobbs' growing collection of Christian books, Bible studies, devotionals, memoirs, inspirational fiction, Apostolic studies, ministry resources, and creative projects.
+# Brad Hobbs | Official Author Website
+Welcome to the official author website of **Brad Hobbs**, a Christian author, teacher, and storyteller dedicated to creating books that encourage spiritual growth, healing, redemption, and a deeper relationship with Jesus Christ.
+This website serves as the central hub for Brad Hobbs' growing collection of Christian books, Bible studies, devotionals, memoirs, inspirational fiction, Apostolic studies, ministry resources, and creative projects.
 ## Visit the Website
 **Live Website**
 https://brad-hobbswd.github.io/authors-page/
@@ -76,8 +76,8 @@ Readers will discover books exploring subjects such as:
 * Responsive Web Design
 * Search Engine Optimization (SEO)
 ---
-# About Bradley Hobbs
-Bradley Hobbs is a Christian author, teacher, and web designer whose writing centers on the transforming power of Jesus Christ. His books combine biblical truth with authentic storytelling, encouraging readers to pursue healing, spiritual maturity, and a deeper understanding of God's grace.
+# About Brad Hobbs
+Brad Hobbs is a Christian author, teacher, and web designer whose writing centers on the transforming power of Jesus Christ. His books combine biblical truth with authentic storytelling, encouraging readers to pursue healing, spiritual maturity, and a deeper understanding of God's grace.
 His growing collection includes Christian nonfiction, Christian fiction, Bible studies, devotionals, memoirs, and ministry resources designed to point readers back to Scripture and the heart of Christ.
 ---
 # Connect
@@ -86,4 +86,4 @@ https://brad-hobbswd.github.io/authors-page/
 💻 Web Design Portfolio
 https://brad-hobbswd.github.io/brad-hobbswd/
 ---
-© 2026 Bradley Hobbs. All Rights Reserved.
+© 2026 Brad Hobbs. All Rights Reserved.
