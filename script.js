@@ -13,21 +13,30 @@
    • Current year
    • Library search
    • Library category filtering
+   • Combined search + category filtering
    • Collection visibility
    • Accessible navigation states
    • Smooth internal navigation
+   • External link handling
+   • Image error handling
 ========================================================= */
 
+
 document.addEventListener("DOMContentLoaded", () => {
+
 
     /* =====================================================
        01. CURRENT YEAR
     ===================================================== */
 
-    const yearElements = document.querySelectorAll("#year");
+    const yearElements =
+        document.querySelectorAll("#year");
 
     yearElements.forEach((element) => {
-        element.textContent = new Date().getFullYear();
+
+        element.textContent =
+            new Date().getFullYear();
+
     });
 
 
@@ -35,25 +44,35 @@ document.addEventListener("DOMContentLoaded", () => {
        02. MOBILE NAVIGATION
     ===================================================== */
 
-    const navToggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    const navToggle =
+        document.querySelector(".nav-toggle");
+
+    const navLinks =
+        document.querySelector(".nav-links");
+
 
     if (navToggle && navLinks) {
+
 
         navToggle.addEventListener("click", () => {
 
             const isOpen =
-                navToggle.getAttribute("aria-expanded") === "true";
+                navToggle.getAttribute(
+                    "aria-expanded"
+                ) === "true";
+
 
             navToggle.setAttribute(
                 "aria-expanded",
                 String(!isOpen)
             );
 
+
             navToggle.classList.toggle(
                 "is-open",
                 !isOpen
             );
+
 
             navLinks.classList.toggle(
                 "is-open",
@@ -63,254 +82,62 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        /* Close navigation after selecting a link */
+        /* -------------------------------------------------
+           Close navigation after selecting a link
+        ------------------------------------------------- */
 
-        navLinks.querySelectorAll("a").forEach((link) => {
+        navLinks
+            .querySelectorAll("a")
+            .forEach((link) => {
 
-            link.addEventListener("click", () => {
+                link.addEventListener(
+                    "click",
+                    () => {
 
-                navToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                navToggle.classList.remove(
-                    "is-open"
-                );
-
-                navLinks.classList.remove(
-                    "is-open"
-                );
-
-            });
-
-        });
-
-
-        /* Close navigation when clicking outside */
-
-        document.addEventListener("click", (event) => {
-
-            if (
-                !navLinks.contains(event.target) &&
-                !navToggle.contains(event.target)
-            ) {
-
-                navToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                navToggle.classList.remove(
-                    "is-open"
-                );
-
-                navLinks.classList.remove(
-                    "is-open"
-                );
-
-            }
-
-        });
-
-
-        /* Close navigation with Escape */
-
-        document.addEventListener("keydown", (event) => {
-
-            if (event.key === "Escape") {
-
-                navToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                navToggle.classList.remove(
-                    "is-open"
-                );
-
-                navLinks.classList.remove(
-                    "is-open"
-                );
-
-                navToggle.focus();
-
-            }
-
-        });
-
-    }
-
-
-    /* =====================================================
-       03. LIBRARY SEARCH
-    ===================================================== */
-
-    const librarySearch =
-        document.querySelector("#librarySearch");
-
-    const libraryCards =
-        document.querySelectorAll(".library-card");
-
-    const libraryCollections =
-        document.querySelectorAll(".library-collection");
-
-    const resultsCount =
-        document.querySelector("#libraryResults");
-
-    const noResults =
-        document.querySelector("#noResults");
-
-
-    if (
-        librarySearch &&
-        libraryCards.length > 0
-    ) {
-
-        const updateLibrary = () => {
-
-            const searchTerm =
-                librarySearch.value
-                    .trim()
-                    .toLowerCase();
-
-            let visibleCards = 0;
-
-
-            libraryCards.forEach((card) => {
-
-                const searchableText =
-                    card.textContent
-                        .toLowerCase();
-
-                const matchesSearch =
-                    searchTerm === "" ||
-                    searchableText.includes(
-                        searchTerm
-                    );
-
-
-                if (matchesSearch) {
-
-                    card.classList.remove(
-                        "library-hidden"
-                    );
-
-                    visibleCards++;
-
-                } else {
-
-                    card.classList.add(
-                        "library-hidden"
-                    );
-
-                }
-
-            });
-
-
-            /*
-             * Show or hide each collection depending
-             * on whether it contains visible books.
-             */
-
-            libraryCollections.forEach(
-                (collection) => {
-
-                    const visibleCollectionCards =
-                        collection.querySelectorAll(
-                            ".library-card:not(.library-hidden)"
+                        navToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
                         );
 
-                    if (
-                        searchTerm !== "" &&
-                        visibleCollectionCards.length === 0
-                    ) {
-
-                        collection.classList.add(
-                            "library-hidden"
+                        navToggle.classList.remove(
+                            "is-open"
                         );
 
-                    } else {
-
-                        collection.classList.remove(
-                            "library-hidden"
+                        navLinks.classList.remove(
+                            "is-open"
                         );
 
                     }
+                );
 
-                }
-            );
-
-
-            /* Results message */
-
-            if (resultsCount) {
-
-                if (searchTerm === "") {
-
-                    resultsCount.textContent =
-                        "Browse the complete library.";
-
-                } else if (visibleCards === 1) {
-
-                    resultsCount.textContent =
-                        "1 book found.";
-
-                } else {
-
-                    resultsCount.textContent =
-                        `${visibleCards} books found.`;
-
-                }
-
-            }
+            });
 
 
-            /* No-results message */
+        /* -------------------------------------------------
+           Close navigation when clicking outside
+        ------------------------------------------------- */
 
-            if (noResults) {
-
-                if (
-                    searchTerm !== "" &&
-                    visibleCards === 0
-                ) {
-
-                    noResults.hidden = false;
-
-                } else {
-
-                    noResults.hidden = true;
-
-                }
-
-            }
-
-        };
-
-
-        librarySearch.addEventListener(
-            "input",
-            updateLibrary
-        );
-
-
-        /*
-         * Allow Escape to clear the search.
-         */
-
-        librarySearch.addEventListener(
-            "keydown",
+        document.addEventListener(
+            "click",
             (event) => {
 
                 if (
-                    event.key === "Escape" &&
-                    librarySearch.value !== ""
+                    !navLinks.contains(event.target) &&
+                    !navToggle.contains(event.target)
                 ) {
 
-                    librarySearch.value = "";
+                    navToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
-                    updateLibrary();
+                    navToggle.classList.remove(
+                        "is-open"
+                    );
+
+                    navLinks.classList.remove(
+                        "is-open"
+                    );
 
                 }
 
@@ -318,14 +145,62 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        updateLibrary();
+        /* -------------------------------------------------
+           Close navigation with Escape
+        ------------------------------------------------- */
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Escape") {
+
+                    navToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    navToggle.classList.remove(
+                        "is-open"
+                    );
+
+                    navLinks.classList.remove(
+                        "is-open"
+                    );
+
+                    navToggle.focus();
+
+                }
+
+            }
+        );
 
     }
 
 
     /* =====================================================
-       04. LIBRARY CATEGORY FILTERS
+       03. LIBRARY ELEMENTS
     ===================================================== */
+
+    const librarySearch =
+        document.querySelector("#library-search");
+
+
+    const libraryCards =
+        document.querySelectorAll(
+            ".library-card"
+        );
+
+
+    const libraryCollections =
+        document.querySelectorAll(
+            ".library-collection"
+        );
+
+
+    const resultsCount =
+        document.querySelector("#library-count");
+
 
     const filterButtons =
         document.querySelectorAll(
@@ -333,250 +208,161 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    if (
-        filterButtons.length > 0 &&
-        libraryCards.length > 0
-    ) {
-
-        filterButtons.forEach((button) => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    const selectedCategory =
-                        button.dataset.category;
+    /*
+     * The library page uses:
+     *
+     * #library-search
+     * #library-count
+     * .filter-button[data-filter]
+     * .library-card[data-category]
+     *
+     * Everything below is designed around those
+     * exact elements.
+     */
 
 
-                    /*
-                     * Update active button
-                     */
-
-                    filterButtons.forEach(
-                        (filter) => {
-
-                            filter.classList.remove(
-                                "active"
-                            );
-
-                            filter.setAttribute(
-                                "aria-pressed",
-                                "false"
-                            );
-
-                        }
-                    );
-
-
-                    button.classList.add(
-                        "active"
-                    );
-
-                    button.setAttribute(
-                        "aria-pressed",
-                        "true"
-                    );
-
-
-                    /*
-                     * Filter cards
-                     */
-
-                    let visibleCards = 0;
-
-
-                    libraryCards.forEach(
-                        (card) => {
-
-                            const cardCategory =
-                                card.dataset.category;
-
-
-                            const matchesCategory =
-                                selectedCategory === "all" ||
-                                cardCategory === selectedCategory;
-
-
-                            if (
-                                matchesCategory
-                            ) {
-
-                                card.classList.remove(
-                                    "library-hidden"
-                                );
-
-                                visibleCards++;
-
-                            } else {
-
-                                card.classList.add(
-                                    "library-hidden"
-                                );
-
-                            }
-
-                        }
-                    );
-
-
-                    /*
-                     * Hide collections that have
-                     * no matching books.
-                     */
-
-                    libraryCollections.forEach(
-                        (collection) => {
-
-                            const matchingCards =
-                                collection.querySelectorAll(
-                                    `.library-card[data-category="${selectedCategory}"]:not(.library-hidden)`
-                                );
-
-
-                            if (
-                                selectedCategory !== "all" &&
-                                matchingCards.length === 0
-                            ) {
-
-                                collection.classList.add(
-                                    "library-hidden"
-                                );
-
-                            } else {
-
-                                collection.classList.remove(
-                                    "library-hidden"
-                                );
-
-                            }
-
-                        }
-                    );
-
-
-                    /*
-                     * Update result count.
-                     */
-
-                    if (resultsCount) {
-
-                        if (
-                            selectedCategory === "all"
-                        ) {
-
-                            resultsCount.textContent =
-                                "Browse the complete library.";
-
-                        } else if (
-                            visibleCards === 1
-                        ) {
-
-                            resultsCount.textContent =
-                                "1 book found in this category.";
-
-                        } else {
-
-                            resultsCount.textContent =
-                                `${visibleCards} books found in this category.`;
-
-                        }
-
-                    }
-
-
-                    /*
-                     * Reset no-results state.
-                     */
-
-                    if (noResults) {
-
-                        noResults.hidden =
-                            visibleCards !== 0;
-
-                    }
-
-
-                    /*
-                     * Clear search when selecting
-                     * a category.
-                     */
-
-                    if (librarySearch) {
-
-                        librarySearch.value = "";
-
-                    }
-
-                }
-            );
-
-        });
-
-    }
+    let activeCategory = "all";
 
 
     /* =====================================================
-       05. COMBINED SEARCH + CATEGORY FILTER
+       04. LIBRARY SEARCH HELPERS
     ===================================================== */
 
-    /*
-     * If your library contains both a search field
-     * and category filters, this function allows them
-     * to work together.
-     */
+    const normalizeText = (value) => {
 
-    const applyLibraryFilters = () => {
+        return (value || "")
+            .toLowerCase()
+            .replace(/\s+/g, " ")
+            .trim();
 
-        if (libraryCards.length === 0) {
-            return;
+    };
+
+
+    /* -----------------------------------------------------
+       Determine whether a card belongs to a category
+    ----------------------------------------------------- */
+
+    const matchesCategory = (card) => {
+
+        if (activeCategory === "all") {
+
+            return true;
+
         }
+
+
+        const categories =
+            normalizeText(
+                card.dataset.category
+            )
+            .split(/\s+/)
+            .filter(Boolean);
+
+
+        return categories.includes(
+            activeCategory
+        );
+
+    };
+
+
+    /* -----------------------------------------------------
+       Determine whether a card matches the search
+    ----------------------------------------------------- */
+
+    const matchesSearch = (
+        card,
+        searchTerm
+    ) => {
+
+        if (!searchTerm) {
+
+            return true;
+
+        }
+
+
+        /*
+         * Search the complete card.
+         *
+         * This means the visitor can search:
+         *
+         * • title
+         * • description
+         * • book type
+         * • category wording
+         * • any other visible text
+         */
+
+        const searchableText =
+            normalizeText(
+                card.textContent
+            );
+
+
+        /*
+         * Split multiple search words.
+         *
+         * Example:
+         *
+         * "church healing"
+         *
+         * requires both words to appear.
+         */
+
+        const words =
+            normalizeText(searchTerm)
+                .split(/\s+/)
+                .filter(Boolean);
+
+
+        return words.every(
+            (word) =>
+                searchableText.includes(word)
+        );
+
+    };
+
+
+    /* =====================================================
+       05. UPDATE LIBRARY
+    ===================================================== */
+
+    const updateLibrary = () => {
 
 
         const searchTerm =
             librarySearch
-                ? librarySearch.value
-                    .trim()
-                    .toLowerCase()
+                ? normalizeText(
+                    librarySearch.value
+                )
                 : "";
-
-
-        const activeFilter =
-            document.querySelector(
-                ".filter-button.active"
-            );
-
-
-        const selectedCategory =
-            activeFilter
-                ? activeFilter.dataset.category
-                : "all";
 
 
         let visibleCards = 0;
 
 
+        /* -------------------------------------------------
+           Check every book
+        ------------------------------------------------- */
+
         libraryCards.forEach((card) => {
 
-            const cardText =
-                card.textContent.toLowerCase();
 
-            const cardCategory =
-                card.dataset.category || "";
-
-
-            const matchesSearch =
-                searchTerm === "" ||
-                cardText.includes(searchTerm);
+            const searchMatch =
+                matchesSearch(
+                    card,
+                    searchTerm
+                );
 
 
-            const matchesCategory =
-                selectedCategory === "all" ||
-                cardCategory === selectedCategory;
+            const categoryMatch =
+                matchesCategory(card);
 
 
             const shouldShow =
-                matchesSearch &&
-                matchesCategory;
+                searchMatch &&
+                categoryMatch;
 
 
             if (shouldShow) {
@@ -586,6 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
                 visibleCards++;
+
 
             } else {
 
@@ -598,12 +385,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        /*
-         * Update collection visibility.
-         */
+        /* -------------------------------------------------
+           Hide empty collections
+        ------------------------------------------------- */
 
         libraryCollections.forEach(
             (collection) => {
+
 
                 const visibleCardsInCollection =
                     collection.querySelectorAll(
@@ -619,6 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         "library-hidden"
                     );
 
+
                 } else {
 
                     collection.classList.remove(
@@ -631,19 +420,21 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        /*
-         * Update results.
-         */
+        /* -------------------------------------------------
+           Update result count
+        ------------------------------------------------- */
 
         if (resultsCount) {
 
+
             if (
                 searchTerm === "" &&
-                selectedCategory === "all"
+                activeCategory === "all"
             ) {
 
                 resultsCount.textContent =
-                    "Browse the complete library.";
+                    "Showing all books.";
+
 
             } else if (
                 visibleCards === 1
@@ -651,6 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 resultsCount.textContent =
                     "1 book found.";
+
 
             } else {
 
@@ -662,39 +454,185 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /*
-         * No results.
-         */
+        /* -------------------------------------------------
+           No results message
+        ------------------------------------------------- */
 
-        if (noResults) {
+        let noResults =
+            document.querySelector(
+                "#noResults"
+            );
 
-            noResults.hidden =
-                visibleCards !== 0;
+
+        if (!noResults) {
+
+
+            noResults =
+                document.createElement("p");
+
+
+            noResults.id =
+                "noResults";
+
+
+            noResults.className =
+                "library-no-results";
+
+
+            noResults.setAttribute(
+                "role",
+                "status"
+            );
+
+
+            noResults.textContent =
+                "No books found. Try another title, subject, or description.";
+
+
+            const controlsSection =
+                document.querySelector(
+                    ".library-controls-section"
+                );
+
+
+            if (controlsSection) {
+
+                controlsSection.appendChild(
+                    noResults
+                );
+
+            }
 
         }
+
+
+        noResults.hidden =
+            visibleCards !== 0;
 
     };
 
 
+    /* =====================================================
+       06. SEARCH EVENTS
+    ===================================================== */
+
     if (librarySearch) {
+
 
         librarySearch.addEventListener(
             "input",
-            applyLibraryFilters
+            updateLibrary
+        );
+
+
+        /*
+         * Escape clears the search.
+         */
+
+        librarySearch.addEventListener(
+            "keydown",
+            (event) => {
+
+
+                if (
+                    event.key === "Escape" &&
+                    librarySearch.value !== ""
+                ) {
+
+                    librarySearch.value =
+                        "";
+
+
+                    updateLibrary();
+
+                }
+
+            }
         );
 
     }
 
 
+    /* =====================================================
+       07. CATEGORY FILTER BUTTONS
+    ===================================================== */
+
     filterButtons.forEach((button) => {
+
+
+        /*
+         * Make sure the accessibility state exists.
+         */
+
+        button.setAttribute(
+            "aria-pressed",
+            button.classList.contains("active")
+                ? "true"
+                : "false"
+        );
+
 
         button.addEventListener(
             "click",
             () => {
 
-                requestAnimationFrame(
-                    applyLibraryFilters
+
+                /*
+                 * IMPORTANT:
+                 *
+                 * library.html uses:
+                 *
+                 * data-filter="healing"
+                 *
+                 * not:
+                 *
+                 * data-category="healing"
+                 */
+
+                activeCategory =
+                    normalizeText(
+                        button.dataset.filter ||
+                        "all"
+                    );
+
+
+                /* -----------------------------------------
+                   Update active button
+                ----------------------------------------- */
+
+                filterButtons.forEach(
+                    (filter) => {
+
+
+                        const isActive =
+                            filter === button;
+
+
+                        filter.classList.toggle(
+                            "active",
+                            isActive
+                        );
+
+
+                        filter.setAttribute(
+                            "aria-pressed",
+                            isActive
+                                ? "true"
+                                : "false"
+                        );
+
+                    }
                 );
+
+
+                /*
+                 * Do NOT clear the search.
+                 *
+                 * Search and category filters are allowed
+                 * to work together.
+                 */
+
+                updateLibrary();
 
             }
         );
@@ -703,7 +641,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       06. SMOOTH INTERNAL LINKS
+       08. INITIAL LIBRARY STATE
+    ===================================================== */
+
+    if (libraryCards.length > 0) {
+
+        updateLibrary();
+
+    }
+
+
+    /* =====================================================
+       09. SMOOTH INTERNAL LINKS
     ===================================================== */
 
     document
@@ -712,12 +661,16 @@ document.addEventListener("DOMContentLoaded", () => {
         )
         .forEach((link) => {
 
+
             link.addEventListener(
                 "click",
                 (event) => {
 
+
                     const targetID =
-                        link.getAttribute("href");
+                        link.getAttribute(
+                            "href"
+                        );
 
 
                     if (
@@ -753,7 +706,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                     /*
-                     * Update URL without jumping.
+                     * Update URL without causing
+                     * another page jump.
                      */
 
                     history.pushState(
@@ -769,7 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       07. EXTERNAL LINKS
+       10. EXTERNAL LINKS
     ===================================================== */
 
     document
@@ -777,6 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
             'a[target="_blank"]'
         )
         .forEach((link) => {
+
 
             if (
                 !link.hasAttribute("rel")
@@ -793,12 +748,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       08. IMAGE ERROR HANDLING
+       11. IMAGE ERROR HANDLING
     ===================================================== */
 
     document
         .querySelectorAll("img")
         .forEach((image) => {
+
 
             image.addEventListener(
                 "error",
@@ -815,11 +771,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       09. PAGE READY
+       12. PAGE READY
     ===================================================== */
 
     document.documentElement.classList.add(
         "js-ready"
     );
+
 
 });
