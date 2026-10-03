@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brad-hobbs.github.io/authors-page/sitemap.xml
