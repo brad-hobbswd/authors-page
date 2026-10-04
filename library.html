@@ -119,6 +119,44 @@
     .filter-buttons .filter-button{min-height:34px;padding:6px 10px;}
     .library-results{display:none;}
 }
+
+.library-card.has-cover .library-text-banner{
+    background:linear-gradient(135deg,#101b2b 0%,#273a52 55%,#b69a63 100%);
+    color:#fff;
+    padding:28px 34px;
+    box-sizing:border-box;
+    text-align:left;
+}
+.library-text-banner .banner-copy{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+.library-text-banner .banner-copy span{
+    font-size:.68rem;
+    letter-spacing:.16em;
+    font-weight:700;
+    opacity:.78;
+}
+.library-text-banner .banner-copy strong{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1.45rem,2.8vw,2.35rem);
+    line-height:1.05;
+}
+.library-text-banner .banner-copy em{
+    font-style:normal;
+    font-size:.82rem;
+    line-height:1.35;
+    opacity:.9;
+    max-width:720px;
+}
+@media(max-width:700px){
+    .library-card.has-cover .library-text-banner{padding:20px 22px;}
+    .library-text-banner .banner-copy strong{font-size:1.35rem;}
+    .library-text-banner .banner-copy em{font-size:.74rem;}
+}
+
 </style>
 </head>
 <body>
@@ -704,14 +742,13 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article
-                    class="library-card"
+                <article class="library-card has-cover"
                     data-title="Who Made You Judge"
                     data-category="series">
                     <div class="book-number">
                         01
                     </div>
-                    <div class="library-card-content">
+                    <div class="library-cover library-text-banner judge-banner"><div class="banner-copy"><span>BIBLICAL STUDY</span><strong>Who Made You Judge?</strong><em>A biblical examination of judgment, grace, mercy, and the heart of the believer.</em></div></div><div class="library-cover library-text-banner fragments-banner"><div class="banner-copy"><span>CHRISTIAN FICTION</span><strong>Fragments of Grace</strong><em>Broken seasons. Quiet healing. Mercy. Restoration. Grace.</em></div></div><div class="library-cover library-text-banner fear-banner"><div class="banner-copy"><span>FAITH & COURAGE</span><strong>Fear Is Not Your Voice</strong><em>Replace fear with faith, truth, confidence, courage, and the steady voice of Jesus Christ.</em></div></div><div class="library-cover"><img src="https://brad-hobbswd.github.io/the-substitute/bookbannersubstitute.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">
                             THE WHO SERIES
                         </span>
@@ -732,14 +769,13 @@
                         </a>
                     </div>
                 </article>
-                <article
-                    class="library-card"
+                <article class="library-card has-cover"
                     data-title="Who Gave You Authority"
                     data-category="series">
                     <div class="book-number">
                         02
                     </div>
-                    <div class="library-card-content">
+                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/the-sub-2/51EDB7AA-9196-4D71-A718-CE3301651819.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">
                             THE WHO SERIES
                         </span>
@@ -760,14 +796,13 @@
                         </a>
                     </div>
                 </article>
-                <article
-                    class="library-card"
+                <article class="library-card has-cover"
                     data-title="Who Do You Call Savior"
                     data-category="series">
                     <div class="book-number">
                         03
                     </div>
-                    <div class="library-card-content">
+                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/the-sub-3/947084B7-096F-46A3-A29F-6A85FA190FB6.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">
                             THE WHO SERIES
                         </span>
@@ -1709,7 +1744,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card"
+                <article class="library-card has-cover"
                     data-title="Fear Is Not Your Voice"
                     data-category="fear">
                     <div class="library-card-content">
