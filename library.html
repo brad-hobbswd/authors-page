@@ -63,16 +63,13 @@
 </script>
 
 <style id="library-book-covers">
+/* Compact library cards without book covers or banner artwork. */
 .library-grid{align-items:start;}
-.library-card.has-cover{padding:0;overflow:hidden;display:flex;flex-direction:column;height:100%;}
-.library-card.has-cover .library-cover{width:100%;aspect-ratio:3/4;background:#f5f2ec;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.library-card.has-cover .library-cover img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s ease;}
-.library-card.has-cover:hover .library-cover img{transform:scale(1.025);}
-.library-card.has-cover .library-card-content{padding:26px;}
-.library-card.has-cover .library-cover + .library-card-content h3{margin-top:0;}
-@media(max-width:700px){.library-card.has-cover .library-card-content{padding:22px;}}
-
-/* Landscape phone/tablet controls: keep search and filters visible while browsing. */
+.library-card{height:100%;}
+.library-card .library-card-content{padding:24px;}
+@media(max-width:700px){
+    .library-card .library-card-content{padding:20px;}
+}
 @media (orientation:landscape) and (max-height:700px) and (max-width:1100px){
     .library-controls-section{
         position:sticky;
@@ -82,29 +79,21 @@
         border-bottom:1px solid rgba(16,27,43,.16);
         box-shadow:0 3px 12px rgba(16,27,43,.10);
     }
-    .library-controls-section .section-inner{
-        padding-top:10px;
-        padding-bottom:10px;
-    }
+    .library-controls-section .section-inner{padding-top:10px;padding-bottom:10px;}
     .library-controls{
         display:grid;
-        grid-template-columns:minmax(220px, 30%) minmax(0, 1fr);
+        grid-template-columns:minmax(220px,30%) minmax(0,1fr);
         gap:18px;
         align-items:center;
     }
-    .library-search label,
-    .filter-label{
+    .library-search label,.filter-label{
         display:block;
         margin-bottom:5px;
         font-size:.72rem;
         line-height:1.1;
         letter-spacing:.08em;
     }
-    .library-search input{
-        width:100%;
-        min-height:42px;
-        box-sizing:border-box;
-    }
+    .library-search input{width:100%;min-height:42px;box-sizing:border-box;}
     .filter-buttons{
         display:flex;
         flex-wrap:nowrap;
@@ -121,17 +110,10 @@
         min-height:38px;
         padding:8px 12px;
     }
-    .library-results{
-        margin-top:7px;
-        font-size:.8rem;
-    }
+    .library-results{margin-top:7px;font-size:.8rem;}
 }
-
 @media (orientation:landscape) and (max-height:480px) and (max-width:1100px){
-    .library-controls-section .section-inner{
-        padding-top:7px;
-        padding-bottom:7px;
-    }
+    .library-controls-section .section-inner{padding-top:7px;padding-bottom:7px;}
     .library-controls{gap:12px;}
     .library-search input{min-height:38px;}
     .filter-buttons .filter-button{min-height:34px;padding:6px 10px;}
@@ -379,8 +361,8 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover" data-title="Alone at the Altar" data-category="memoir">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/alone-atthe-altar/A3911C62-6D0D-442B-A2B1-F73AFCBD0ECE.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="Alone at the Altar" data-category="memoir">
+                    <div class="library-card-content">
                         <span class="book-type">TRUE STORY • MEMOIR</span>
                         <h3>Alone at the Altar</h3>
                         <p>
@@ -413,10 +395,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The Power of a Holy No"
                     data-category="memoir">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/holy-no/A1AF1547-BF30-4BBD-B77E-3604997AC0FA.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             The Power of a Holy, No!
                         </h3>
@@ -434,10 +416,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="I Am Not Ignoring You I'm Just Overwhelmed"
                     data-category="memoir">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/banneroverwhelmed.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             I Am Not Ignoring You,
                             I'm Just Overwhelmed
@@ -477,10 +459,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="A Love Older Than Fear"
                     data-category="history">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/A-Love-older-ThanFear/F8EEAECA-8E19-4571-8295-E5D1BF1D60A8.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             A Love Older Than Fear
                         </h3>
@@ -514,8 +496,8 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover" data-title="Beneath Everything The Story of Joseph Bennett" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/beneath-everything/assets/images/beneatheverythingjosephbennettbanner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="Beneath Everything The Story of Joseph Bennett" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">JOSEPH BENNETT STORIES</span>
                         <h3>Beneath Everything</h3>
                         <p>
@@ -526,10 +508,10 @@
                         <a href="https://brad-hobbswd.github.io/beneath-everything/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The Price of a Promise"
                     data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/priceOfpromise/F65DB1EF-CB29-446E-A94F-958A3D9ECFE8.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <span class="book-type">JOSEPH BENNETT STORIES</span>
                         <h3>
                             The Price of a Promise
@@ -548,8 +530,8 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover" data-title="The Weight of the Pulpit A Joseph Bennett Story" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/weight-pulpit/images/weightpulpitbanner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="The Weight of the Pulpit A Joseph Bennett Story" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">JOSEPH BENNETT STORIES</span>
                         <h3>The Weight of the Pulpit</h3>
                         <p>
@@ -561,10 +543,10 @@
                         <a href="https://brad-hobbswd.github.io/weight-pulpit/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-<article class="library-card has-cover"
+<article class="library-card"
                     data-title="Let Not Your Heart Be Troubled"
                     data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/let-not-your-heart-be-troubled/361319A1-0A5E-4708-B056-17D4910DE057.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <span class="book-type">
                             FRIEND JOEY STORIES
                         </span>
@@ -600,8 +582,8 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover" data-title="The Strength in Truth" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/strength-of-the-truth/4CA866AE-17DF-48D5-A11F-B2EC3338D21F.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="The Strength in Truth" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">STRENGTH IN TRUTH • BOOK ONE</span>
                         <h3>The Strength in Truth</h3>
                         <p>
@@ -612,8 +594,8 @@
                         <a href="https://brad-hobbswd.github.io/strength-of-the-truth/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-                <article class="library-card has-cover" data-title="The Strength in Truth The Man Who Gave Too Much" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/strengthtruth-man-who-gave-too-much/5A0AD872-5A59-4F76-89B1-6B7CDE906EA1.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="The Strength in Truth The Man Who Gave Too Much" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">STRENGTH IN TRUTH • BOOK TWO</span>
                         <h3>The Strength in Truth: The Man Who Gave Too Much</h3>
                         <p>
@@ -639,8 +621,8 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover" data-title="Bruised Reeds How Gossip Became Violence in the Church" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/bruise-reeds-gossip-violence/954CDC23-F8D5-414F-A655-02DCCB789ABF.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="Bruised Reeds How Gossip Became Violence in the Church" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">BRUISED REEDS • BOOK ONE</span>
                         <h3>Bruised Reeds: How Gossip Became Violence in the Church</h3>
                         <p>
@@ -651,8 +633,8 @@
                         <a href="https://brad-hobbswd.github.io/bruise-reeds-gossip-violence/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-                <article class="library-card has-cover" data-title="Bruised Reeds Holiness Is a Weapon" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/bruise-reeds-holiness-weapon/BF6DC6EE-2C2E-4956-B6DE-27B82AC5CA6F.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="Bruised Reeds Holiness Is a Weapon" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">BRUISED REEDS • BOOK TWO</span>
                         <h3>Bruised Reeds: Holiness Is a Weapon</h3>
                         <p>
@@ -677,8 +659,8 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover" data-title="The Rise of a Holy Family A Revival Born from Rejection" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/holy-family-rejection/0EB7BA12-5534-46D0-9EED-B926C2686BDF.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="The Rise of a Holy Family A Revival Born from Rejection" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">HOLY FAMILY • BOOK ONE</span>
                         <h3>The Rise of a Holy Family: A Revival Born from Rejection</h3>
                         <p>
@@ -689,8 +671,8 @@
                         <a href="https://brad-hobbswd.github.io/holy-family-rejection/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-                <article class="library-card has-cover" data-title="The Rise of a Holy Family II A Revival That Breaks Every Label" data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/holy-family-breaks-every-label/DA15EC0A-5D1B-4B25-A931-27E017461FE4.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                <article class="library-card" data-title="The Rise of a Holy Family II A Revival That Breaks Every Label" data-category="series">
+                    <div class="library-card-content">
                         <span class="book-type">HOLY FAMILY • BOOK TWO</span>
                         <h3>The Rise of a Holy Family II: A Revival That Breaks Every Label</h3>
                         <p>
@@ -914,10 +896,10 @@
                 <p>A connected series of Christian fiction centered on worship, surrender, grace, devotion, redemption, and the transforming presence of God.</p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Fragments of Grace"
                     data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/fragments-of-grace/cover.jpg" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Fragments of Grace
                         </h3>
@@ -936,10 +918,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The Fragrance"
                     data-category="series">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/the-fragrance/575E6969-7A0C-499E-ACDD-FCCF8208C3F0.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             The Fragrance
                         </h3>
@@ -979,10 +961,10 @@
             <div class="library-grid">
 
 
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Hide Me Under Your Wings Lord"
                     data-category="healing">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/hide-me-under-your-wings/F0C8E8F5-2649-4882-8FAF-25DF1C2D16BA.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Hide Me Under Your Wings Lord
                         </h3>
@@ -1000,10 +982,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="No Condemnation"
                     data-category="healing">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/no-condemnation/FC05EFDA-912D-46AA-BF7A-30BA2DB0D7F4.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             No Condemnation
                         </h3>
@@ -1021,10 +1003,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The Room With No Windows"
                     data-category="healing">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/room-with-no-windows/1C67C814-E36F-45FA-AF7F-34CF60580943.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             The Room With No Windows
                         </h3>
@@ -1043,10 +1025,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Still Seen Still Loved"
                     data-category="healing">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/stillseen-still-loved/F0BA5559-46F9-4FEA-831D-72A6955B2A69.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Still Seen, Still Loved
                         </h3>
@@ -1086,10 +1068,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Love That Covers"
                     data-category="love">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/love-that-covers/B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Love That Covers
                         </h3>
@@ -1107,10 +1089,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Love That Covers LGBTQIA Edition"
                     data-category="love">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/0C57556B-64CB-42F0-B5E5-9DD0FEE781D7.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Love That Covers
                             <span class="title-note">
@@ -1131,10 +1113,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="What Love Isn't"
                     data-category="love">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/whatLoveisnt-truthhealedtheheart/whatLoveIsntBanner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             What Love Isn't
                         </h3>
@@ -1153,10 +1135,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="What Love Was Carrying"
                     data-category="love">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/lovecarryjesusseen/FD5F262C-CA86-4D98-80D8-877874C54ADC.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             What Love Was Carrying
                         </h3>
@@ -1197,10 +1179,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Seven Times Seventy"
                     data-category="forgiveness">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/seventy-times-seven/B89DED4A-8D89-44B4-BCA3-CBFF01289A4E.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Seven Times Seventy
                         </h3>
@@ -1240,10 +1222,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Rivers in the Dark"
                     data-category="holyghost">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/rivers-in-the-dark/5B5D25B2-8305-441D-8C72-D35CB0AEA506.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Rivers in the Dark
                         </h3>
@@ -1282,10 +1264,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Born of Spirit and Truth"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/bornofspirit-and-truth/1CB50812-0B94-4BC5-85DD-36817EA4F7FF.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Born of Spirit and Truth
                         </h3>
@@ -1304,10 +1286,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Faith That Sees Beyond Sight"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/faith-that-sees-beyond-sight/E31AC37C-7279-4414-8AD3-3D84090FA715.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Faith That Sees Beyond Sight
                         </h3>
@@ -1325,10 +1307,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="From Milk to Meat The Call to Grow Up in Jesus"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/milk2meat/DBD06F2A-47C4-4122-85BF-5B7E95E521F0.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             From Milk to Meat:
                             The Call to Grow Up in Jesus
@@ -1348,10 +1330,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Loving the God We Cannot See"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/Loving-the-God-Cannot-See/F68E8BAC-A77B-447A-9A03-0E4A07954535.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Loving the God We Cannot See
                         </h3>
@@ -1369,10 +1351,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="One Mouth One Message"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/onemouth-onemessage/E9A66014-FFC0-4E06-8BD6-F9E911E9B911.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             One Mouth, One Message
                         </h3>
@@ -1390,10 +1372,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Sanctified"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/sanctified/A30C4C23-71C7-4721-878B-6533CA027327.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Sanctified
                         </h3>
@@ -1411,10 +1393,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Small Enough to Hear Him"
                     data-category="growth">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/small-enough-to-hear-him/D575D9FA-00CC-4986-9B7E-DCC6D918603C.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Small Enough to Hear Him
                         </h3>
@@ -1454,10 +1436,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Beyond the Labels Becoming Who God Says You Are"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/beyond-the-labels/banner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Beyond the Labels:
                             Becoming Who God Says You Are
@@ -1476,10 +1458,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Words That Sound Good"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/Words-That-Sound-Good/banner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Words That Sound Good
                         </h3>
@@ -1498,10 +1480,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Beyond Denominations"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/beyond-denominations/beyond-denominations-banner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Beyond Denominations
                         </h3>
@@ -1519,10 +1501,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Kept Released Covenant"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/kept-released-covenant/bannercovenant.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Kept Released Covenant
                         </h3>
@@ -1540,10 +1522,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Last Agreement Careful What You Say Amen To"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/last-agreement-amen/agreementbookcover.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Last Agreement:
                             Careful What You Say AMEN To
@@ -1563,10 +1545,10 @@
                     </div>
                 </article>
 
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="A Foundation Before the Shout"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/before-the-shout/83EE2E0D-244C-40C9-940B-A63CA8CB6BC7.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             A Foundation Before the Shout
                         </h3>
@@ -1585,10 +1567,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Real Pentecost"
                     data-category="apostolic">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/Real-Pentecost/AB10370E-2A4D-4C9F-AEE8-569AA32E2202.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Real Pentecost
                         </h3>
@@ -1620,10 +1602,10 @@
                 <p>Writing centered on church hurt, healing, restoration, truth, grace, and finding hope in Jesus Christ.</p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Whispers in the Pew"
                     data-category="church">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/whispers-in-the-pew/whisperbanner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Whispers in the Pew
                         </h3>
@@ -1663,10 +1645,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="What They Said About You"
                     data-category="workplace">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/what-they-said-about-you/24CE78A9-09E1-44A6-B873-EB541278BA4E.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             What They Said About You
                         </h3>
@@ -1706,10 +1688,10 @@
                 </p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Fear Before Fear"
                     data-category="fear">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/fearb4fear/banner.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Fear Before Fear
                         </h3>
@@ -1762,10 +1744,10 @@
                 <p>Christian fiction inspired by Scripture, redemption, sacrifice, worship, faith, hope, and the transforming presence of Jesus Christ.</p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The House That Welcomed Him"
                     data-category="fiction">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/house-welcomed-him/72EE37FA-236A-40AB-8BA4-F6B878EF0FB5.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             The House That Welcomed Him
                         </h3>
@@ -1784,10 +1766,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The Kingdom Taken"
                     data-category="fiction">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/kingdom-taken/0F737E1B-BA64-43E3-B98A-624331423337.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             The Kingdom Taken
                         </h3>
@@ -1806,10 +1788,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Overshadowed God With Us"
                     data-category="fiction">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/god-with-us/3D44EEFB-D466-4825-88B3-2FF36956D52F.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Overshadowed:
                             God With Us
@@ -1829,10 +1811,10 @@
                         </a>
                     </div>
                 </article>
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="The Sword She Never Asked For"
                     data-category="fiction">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/sword-she-never-asked-for/951E0DC3-1C4A-4490-82F3-F60B65956EF7.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             The Sword She Never Asked For
                         </h3>
@@ -1864,10 +1846,10 @@
                 <p>Christian family stories, inspirational writing, faith based fiction, biblical values, courage, kindness, wisdom, and growing in Jesus.</p>
             </div>
             <div class="library-grid">
-                <article class="library-card has-cover"
+                <article class="library-card"
                     data-title="Dallas and the Road Back to Life"
                     data-category="family">
-                    <div class="library-cover"><img src="https://brad-hobbswd.github.io/dallas-road-back-to-life/bookbannerdallas.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                    <div class="library-card-content">
                         <h3>
                             Dallas and the Road Back to Life
                         </h3>
