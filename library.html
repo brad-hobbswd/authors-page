@@ -78,7 +78,7 @@
 }
 .library-card.has-cover .library-cover{
     width:100%;
-    aspect-ratio:2/1;
+    height:clamp(210px, 15vw, 250px);
     background:#f5f2ec;
     display:flex;
     align-items:center;
@@ -94,6 +94,11 @@
     object-position:center;
     display:block;
     transition:transform .35s ease;
+}
+@media(max-width:700px){
+    .library-card.has-cover .library-cover{
+        height:clamp(175px, 48vw, 220px);
+    }
 }
 .library-card.has-cover:hover .library-cover img{transform:scale(1.025);}
 .library-card.has-cover .library-card-content{padding:26px;}
