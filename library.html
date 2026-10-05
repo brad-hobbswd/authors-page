@@ -85,6 +85,20 @@
     display:block;
     transition:transform .35s ease;
 }
+
+/* Portrait book covers keep the complete cover visible */
+.library-card.has-cover .library-cover.is-book-cover{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f5f2ec;
+}
+.library-card.has-cover .library-cover.is-book-cover img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+}
 .library-card.has-cover:hover .library-cover img{transform:scale(1.025);}
 .library-card.has-cover .library-card-content{padding:26px;}
 .library-card.has-cover .library-cover + .library-card-content h3{margin-top:0;}
