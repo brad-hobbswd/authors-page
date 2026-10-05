@@ -273,6 +273,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const applyClass = () => {
+                if (cover.dataset.artType) {
+                    return;
+                }
                 if (image.naturalWidth && image.naturalHeight) {
                     const ratio = image.naturalWidth / image.naturalHeight;
                     cover.classList.toggle("is-book-cover", ratio < 1.35);
