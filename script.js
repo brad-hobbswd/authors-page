@@ -261,6 +261,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* =====================================================
+       06B. DISTINGUISH BOOK COVERS FROM WIDE BANNERS
+       Portrait artwork is kept fully visible instead of cropped.
+    ===================================================== */
+
+    const classifyLibraryImages = () => {
+        document.querySelectorAll(".library-cover img.library-banner-image").forEach((image) => {
+            const cover = image.closest(".library-cover");
+            if (!cover) {
+                return;
+            }
+
+            const applyClass = () => {
+                if (image.naturalWidth && image.naturalHeight) {
+                    const ratio = image.naturalWidth / image.naturalHeight;
+                    cover.classList.toggle("is-book-cover", ratio < 1.35);
+                }
+            };
+
+            if (image.complete) {
+                applyClass();
+            } else {
+                image.addEventListener("load", applyClass, { once: true });
+            }
+        });
+    };
+
+    classifyLibraryImages();
+
+    /* =====================================================
        07. PAGE READY
     ===================================================== */
 
