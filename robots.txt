@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brad-hobbs.github.io/authors-page/sitemap.xml
+Sitemap: https://brad-hobbswd.github.io/authors-page/sitemap.xml
