@@ -88,11 +88,14 @@
 }
 .library-card.has-cover .library-cover.is-banner{
     align-items:flex-start;
+    height:auto;
+    min-height:clamp(210px, 15vw, 250px);
 }
 .library-card.has-cover .library-cover.is-banner img{
     width:100%;
     height:auto;
-    max-height:100%;
+    max-width:100%;
+    max-height:none;
     object-fit:contain;
     object-position:top center;
 }
@@ -115,6 +118,10 @@
 @media(max-width:700px){
     .library-card.has-cover .library-cover{
         height:clamp(175px, 48vw, 220px);
+    }
+    .library-card.has-cover .library-cover.is-banner{
+        height:auto;
+        min-height:clamp(175px, 48vw, 220px);
     }
 }
 .library-card.has-cover:hover .library-cover img{transform:scale(1.025);}
