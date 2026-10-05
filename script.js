@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const libraryCards = document.querySelectorAll(".library-card");
     const libraryCollections = document.querySelectorAll(".library-collection");
     const resultsCount = document.querySelector("#library-count");
-    const filterButtons = document.querySelectorAll(".filter-button");
+    const libraryFilter = document.querySelector("#library-filter");
 
     let activeCategory = "all";
 
@@ -196,24 +196,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    filterButtons.forEach((button) => {
-        button.setAttribute(
-            "aria-pressed",
-            button.classList.contains("active") ? "true" : "false"
-        );
-
-        button.addEventListener("click", () => {
-            activeCategory = normalizeText(button.dataset.filter || "all");
-
-            filterButtons.forEach((filter) => {
-                const isActive = filter === button;
-                filter.classList.toggle("active", isActive);
-                filter.setAttribute("aria-pressed", isActive ? "true" : "false");
-            });
-
+    if (libraryFilter) {
+        libraryFilter.addEventListener("change", () => {
+            activeCategory = normalizeText(libraryFilter.value || "all");
             updateLibrary();
         });
-    });
+    }
 
     if (libraryCards.length) {
         updateLibrary();
