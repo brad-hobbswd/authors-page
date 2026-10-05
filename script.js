@@ -282,6 +282,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     cover.classList.toggle("is-book-cover", isBookCover);
                     cover.classList.toggle("is-banner", !isBookCover);
                     cover.dataset.artType = isBookCover ? "cover" : "banner";
+                    if (!isBookCover) {
+                        cover.style.aspectRatio = `${image.naturalWidth} / ${image.naturalHeight}`;
+                    }
                 }
             };
 
