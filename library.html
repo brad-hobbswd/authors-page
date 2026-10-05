@@ -135,9 +135,17 @@
     aspect-ratio:auto !important;
     overflow:visible !important;
     display:block !important;
+    position:relative !important;
     padding:0 !important;
     margin:0 !important;
     line-height:0 !important;
+}
+.library-card.has-cover .library-cover.is-banner + .library-card-content{
+    position:relative !important;
+    z-index:1 !important;
+    clear:both !important;
+    display:block !important;
+    width:100% !important;
 }
 .library-card.has-cover .library-cover.is-banner img.library-banner-image{
     display:block !important;
