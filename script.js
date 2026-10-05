@@ -278,7 +278,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 if (image.naturalWidth && image.naturalHeight) {
                     const ratio = image.naturalWidth / image.naturalHeight;
-                    cover.classList.toggle("is-book-cover", ratio < 1.35);
+                    const isBookCover = ratio < 1.35;
+                    cover.classList.toggle("is-book-cover", isBookCover);
+                    cover.classList.toggle("is-banner", !isBookCover);
+                    cover.dataset.artType = isBookCover ? "cover" : "banner";
                 }
             };
 
