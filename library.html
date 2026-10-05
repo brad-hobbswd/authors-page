@@ -144,8 +144,18 @@
     position:relative !important;
     z-index:1 !important;
     clear:both !important;
-    display:block !important;
+    display:flex !important;
+    flex-direction:column !important;
     width:100% !important;
+    height:auto !important;
+    flex:1 1 auto !important;
+}
+.library-card.has-cover{
+    height:auto !important;
+    min-height:100% !important;
+}
+.library-card.has-cover .library-cover.is-banner{
+    flex:0 0 auto !important;
 }
 .library-card.has-cover .library-cover.is-banner img.library-banner-image{
     display:block !important;
