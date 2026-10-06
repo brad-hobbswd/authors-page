@@ -3746,3 +3746,169 @@ h3 {
     }
 
 }
+
+/* =========================================================
+   FEATURED BOOK SHOWCASE
+   The Authors Page is a showcase, not a second library.
+========================================================= */
+
+.showcase-section {
+    padding-top: 70px;
+    padding-bottom: 75px;
+}
+
+.showcase-section .section-heading {
+    margin-bottom: 42px;
+}
+
+.showcase-book {
+    max-width: 1250px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.showcase-book:last-child {
+    margin-bottom: 0;
+}
+
+.showcase-banner-link {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-large);
+    background: var(--navy);
+    box-shadow: var(--shadow-large);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.showcase-banner-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 35px 80px rgba(16, 27, 43, 0.22);
+}
+
+.showcase-banner-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.showcase-book-content {
+    max-width: 850px;
+    margin: 25px auto 0;
+}
+
+.showcase-book-content h3 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+.showcase-book-content p {
+    max-width: 760px;
+    margin: 0 auto 22px;
+    color: var(--muted);
+}
+
+.look-again-section {
+    background: var(--white);
+}
+
+.showcase-book-list .showcase-book {
+    margin-bottom: 70px;
+}
+
+.who-series-section {
+    background:
+        linear-gradient(
+            180deg,
+            var(--ivory) 0%,
+            var(--ivory-light) 100%
+        );
+}
+
+.series-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.series-showcase-book {
+    text-align: center;
+}
+
+.series-showcase-book a {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius-medium);
+    background: var(--navy);
+    box-shadow: var(--shadow-medium);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.series-showcase-book a:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
+}
+
+.series-showcase-book img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.series-showcase-book h3 {
+    margin: 18px 0 0;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+@media (max-width: 900px) {
+    .series-showcase {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+
+    .series-showcase-book {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .showcase-section {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .showcase-section .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .showcase-book {
+        margin-bottom: 48px;
+    }
+
+    .showcase-banner-link {
+        border-radius: var(--radius-medium);
+    }
+
+    .showcase-book-content {
+        margin-top: 20px;
+    }
+
+    .showcase-book-content h3 {
+        font-size: 2rem;
+    }
+
+    .series-showcase {
+        gap: 35px;
+    }
+}
