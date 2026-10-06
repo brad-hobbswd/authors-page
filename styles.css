@@ -717,7 +717,15 @@ h3 {
 
 .welcome-section h1 {
 
-    font-size: clamp(3.4rem, 7vw, 6.25rem);
+    width: min(1200px, calc(100vw - 40px));
+
+    margin-left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: clamp(3.2rem, 7vw, 6.25rem);
+
+    letter-spacing: -0.025em;
 
 }
 
