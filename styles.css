@@ -685,11 +685,13 @@ h3 {
 ========================================================= */
 
 .author-banner {
-    width: 100%;
-    margin: 0;
+    width: min(92%, 1100px);
+    margin: 28px auto 0;
     padding: 0;
     background: var(--navy);
     overflow: hidden;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-large);
 }
 
 .author-banner img {
@@ -3540,14 +3542,16 @@ h3 {
         gap: 14px;
 
     }
-     .author-banner img {
+    .author-banner {
+        width: 94%;
+        margin-top: 20px;
+        border-radius: var(--radius-medium);
+    }
 
+    .author-banner img {
         width: 100%;
-
         height: auto;
-
         object-fit: contain;
-
     }
 
 }
