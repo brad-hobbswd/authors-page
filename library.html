@@ -350,6 +350,68 @@
     .library-text-banner .banner-copy em{font-size:.74rem;}
 }
 
+
+/* Placeholder artwork for books awaiting final covers */
+.library-cover.is-placeholder {
+    min-height: 250px;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #101b2b, #35465b);
+    line-height: 1.5;
+}
+.library-cover.is-placeholder .placeholder-label {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    opacity: .85;
+    margin-bottom: 12px;
+}
+.library-cover.is-placeholder strong {
+    display: block;
+    max-width: 100%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    line-height: 1.15;
+}
+.library-cover.is-placeholder .placeholder-subtitle {
+    display: block;
+    max-width: 450px;
+    margin-top: 12px;
+    font-size: .85rem;
+    line-height: 1.5;
+    opacity: .95;
+}
+.library-cover.is-placeholder.veil {
+    background: linear-gradient(135deg, #101b2b, #394c65, #9b8255);
+}
+.library-cover.is-placeholder.bound {
+    background: linear-gradient(135deg, #351321, #702d42, #b69a63);
+}
+.library-cover.is-placeholder.grace {
+    background: linear-gradient(135deg, #54443a, #9d8164, #d8c6a4);
+}
+@media (max-width: 700px) {
+    .library-cover.is-placeholder {
+        min-height: 200px;
+        padding: 20px;
+    }
+    .library-cover.is-placeholder strong {
+        font-size: 1.5rem;
+    }
+    .library-cover.is-placeholder .placeholder-subtitle {
+        font-size: .78rem;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -766,6 +828,62 @@
                         </a>
                     </div>
                 </article>
+<article class="library-card has-cover"
+         data-title="Beyond the Veil"
+         data-category="apostolic">
+    <div class="library-cover is-placeholder veil"
+         role="img"
+         aria-label="Beyond the Veil book cover placeholder">
+        <span class="placeholder-label">Apostolic Teaching Series</span>
+        <strong>Beyond the Veil</strong>
+        <span class="placeholder-subtitle">
+            Revealing the Truth About Authority,
+            Obedience, and the Heart
+        </span>
+    </div>
+    <div class="library-card-content">
+        <span class="book-type">MULTIWEEK APOSTOLIC CHURCH STUDY</span>
+        <h3>Beyond the Veil</h3>
+        <p>
+            An Apostolic teaching resource for churches, exploring
+            the truth about God's authority, obedience, the heart,
+            and the responsibility of spiritual leadership.
+            Inspired by themes explored in John Bevere's
+            <em>Under Cover</em>.
+        </p>
+        <span class="book-link" aria-label="Book page coming soon">
+            Book Page Coming Soon
+        </span>
+    </div>
+</article>
+<article class="library-card has-cover"
+         data-title="I Refuse to Stay Bound"
+         data-category="apostolic">
+    <div class="library-cover is-placeholder bound"
+         role="img"
+         aria-label="I Refuse to Stay Bound book cover placeholder">
+        <span class="placeholder-label">Apostolic Teaching Series</span>
+        <strong>I Refuse to Stay Bound</strong>
+        <span class="placeholder-subtitle">
+            Overcoming Offense, Releasing Bitterness,
+            and Walking in the Freedom of Jesus Christ
+        </span>
+    </div>
+    <div class="library-card-content">
+        <span class="book-type">MULTIWEEK APOSTOLIC CHURCH STUDY</span>
+        <h3>I Refuse to Stay Bound</h3>
+        <p>
+            An Apostolic teaching resource for churches and group
+            studies addressing offense, bitterness, forgiveness,
+            spiritual freedom, and walking in the truth and liberty
+            of Jesus Christ. Inspired by themes explored in
+            John Bevere's <em>The Bait of Satan</em>.
+        </p>
+        <span class="book-link" aria-label="Book page coming soon">
+            Book Page Coming Soon
+        </span>
+    </div>
+</article>
     </div>
   </div>
 </section>
@@ -1416,6 +1534,31 @@
                         </a>
                     </div>
                 </article>
+<article class="library-card has-cover"
+         data-title="From Bottom to Grace"
+         data-category="memoir">
+    <div class="library-cover is-placeholder grace"
+         role="img"
+         aria-label="From Bottom to Grace book cover placeholder">
+        <span class="placeholder-label">A Personal Family Story</span>
+        <strong>From Bottom to Grace</strong>
+        <span class="placeholder-subtitle">
+            A Story of Life, Grace, and Redemption
+        </span>
+    </div>
+    <div class="library-card-content">
+        <span class="book-type">PERSONAL FAMILY STORY</span>
+        <h3>From Bottom to Grace</h3>
+        <p>
+            A personal book centered on the story of a family member.
+            Further details will be shared when the final book
+            description and cover are ready.
+        </p>
+        <span class="book-link" aria-label="Book page coming soon">
+            Book Page Coming Soon
+        </span>
+    </div>
+</article>
     </div>
   </div>
 </section>
