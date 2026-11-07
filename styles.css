@@ -4130,7 +4130,4 @@ h3 {
     }
 
 }
-/* New wide book banners in the homepage's Christian Living section */
-.new-publications-top .christian-living-category .book-cover-link{display:block;width:100%;max-width:100%;height:auto;margin:0 auto 18px;}
-.new-publications-top .christian-living-category .book-cover-link img{display:block;width:100%;max-width:100%;height:auto;max-height:none;object-fit:contain;border-radius:10px;box-shadow:0 16px 38px rgba(16,27,43,.16);}
-@media(max-width:680px){.new-publications-top .christian-living-category .book-cover-link img{width:100%;max-width:100%;height:auto;max-height:none}}
+
