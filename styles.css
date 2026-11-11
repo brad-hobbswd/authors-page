@@ -4510,3 +4510,123 @@ h3 {
         width: min(100% - 32px, 1240px);
     }
 }
+
+
+
+/* =========================================================
+   SIDE-BY-SIDE FEATURED PUBLICATIONS
+   Christian Living & Discipleship and Personal Story share
+   one desktop row while remaining distinct sections.
+========================================================= */
+
+.publication-feature-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: clamp(26px, 3.5vw, 48px);
+    width: min(100% - 40px, 1240px);
+    margin: 0 auto clamp(58px, 7vw, 84px);
+}
+
+.publication-feature-row > .publication-section {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    padding: clamp(42px, 5vw, 62px) 0;
+    border: 0;
+    background: transparent;
+}
+
+.publication-feature-row > .publication-section + .publication-section {
+    border-top: 0;
+    border-left: 1px solid rgba(169, 126, 54, 0.24);
+    padding-left: clamp(22px, 3vw, 42px);
+}
+
+.publication-feature-row .section-inner {
+    width: 100%;
+}
+
+.publication-feature-row .publication-category-heading {
+    min-height: 150px;
+    margin-bottom: 28px;
+}
+
+.publication-feature-row .editorial-book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 28px);
+    width: 100%;
+}
+
+.publication-feature-row .editorial-book .book-cover-link {
+    height: clamp(210px, 25vw, 330px);
+    margin-bottom: 16px;
+}
+
+.publication-feature-row .editorial-book .showcase-book-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+.publication-feature-row .editorial-book .showcase-book-content h3 {
+    font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+}
+
+.publication-feature-row .editorial-book .showcase-book-content p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.publication-feature-row .personal-story-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 100%;
+}
+
+.publication-feature-row .publication-section-story .editorial-book .book-cover-link {
+    height: clamp(250px, 29vw, 360px);
+}
+
+.publication-feature-row .publication-section-story .center-button {
+    margin-top: 32px;
+}
+
+@media (max-width: 900px) {
+    .publication-feature-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .publication-feature-row > .publication-section {
+        padding: 48px 0;
+    }
+
+    .publication-feature-row > .publication-section + .publication-section {
+        border-left: 0;
+        border-top: 1px solid rgba(169, 126, 54, 0.24);
+        padding-left: 0;
+    }
+
+    .publication-feature-row .publication-category-heading {
+        min-height: 0;
+    }
+
+    .publication-feature-row .editorial-book .book-cover-link {
+        height: clamp(280px, 42vw, 380px);
+    }
+}
+
+@media (max-width: 560px) {
+    .publication-feature-row {
+        width: min(100% - 32px, 1240px);
+    }
+
+    .publication-feature-row .editorial-book-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+    }
+
+    .publication-feature-row .editorial-book .book-cover-link,
+    .publication-feature-row .publication-section-story .editorial-book .book-cover-link {
+        height: 360px;
+    }
+}
