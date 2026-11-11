@@ -4331,3 +4331,76 @@ h3 {
         font-size: 1.75rem;
     }
 }
+
+
+
+/* =========================================================
+   FINAL OVERRIDE: REMOVE THE PUBLICATION WHITE CARDS
+   This selector intentionally outranks the older completed
+   books card styling above. The book information sits directly
+   on the page background, not inside a panel.
+========================================================= */
+
+.new-publications-top.completed-books-section .editorial-book-grid .editorial-book,
+.new-publications-top.completed-books-section .showcase-book-list .showcase-book.editorial-book {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.new-publications-top.completed-books-section .editorial-book .showcase-book-content,
+.new-publications-top.completed-books-section .editorial-book .editorial-book-content {
+    display: block !important;
+    flex: initial !important;
+    width: min(100%, 440px) !important;
+    max-width: 440px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.new-publications-top.completed-books-section .editorial-book .showcase-book-content p {
+    flex: initial !important;
+    width: auto !important;
+    margin: 0 auto 16px !important;
+}
+
+.new-publications-top.completed-books-section .editorial-book .book-cover-link {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.new-publications-top.completed-books-section .editorial-book .book-cover-link img {
+    background: transparent !important;
+}
+
+.new-publications-top.completed-books-section .editorial-book .primary-button,
+.new-publications-top.completed-books-section .editorial-book .editorial-book-link {
+    margin-top: 2px !important;
+    align-self: center !important;
+}
+
+@media (max-width: 560px) {
+    .new-publications-top.completed-books-section .editorial-book-grid .editorial-book,
+    .new-publications-top.completed-books-section .showcase-book-list .showcase-book.editorial-book {
+        padding: 0 !important;
+    }
+}
