@@ -4131,3 +4131,203 @@ h3 {
 
 }
 
+
+
+/* =========================================================
+   AUTHOR HOME: OPEN EDITORIAL BOOK GALLERY
+   Replaces boxed publication cards with the open layout used
+   by the three-book Question Series.
+========================================================= */
+
+.new-publications-top {
+    padding-top: clamp(48px, 6vw, 78px);
+    padding-bottom: clamp(65px, 8vw, 100px);
+    background: var(--ivory);
+}
+
+.new-publications-top .section-heading {
+    margin-bottom: clamp(48px, 6vw, 76px);
+}
+
+.new-publications-top .publication-category {
+    margin: 0 0 clamp(68px, 8vw, 100px);
+}
+
+.new-publications-top .publication-category-heading {
+    max-width: 900px;
+    margin: 0 auto clamp(34px, 4vw, 48px);
+    text-align: center;
+}
+
+.new-publications-top .publication-category-heading h3 {
+    margin: 8px 0 12px;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 3vw, 2.65rem);
+}
+
+.new-publications-top .publication-category-heading p:last-child {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+.new-publications-top .editorial-book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    justify-items: center;
+    gap: clamp(38px, 6vw, 82px);
+    width: min(100%, 1120px);
+    margin: 0 auto;
+}
+
+.new-publications-top .editorial-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+}
+
+.new-publications-top .editorial-book .book-cover-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 340px;
+    height: clamp(350px, 42vw, 470px);
+    margin: 0 auto 22px;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+    transition: transform var(--transition);
+}
+
+.new-publications-top .editorial-book .book-cover-link:hover {
+    transform: translateY(-7px);
+}
+
+.new-publications-top .editorial-book .book-cover-link img {
+    display: block;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 18px 42px rgba(16, 27, 43, 0.17);
+}
+
+.new-publications-top .editorial-book-content,
+.new-publications-top .editorial-book .showcase-book-content {
+    display: block;
+    width: min(100%, 440px);
+    height: auto;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.new-publications-top .editorial-book .latest-type {
+    display: block;
+    margin: 0 0 10px;
+    color: var(--gold-dark);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+}
+
+.new-publications-top .editorial-book .showcase-book-content h3 {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-size: clamp(1.65rem, 2.5vw, 2.25rem);
+    line-height: 1.12;
+}
+
+.new-publications-top .editorial-book .showcase-book-content p {
+    max-width: 440px;
+    margin: 0 auto 16px;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+.new-publications-top .editorial-book-link {
+    display: inline-block;
+    margin-top: 2px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--gold);
+    color: var(--navy);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.new-publications-top .editorial-book-link:hover {
+    color: var(--gold-dark);
+    border-color: var(--gold-dark);
+}
+
+.new-publications-top .personal-story-category {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.new-publications-top .personal-story-grid {
+    grid-template-columns: minmax(0, 440px);
+    max-width: 440px;
+}
+
+.new-publications-top .personal-story-grid .editorial-book .book-cover-link {
+    max-width: 340px;
+}
+
+.new-publications-top .center-button {
+    margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+    .new-publications-top .editorial-book-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 52px;
+        max-width: 500px;
+    }
+
+    .new-publications-top .editorial-book .book-cover-link {
+        height: clamp(340px, 78vw, 440px);
+    }
+
+    .new-publications-top .publication-category {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-publications-top {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .new-publications-top .editorial-book .book-cover-link {
+        height: 360px;
+    }
+
+    .new-publications-top .editorial-book .showcase-book-content h3 {
+        font-size: 1.75rem;
+    }
+}
