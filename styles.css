@@ -4674,3 +4674,11 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 385px), min(100%, 385px)));
     justify-content: center;
 }
+
+
+/* Fit all three biblical teaching features on one desktop row. */
+@media (min-width: 761px) {
+    .featured-teaching-top .editorial-book-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
