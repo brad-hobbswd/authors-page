@@ -4682,3 +4682,28 @@ h3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+
+/* Show only the teaching book covers, with shadows on the artwork itself. */
+.featured-teaching-top .editorial-book .book-cover-link {
+    width: fit-content;
+    height: auto;
+    min-height: 0;
+    max-width: 100%;
+    background: transparent;
+}
+
+.featured-teaching-top .editorial-book .book-cover-link img {
+    width: auto;
+    height: auto;
+    max-width: min(100%, 340px);
+    max-height: 470px;
+    object-fit: contain;
+    box-shadow: 0 18px 42px rgba(16, 27, 43, 0.2);
+}
+
+@media (max-width: 760px) {
+    .featured-teaching-top .editorial-book .book-cover-link img {
+        max-height: 440px;
+    }
+}
