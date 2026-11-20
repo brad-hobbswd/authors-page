@@ -4657,3 +4657,13 @@ h3 {
 .about-cta .secondary-button {
     color: var(--white);
 }
+
+
+/* Contact page CTA: keep the action row centered and both labels readable. */
+.contact-cta .hero-buttons {
+    justify-content: center;
+}
+
+.contact-cta .secondary-button {
+    color: var(--white);
+}
