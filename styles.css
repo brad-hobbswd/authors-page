@@ -4647,3 +4647,13 @@ h3 {
         padding-bottom: 14px;
     }
 }
+
+
+/* About page CTA: keep the action row centered and both labels readable. */
+.about-cta .hero-buttons {
+    justify-content: center;
+}
+
+.about-cta .secondary-button {
+    color: var(--white);
+}
