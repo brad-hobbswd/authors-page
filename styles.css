@@ -4667,3 +4667,10 @@ h3 {
 .contact-cta .secondary-button {
     color: var(--white);
 }
+
+
+/* Center the two-card biblical studies collection without stretching its cards. */
+.library-collection[data-category="biblical"] .library-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 385px), min(100%, 385px)));
+    justify-content: center;
+}
