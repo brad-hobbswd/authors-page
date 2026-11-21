@@ -4669,10 +4669,23 @@ h3 {
 }
 
 
-/* Center the two-card biblical studies collection without stretching its cards. */
+/* Keep the opening Biblical Studies banners aligned with the Library grid.
+   Desktop uses three columns, portrait tablet uses two, and mobile uses one. */
 .library-collection[data-category="biblical"] .library-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 385px), min(100%, 385px)));
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+}
+
+@media (max-width: 1000px) {
+    .library-collection[data-category="biblical"] .library-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .library-collection[data-category="biblical"] .library-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 
