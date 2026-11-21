@@ -42,13 +42,14 @@ The Library provides the broader catalog and organizes books and resources by su
 
 ### Joseph Bennett Stories
 
-The Library has a dedicated collection for the connected Joseph Bennett stories. Titles are grouped together only when confirmed to belong to this character/story collection. The collection currently includes:
+The Library has a dedicated collection for the connected Joseph Bennett stories. Titles are grouped together only when confirmed to belong to this character/story collection. The collection includes all four connected stories:
 
 - **Beneath Everything**
 - **The Weight of the Pulpit**
 - **Let Not Your Heart Be Troubled**
+- **The Price of a Promise**
 
-`The Price of a Promise` remains in **Memoir & Personal Reflection** unless its connection to Joseph Bennett is confirmed. A category label alone is not considered proof that a title belongs to the story collection.
+All four titles are grouped together as Joseph Bennett stories.
 
 ## Navigation
 
