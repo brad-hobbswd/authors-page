@@ -47,7 +47,7 @@ The Library has a dedicated collection for the connected Joseph Bennett stories.
 - **Beneath Everything**
 - **The Weight of the Pulpit**
 - **Let Not Your Heart Be Troubled**
-- **The Price of a Promise**
+- **The Price of a Promise** — Joseph Bennett's story involving a romance scam, broken promises, loss, forgiveness, healing, restoration, and trusting God.
 
 All four titles are grouped together as Joseph Bennett stories.
 
