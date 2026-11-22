@@ -89,3 +89,10 @@
  .library-nav-controls{max-width:160px;flex-basis:130px}
  .library-nav-controls select{max-width:82px}
 }
+
+/* Compact library heading and results status aligned with navbar controls */
+.library-page-heading{max-width:var(--max-width,1200px);margin:10px auto 6px;padding:0 20px}
+.library-page-heading h1{font-size:1.15rem;line-height:1.2;margin:0;font-weight:650}
+.library-nav-controls{align-items:center}
+.library-results-status{white-space:nowrap;margin:0!important;padding:0!important;width:auto!important;font-size:.67rem;color:rgba(255,255,255,.72);flex:0 0 auto}
+@media(max-width:560px){.library-page-heading{margin:7px auto 4px;padding:0 14px}.library-page-heading h1{font-size:1rem}.library-results-status{font-size:.58rem;white-space:normal;max-width:58px;text-align:right}}
