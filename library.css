@@ -550,3 +550,12 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* Fragments of Grace: reduce banner scale and preserve full artwork. */
+.library-card[data-title="Fragments of Grace"]{
+  --banner-zoom:0.72;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
