@@ -434,10 +434,9 @@
 }
 
 
-/* Individual banner framing for these titles. */
-.library-card[data-title="The Rise of a Holy Family A Revival Born from Rejection"],
+/* Book One banner: show the complete artwork without zooming or cropping. */
 .library-card[data-title="The Strength in Truth"]{
-  --banner-zoom:0.88;
+  --banner-zoom:1;
   --banner-position-x:50%;
   --banner-position-y:50%;
   --banner-object-fit:contain;
@@ -456,7 +455,7 @@
   width:100%;
   height:100%;
   max-width:none;
-  object-fit:cover;
+  object-fit:var(--banner-object-fit,cover);
   object-position:var(--banner-position-x,50%) var(--banner-position-y,50%);
   transform:scale(var(--banner-zoom,1));
   transform-origin:center;
