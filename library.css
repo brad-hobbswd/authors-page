@@ -422,3 +422,13 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Individual banner framing for The Substitute books. */
+.library-card[data-title="The Substitute II"],
+.library-card[data-title="The Substitute Beyond the Substitute"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
