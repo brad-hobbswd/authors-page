@@ -139,3 +139,25 @@
 }
 .library-collection[data-category="bibfiction"] .library-grid{align-items:stretch}
 .library-collection[data-category="bibfiction"] .library-card{height:100%}
+
+/* Christian Fiction banners: full artwork, no zoomed crop. */
+.library-collection[data-category="fiction"] .library-cover{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f5f2ec;
+  overflow:hidden;
+}
+.library-collection[data-category="fiction"] .library-cover img.library-banner-image{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.library-collection[data-category="fiction"] .library-grid{align-items:stretch}
+.library-collection[data-category="fiction"] .library-card{height:100%}
