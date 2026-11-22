@@ -443,231 +443,24 @@
   --banner-object-fit:contain;
 }
 
-
-/* Library-wide centered layout and visual balance */
-.library-page-heading,
-.library-page-heading *{
-  text-align:center;
-}
-.collection-heading,
-.collection-heading *{
-  text-align:center;
-}
-.library-grid{
-  justify-items:center;
-}
-.library-card.has-cover{
-  text-align:center;
-}
-.library-card-content,
-.library-card-content *{
-  text-align:center;
-}
-.library-card-content{
-  align-items:center;
-}
-.library-card-content p,
-.library-card-content h3,
-.library-card-content .book-type,
-.library-card-content .book-link{
-  width:100%;
-}
-.library-card-content .book-link{
-  display:flex;
-  justify-content:center;
-}
-/* Center a lone card on an incomplete final grid row. */
-.library-grid > .library-card:last-child:nth-child(3n + 1){
-  grid-column:2;
-}
-.library-grid > .library-card:last-child:nth-child(3n + 2){
-  grid-column:2 / span 2;
-  justify-self:center;
-}
-@media(max-width:900px){
-  .library-grid > .library-card:last-child:nth-child(3n + 1),
-  .library-grid > .library-card:last-child:nth-child(3n + 2){
-    grid-column:auto;
-  }
-}
-@media(max-width:700px){
-  .library-page-heading{ text-align:center; }
-  .library-card-content{ align-items:center; }
-  .library-card-content p{ max-width:100%; }
-}
-
-
-/* Cohesive final Library layout: centered collections, balanced cards, and unified collection headers. */
-.library-collection:not(.library-series-section){
-  padding:clamp(30px,4vw,52px) clamp(14px,2vw,24px);
-}
-.collection-heading{
-  box-sizing:border-box;
-  width:min(100%,1100px);
-  max-width:1100px;
-  margin:0 auto clamp(22px,3vw,32px);
-  padding:clamp(22px,3vw,34px) 24px;
-  border:1px solid rgba(169,126,54,.24);
-  border-radius:16px;
-  background:linear-gradient(135deg,#18283b 0%,#263d57 52%,#18283b 100%);
-  box-shadow:0 10px 26px rgba(16,27,43,.12);
-  color:#fff;
-  text-align:center;
-}
-.collection-heading .section-label{
-  color:#e4c47e;
-  letter-spacing:.18em;
-}
-.collection-heading h2{color:#fff;}
-.collection-heading p:not(.section-label){color:rgba(255,255,255,.86);}
-.library-grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:stretch;
-  gap:clamp(16px,2vw,24px);
-  width:100%;
-  max-width:1200px;
-  margin:0 auto;
-}
-.library-grid > .library-card{
-  flex:1 1 300px;
-  width:auto;
-  max-width:380px;
-  min-width:min(100%,280px);
-}
-.library-card.has-cover{width:100%;}
-.library-card-content{height:100%;}
-.library-card-content h3{margin-left:auto;margin-right:auto;}
-.library-card-content p{margin-left:auto;margin-right:auto;}
-.library-card-content .book-link{margin-left:auto;margin-right:auto;}
-/* Collection and series cards share the same centered, balanced system. */
-.library-series-section .collection-heading{margin-bottom:clamp(20px,3vw,30px);}
-.library-series-section .library-grid{display:flex;flex-wrap:wrap;justify-content:center;}
-.library-series-section .library-grid > .library-card{flex:1 1 300px;max-width:380px;}
-.library-series-section[data-series-section="love-that-covers"] .library-grid{max-width:1200px;}
-.library-series-section[data-series-section="love-that-covers"] .library-grid > .library-card{max-width:380px;}
-@media(max-width:760px){
-  .library-grid > .library-card,
-  .library-series-section .library-grid > .library-card{flex:1 1 100%;max-width:420px;}
-  .collection-heading{padding:22px 16px;border-radius:12px;}
-}
-
-
-/* Correction: retain the original collection heading design and grid layout. Only standardize book banner framing. */
-.collection-heading{
-  max-width:780px;
-  margin:0 auto clamp(22px,3vw,34px);
-  padding:0;
-  border:0;
-  border-radius:0;
-  background:none;
-  box-shadow:none;
-  color:inherit;
-}
-.collection-heading .section-label{color:var(--gold-dark,#8b6b30);}
-.collection-heading h2{color:inherit;}
-.collection-heading p:not(.section-label){color:var(--muted,#647084);}
-.library-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  justify-items:stretch;
-  align-items:stretch;
-  gap:clamp(16px,2vw,24px);
-  max-width:var(--max-width,1200px);
-  margin:0 auto;
-}
-.library-grid > .library-card{width:auto;max-width:none;min-width:0;flex:none;}
-.library-series-section .library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
-.library-series-section .library-grid > .library-card{width:auto;max-width:none;flex:none;}
-.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:920px;}
-.library-series-section[data-series-section="love-that-covers"] .library-grid > .library-card{max-width:none;}
-/* All book banners share a consistent frame; each title's custom variables control zoom/fit. */
+/* Clean, unified banner presentation without altering the page's other layout styles. */
 .library-card.has-cover .library-cover.is-banner{
-  width:100%;height:200px;aspect-ratio:auto;padding:0;overflow:hidden;display:block;
-}
-.library-card.has-cover .library-cover.is-banner img,
-.library-card.has-cover .library-cover.is-banner img.library-banner-image{
-  width:100%;height:100%;max-width:none;display:block;
-  object-fit:var(--banner-object-fit,cover);
-  object-position:var(--banner-position-x,50%) var(--banner-position-y,50%);
-  transform:scale(var(--banner-zoom,1));
-  transform-origin:var(--banner-position-x,50%) var(--banner-position-y,50%);
-}
-@media(max-width:1000px){
-  .library-grid,.library-collection[data-category="biblical"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-  .library-series-section .library-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-@media(max-width:700px){
-  .library-grid,.library-series-section .library-grid,.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:1fr;}
-  .library-grid > .library-card,.library-series-section .library-grid > .library-card{max-width:420px;margin:0 auto;}
-  .library-card.has-cover .library-cover.is-banner{height:170px;}
-}
-
-
-/* FINAL ALL-BOOK BANNER FIX: one consistent frame, full artwork visible, centered across every book card. */
-.library-card.has-cover .library-cover.is-banner{
-  box-sizing:border-box;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   width:100%;
   height:200px;
-  min-height:200px;
   aspect-ratio:auto;
-  padding:8px;
   overflow:hidden;
-  background:#f2eee7;
 }
 .library-card.has-cover .library-cover.is-banner img,
 .library-card.has-cover .library-cover.is-banner img.library-banner-image{
-  box-sizing:border-box;
   display:block;
   width:100%;
   height:100%;
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain !important;
-  object-position:50% 50% !important;
-  transform:none !important;
-  transform-origin:center center;
-}
-/* Individual zoom variables are retained for future adjustments, but no artwork is cropped by default. */
-.library-card.has-cover .library-cover.is-banner img.library-banner-image{--banner-zoom:1;}
-@media(max-width:700px){
-  .library-card.has-cover .library-cover.is-banner{height:170px;min-height:170px;padding:6px;}
-}
-
-
-/* ACTUAL banner correction: artwork fills the entire uniform banner strip. */
-.library-card.has-cover .library-cover.is-banner{
-  display:block !important;
-  width:100% !important;
-  height:200px !important;
-  min-height:200px !important;
-  padding:0 !important;
-  margin:0 !important;
-  overflow:hidden !important;
-  background:#f2eee7;
-  border-radius:0 !important;
-}
-.library-card.has-cover .library-cover.is-banner img,
-.library-card.has-cover .library-cover.is-banner img.library-banner-image{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  min-width:100% !important;
-  min-height:100% !important;
-  max-width:none !important;
-  max-height:none !important;
-  object-fit:cover !important;
-  object-position:var(--banner-position-x,50%) var(--banner-position-y,50%) !important;
-  transform:none !important;
-  margin:0 !important;
+  max-width:none;
+  object-fit:cover;
+  object-position:var(--banner-position-x,50%) var(--banner-position-y,50%);
+  transform:scale(var(--banner-zoom,1));
+  transform-origin:center;
 }
 @media(max-width:700px){
-  .library-card.has-cover .library-cover.is-banner{
-    height:170px !important;
-    min-height:170px !important;
-  }
+  .library-card.has-cover .library-cover.is-banner{height:170px;}
 }
