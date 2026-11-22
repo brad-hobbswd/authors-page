@@ -499,3 +499,13 @@
   font-size:clamp(1.2rem,1.8vw,1.55rem);
   line-height:1.25;
 }
+
+
+/* These two banners display the complete original artwork without zoom. */
+.library-card[data-title="Sanctified"],
+.library-card[data-title="A Foundation Before the Shout"]{
+  --banner-zoom:1;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
