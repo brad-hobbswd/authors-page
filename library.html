@@ -692,6 +692,27 @@
     object-position:center !important;
 }
 
+
+/* ONLY the original Love That Covers card: widen and shorten its banner holder */
+.library-card.has-cover[data-title="Love That Covers"] .library-cover{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:2.15 / 1 !important;
+    overflow:hidden !important;
+    display:block !important;
+    padding:0 !important;
+}
+.library-card.has-cover[data-title="Love That Covers"] .library-cover img,
+.library-card.has-cover[data-title="Love That Covers"] .library-cover img.library-banner-image{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center !important;
+}
+
 </style>
 </head>
 <body>
