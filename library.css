@@ -559,3 +559,12 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* The House That Welcomed Him: reduce artwork scale, preserve full banner. */
+.library-card[data-title="The House That Welcomed Him"]{
+  --banner-zoom:0.72;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
