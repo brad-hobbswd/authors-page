@@ -541,3 +541,12 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* Fear Before Fear: reduce artwork scale while retaining the complete banner. */
+.library-card[data-title="Fear Before Fear"]{
+  --banner-zoom:0.72;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
