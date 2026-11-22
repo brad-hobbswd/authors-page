@@ -521,3 +521,14 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* Complete banner artwork, no zoom, for these devotional titles. */
+.library-card[data-title="Small Enough to Hear Him"],
+.library-card[data-title="Whispers in the Pew"],
+.library-card[data-title="No Condemnation"]{
+  --banner-zoom:1;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
