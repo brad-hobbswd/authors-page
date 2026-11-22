@@ -432,3 +432,13 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Individual banner framing for these titles. */
+.library-card[data-title="The Rise of a Holy Family A Revival Born from Rejection"],
+.library-card[data-title="The Strength in Truth"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
