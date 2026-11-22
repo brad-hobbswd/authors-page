@@ -307,3 +307,14 @@
   .library-collection:not([data-series-section]) .library-grid{gap:11px!important}
   .library-collection[data-category="independent"] .collection-heading h2{font-size:1.35rem!important}
 }
+
+
+/* CLEAR BREAK BETWEEN THE SERIES SHELVES AND THE MAIN COLLECTIONS */
+.library-collection[data-category="biblical"] .section-inner{
+  padding-top:clamp(48px,6vw,80px)!important;
+}
+@media(max-width:560px){
+  .library-collection[data-category="biblical"] .section-inner{
+    padding-top:clamp(38px,9vw,58px)!important;
+  }
+}
