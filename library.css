@@ -618,3 +618,28 @@
     max-width:420px;
   }
 }
+
+
+/* Final compact Scripture Studies layout: cards stay the same size as other library cards. */
+.library-collection[data-category="biblical"] .library-grid{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  align-items:stretch !important;
+  gap:24px !important;
+  max-width:1100px !important;
+  margin-inline:auto !important;
+}
+.library-collection[data-category="biblical"] .library-card{
+  flex:0 1 340px !important;
+  width:340px !important;
+  max-width:340px !important;
+}
+@media(max-width:700px){
+  .library-collection[data-category="biblical"] .library-grid{max-width:100% !important;}
+  .library-collection[data-category="biblical"] .library-card{
+    flex:0 1 100% !important;
+    width:100% !important;
+    max-width:420px !important;
+  }
+}
