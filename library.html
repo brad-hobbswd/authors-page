@@ -1146,6 +1146,66 @@ article.library-card[data-title="Love That Covers LGBTQIA Edition"] > .library-c
     }
 }
 
+
+/* VERIFIED TARGET: Love That Covers editions occupy the two shown spaces */
+section.library-series-section[data-series-section="love-that-covers"] .library-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 340px)) !important;
+    justify-content:center !important;
+    align-items:start !important;
+    gap:18px !important;
+    width:100% !important;
+}
+section.library-series-section[data-series-section="love-that-covers"] article.library-card{
+    display:flex !important;
+    flex-direction:column !important;
+    width:340px !important;
+    max-width:340px !important;
+    min-width:0 !important;
+    grid-column:auto !important;
+    justify-self:stretch !important;
+    margin:0 !important;
+}
+section.library-series-section[data-series-section="love-that-covers"] article.library-card > .library-cover{
+    display:flex !important;
+    width:100% !important;
+    height:220px !important;
+    min-height:220px !important;
+    max-height:220px !important;
+    aspect-ratio:auto !important;
+    flex:0 0 220px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+}
+section.library-series-section[data-series-section="love-that-covers"] article.library-card > .library-cover > img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:100% !important;
+    max-height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+}
+@media(max-width:700px){
+    section.library-series-section[data-series-section="love-that-covers"] .library-grid{
+        grid-template-columns:minmax(0,340px) !important;
+        justify-content:center !important;
+    }
+    section.library-series-section[data-series-section="love-that-covers"] article.library-card{
+        width:100% !important;
+        max-width:340px !important;
+    }
+    section.library-series-section[data-series-section="love-that-covers"] article.library-card > .library-cover{
+        height:190px !important;
+        min-height:190px !important;
+        max-height:190px !important;
+        flex-basis:190px !important;
+    }
+}
+
 </style>
 </head>
 <body>
