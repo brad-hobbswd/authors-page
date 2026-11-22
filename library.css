@@ -472,3 +472,13 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* Substitute series banners: complete artwork, no zoom. */
+.library-card[data-title="The Substitute II"],
+.library-card[data-title="The Substitute Beyond the Substitute"]{
+  --banner-zoom:1;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
