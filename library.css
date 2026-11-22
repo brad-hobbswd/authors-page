@@ -230,3 +230,26 @@
   object-fit:cover;
   object-position:center;
 }
+
+/* Selected banners with taller or nonstandard artwork: preserve the entire image instead of cropping/zooming. */
+.library-card[data-title="I Am Not Ignoring You I'm Just Overwhelmed"] .library-cover.is-banner,
+.library-card[data-title="Overshadowed God With Us"] .library-cover.is-banner,
+.library-card[data-title="The Fragrance"] .library-cover.is-banner,
+.library-card[data-title="Fragments of Grace"] .library-cover.is-banner,
+.library-card[data-title="Fear Is Not Your Voice"] .library-cover.is-banner,
+.library-card[data-title="Fear Before Fear"] .library-cover.is-banner{
+  aspect-ratio:auto;
+  height:auto;
+}
+.library-card[data-title="I Am Not Ignoring You I'm Just Overwhelmed"] .library-cover.is-banner img,
+.library-card[data-title="Overshadowed God With Us"] .library-cover.is-banner img,
+.library-card[data-title="The Fragrance"] .library-cover.is-banner img,
+.library-card[data-title="Fragments of Grace"] .library-cover.is-banner img,
+.library-card[data-title="Fear Is Not Your Voice"] .library-cover.is-banner img,
+.library-card[data-title="Fear Before Fear"] .library-cover.is-banner img{
+  width:100%;
+  height:auto;
+  max-width:none;
+  object-fit:contain;
+  object-position:center;
+}
