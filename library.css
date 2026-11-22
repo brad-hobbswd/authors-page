@@ -63,3 +63,16 @@
 .library-grid,.library-card,.library-card-content,.library-card-content h3{min-width:0;max-width:100%;box-sizing:border-box}
 .library-card-content h3{white-space:normal;overflow-wrap:anywhere}
 @media(max-width:560px){.library-card[data-title="Beyond Denominations"] .library-card-content h3,.library-card[data-title="No Condemnation"] .library-card-content h3{font-size:.9rem;line-height:1.18}}
+
+
+/* Keep library search beside the hamburger on compact layouts. */
+@media(max-width:1000px){
+.navbar{gap:10px}
+.nav-search-slot{display:block;flex:1 1 auto;min-width:0;max-width:420px}
+.nav-search-slot .library-search label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav-search-slot .library-search input{min-height:40px;padding:8px 11px;border-radius:9px;font-size:.9rem}
+.nav-search-slot .library-search input:focus{outline:2px solid #b69a63;outline-offset:2px}
+.library-controls.search-in-nav{grid-template-columns:minmax(0,1fr)}
+.nav-search-slot:empty{display:none}
+}
+@media(max-width:560px){.nav-search-slot .library-search input{min-height:38px;padding:7px 9px;font-size:.84rem}}
