@@ -203,3 +203,34 @@
     padding-bottom:8px!important;
   }
 }
+
+
+/* COMPACT INDEPENDENT WRITINGS INTRO */
+.library-collection[data-category="independent"] .section-inner{
+  padding-top:4px!important;
+  padding-bottom:10px!important;
+}
+.library-collection[data-category="independent"] .collection-heading{
+  margin-top:0!important;
+  margin-bottom:8px!important;
+}
+.library-collection[data-category="independent"] .collection-heading .section-label{
+  font-size:.62rem!important;
+  margin-bottom:2px!important;
+}
+.library-collection[data-category="independent"] .collection-heading h2{
+  font-size:clamp(1.05rem,1.8vw,1.4rem)!important;
+  line-height:1.15!important;
+  margin:0 0 3px!important;
+}
+.library-collection[data-category="independent"] .collection-heading p:not(.section-label){
+  font-size:.76rem!important;
+  line-height:1.35!important;
+  margin:0!important;
+  max-width:760px;
+}
+@media(max-width:560px){
+  .library-collection[data-category="independent"] .section-inner{padding-top:3px!important;padding-bottom:8px!important}
+  .library-collection[data-category="independent"] .collection-heading h2{font-size:1.05rem!important}
+  .library-collection[data-category="independent"] .collection-heading p:not(.section-label){font-size:.7rem!important}
+}
