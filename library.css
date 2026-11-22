@@ -495,3 +495,60 @@
   .library-card-content{ align-items:center; }
   .library-card-content p{ max-width:100%; }
 }
+
+
+/* Cohesive final Library layout: centered collections, balanced cards, and unified collection headers. */
+.library-collection:not(.library-series-section){
+  padding:clamp(30px,4vw,52px) clamp(14px,2vw,24px);
+}
+.collection-heading{
+  box-sizing:border-box;
+  width:min(100%,1100px);
+  max-width:1100px;
+  margin:0 auto clamp(22px,3vw,32px);
+  padding:clamp(22px,3vw,34px) 24px;
+  border:1px solid rgba(169,126,54,.24);
+  border-radius:16px;
+  background:linear-gradient(135deg,#18283b 0%,#263d57 52%,#18283b 100%);
+  box-shadow:0 10px 26px rgba(16,27,43,.12);
+  color:#fff;
+  text-align:center;
+}
+.collection-heading .section-label{
+  color:#e4c47e;
+  letter-spacing:.18em;
+}
+.collection-heading h2{color:#fff;}
+.collection-heading p:not(.section-label){color:rgba(255,255,255,.86);}
+.library-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:clamp(16px,2vw,24px);
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+.library-grid > .library-card{
+  flex:1 1 300px;
+  width:auto;
+  max-width:380px;
+  min-width:min(100%,280px);
+}
+.library-card.has-cover{width:100%;}
+.library-card-content{height:100%;}
+.library-card-content h3{margin-left:auto;margin-right:auto;}
+.library-card-content p{margin-left:auto;margin-right:auto;}
+.library-card-content .book-link{margin-left:auto;margin-right:auto;}
+/* Collection and series cards share the same centered, balanced system. */
+.library-series-section .collection-heading{margin-bottom:clamp(20px,3vw,30px);}
+.library-series-section .library-grid{display:flex;flex-wrap:wrap;justify-content:center;}
+.library-series-section .library-grid > .library-card{flex:1 1 300px;max-width:380px;}
+.library-series-section[data-series-section="love-that-covers"] .library-grid{max-width:1200px;}
+.library-series-section[data-series-section="love-that-covers"] .library-grid > .library-card{max-width:380px;}
+@media(max-width:760px){
+  .library-grid > .library-card,
+  .library-series-section .library-grid > .library-card{flex:1 1 100%;max-width:420px;}
+  .collection-heading{padding:22px 16px;border-radius:12px;}
+}
