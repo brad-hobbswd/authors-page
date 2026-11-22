@@ -56,10 +56,6 @@
 .library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner{height:220px;aspect-ratio:auto}
 .library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner img{height:100%}
 
-/* A deliberate section break introduces Scripture Studies after the teaching shelves. */
-.library-collection[data-category="biblical"]{margin-top:clamp(30px,5vw,60px);border-top:2px solid rgba(169,126,54,.5);padding-top:clamp(34px,4vw,52px)}
-.library-collection[data-category="biblical"] .library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-
 /* Independent titles share one three-card row; teaching studies share a two-card row. */
 .library-collection[data-category="independent"] .library-grid{grid-template-columns:repeat(3,minmax(0,340px))}
 .library-collection[data-category="teaching"] .library-grid{grid-template-columns:repeat(2,minmax(0,420px))}
@@ -80,7 +76,7 @@
 
 @media(max-width:1000px){
   .library-nav-controls{flex:1 1 280px;max-width:340px}
-  .library-grid,.library-collection[data-category="biblical"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .library-collection[data-category="independent"] .library-grid{grid-template-columns:repeat(2,minmax(0,340px))}
   .library-collection[data-category="teaching"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -108,8 +104,7 @@
   .library-results-status{font-size:.72rem}
   .library-collection{padding:28px 14px}
   .library-series-section{padding-top:22px;padding-bottom:25px}
-  .library-collection[data-category="biblical"]{margin-top:30px;padding-top:28px}
-  .library-grid,.library-collection[data-category="biblical"] .library-grid,
+  .library-grid,
   .library-collection[data-category="independent"] .library-grid,
   .library-collection[data-category="teaching"] .library-grid{grid-template-columns:minmax(0,1fr)}
   .library-collection[data-category="family"] .library-grid{grid-template-columns:minmax(0,1fr);max-width:420px}
@@ -182,33 +177,6 @@
   object-position:center;
 }
 
-
-/* Scripture Studies: let each card span the collection width so banners fill the entire card top. */
-.library-collection[data-category="biblical"] .library-grid{
-  display:grid;
-  grid-template-columns:minmax(0,1fr);
-  align-items:stretch;
-  width:100%;
-}
-.library-collection[data-category="biblical"] .library-card{
-  width:100%;
-  max-width:none;
-  height:100%;
-}
-.library-collection[data-category="biblical"] .library-cover.is-banner{
-  width:100%;
-  aspect-ratio:16/9;
-  height:auto;
-  overflow:hidden;
-}
-.library-collection[data-category="biblical"] .library-cover.is-banner img.library-banner-image{
-  display:block;
-  width:100%;
-  height:100%;
-  max-width:none;
-  object-fit:cover;
-  object-position:center;
-}
 
 
 /* Universal banner treatment: artwork fills the banner edge-to-edge inside rounded cards. */
@@ -623,24 +591,3 @@
 }
 
 
-/* Scripture Studies banners follow the same natural-proportion standard as all other collections. */
-.library-collection[data-category="biblical"] .library-cover.is-banner{
-  width:100%;
-  height:auto !important;
-  min-height:0;
-  aspect-ratio:auto !important;
-  overflow:hidden;
-  display:block;
-  padding:0;
-}
-.library-collection[data-category="biblical"] .library-cover.is-banner img,
-.library-collection[data-category="biblical"] .library-cover.is-banner img.library-banner-image{
-  display:block;
-  width:100%;
-  height:auto !important;
-  max-width:100%;
-  object-fit:contain !important;
-  object-position:center !important;
-  transform:none !important;
-  transform-origin:center !important;
-}
