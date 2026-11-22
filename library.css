@@ -181,3 +181,34 @@
   object-fit:cover;
   object-position:center;
 }
+
+
+/* Scripture Studies: cards stretch to support full-width horizontal banners. */
+.library-collection[data-category="biblical"] .library-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+  width:100%;
+}
+.library-collection[data-category="biblical"] .library-card{
+  width:100%;
+  max-width:none;
+  height:100%;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  overflow:hidden;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner img.library-banner-image{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+}
+@media(max-width:700px){
+  .library-collection[data-category="biblical"] .library-grid{grid-template-columns:minmax(0,1fr)}
+}
