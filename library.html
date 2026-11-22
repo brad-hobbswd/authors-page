@@ -1215,6 +1215,45 @@ article.library-card[data-title="Love That Covers LGBTQIA Edition"] > div.librar
     margin:0 !important;
 }
 
+
+/* LOVE THAT COVERS LGBTQIA+: wider card, full banner artwork without zoom/crop */
+article.library-card[data-title="Love That Covers LGBTQIA Edition"]{
+    width:min(340px, calc(100vw - 32px)) !important;
+    max-width:340px !important;
+    justify-self:center !important;
+    grid-column:auto !important;
+    box-sizing:border-box !important;
+}
+article.library-card[data-title="Love That Covers LGBTQIA Edition"] > div.library-cover{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:2.7 / 1 !important;
+    flex:0 0 auto !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+}
+article.library-card[data-title="Love That Covers LGBTQIA Edition"] > div.library-cover > img.library-banner-image{
+    width:100% !important;
+    height:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    max-width:100% !important;
+    max-height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+}
+@media(max-width:560px){
+    article.library-card[data-title="Love That Covers LGBTQIA Edition"]{
+        width:min(340px, calc(100vw - 32px)) !important;
+        max-width:none !important;
+    }
+    article.library-card[data-title="Love That Covers LGBTQIA Edition"] > div.library-cover{
+        aspect-ratio:2.5 / 1 !important;
+    }
+}
+
 </style>
 </head>
 <body>
