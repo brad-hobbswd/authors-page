@@ -954,6 +954,74 @@ article.library-card[data-title="Alone at the Altar"] > .library-cover{
  }
 }
 
+
+/* ROOT FIX: widen selected collection cards AND their banner holders */
+.library-collection[data-category="series-bruised-reeds"] .library-grid,
+.library-collection[data-category="series-love-that-covers"] .library-grid,
+.library-collection[data-category="series-strength-in-truth"] .library-grid,
+.library-collection[data-category="series-holy-family"] .library-grid,
+.library-collection[data-category="series-substitute"] .library-grid,
+.library-collection[data-category="independent"] .library-grid{
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),340px)) !important;
+    justify-content:center !important;
+    gap:18px !important;
+}
+.library-collection[data-category="series-bruised-reeds"] article.library-card,
+.library-collection[data-category="series-love-that-covers"] article.library-card,
+.library-collection[data-category="series-strength-in-truth"] article.library-card,
+.library-collection[data-category="series-holy-family"] article.library-card,
+.library-collection[data-category="series-substitute"] article.library-card,
+.library-collection[data-category="independent"] article.library-card{
+    width:100% !important;
+    max-width:340px !important;
+}
+.library-collection[data-category="series-bruised-reeds"] article.library-card > .library-cover,
+.library-collection[data-category="series-love-that-covers"] article.library-card > .library-cover,
+.library-collection[data-category="series-strength-in-truth"] article.library-card > .library-cover,
+.library-collection[data-category="series-holy-family"] article.library-card > .library-cover,
+.library-collection[data-category="series-substitute"] article.library-card > .library-cover,
+.library-collection[data-category="independent"] article.library-card > .library-cover{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:2.45 / 1 !important;
+    flex:0 0 auto !important;
+    overflow:hidden !important;
+}
+.library-collection[data-category="series-bruised-reeds"] article.library-card > .library-cover > img,
+.library-collection[data-category="series-love-that-covers"] article.library-card > .library-cover > img,
+.library-collection[data-category="series-strength-in-truth"] article.library-card > .library-cover > img,
+.library-collection[data-category="series-holy-family"] article.library-card > .library-cover > img,
+.library-collection[data-category="series-substitute"] article.library-card > .library-cover > img,
+.library-collection[data-category="independent"] article.library-card > .library-cover > img{
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center !important;
+}
+@media(max-width:700px){
+ .library-collection[data-category="series-bruised-reeds"] .library-grid,
+ .library-collection[data-category="series-love-that-covers"] .library-grid,
+ .library-collection[data-category="series-strength-in-truth"] .library-grid,
+ .library-collection[data-category="series-holy-family"] .library-grid,
+ .library-collection[data-category="series-substitute"] .library-grid,
+ .library-collection[data-category="independent"] .library-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    justify-content:stretch !important;
+ }
+ .library-collection[data-category="series-bruised-reeds"] article.library-card,
+ .library-collection[data-category="series-love-that-covers"] article.library-card,
+ .library-collection[data-category="series-strength-in-truth"] article.library-card,
+ .library-collection[data-category="series-holy-family"] article.library-card,
+ .library-collection[data-category="series-substitute"] article.library-card,
+ .library-collection[data-category="independent"] article.library-card{
+    max-width:none !important;
+ }
+}
+
 </style>
 </head>
 <body>
