@@ -492,3 +492,10 @@
   margin-right:auto !important;
   justify-content:center !important;
 }
+
+
+/* Smaller collection heading for Scripture Studies, matching the other page sections. */
+.library-collection[data-category="biblical"] .collection-heading h2{
+  font-size:clamp(1.2rem,1.8vw,1.55rem);
+  line-height:1.25;
+}
