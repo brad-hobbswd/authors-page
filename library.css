@@ -326,3 +326,20 @@
   align-items:center!important;
   width:100%;
 }
+
+
+/* DEFINITIVE DIVIDER AND SPACE BEFORE SCRIPTURE STUDIES */
+.library-collection[data-category="biblical"]{
+  margin-top:clamp(38px,5vw,68px)!important;
+  border-top:2px solid rgba(169,126,54,.45)!important;
+  padding-top:clamp(28px,3.5vw,44px)!important;
+}
+.library-collection[data-category="biblical"] .section-inner{
+  padding-top:0!important;
+}
+@media(max-width:560px){
+  .library-collection[data-category="biblical"]{
+    margin-top:34px!important;
+    padding-top:24px!important;
+  }
+}
