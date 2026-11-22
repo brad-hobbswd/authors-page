@@ -611,6 +611,24 @@
     }
 }
 
+
+/* SUBSTITUTE TRILOGY: enlarge and equalize banner artwork */
+.library-series-section[data-series-section="substitute"] .library-card.has-cover .library-cover.is-banner{
+    aspect-ratio:1.55 / 1 !important;
+    overflow:hidden !important;
+}
+.library-series-section[data-series-section="substitute"] .library-card.has-cover .library-cover.is-banner img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+}
+@media(max-width:560px){
+    .library-series-section[data-series-section="substitute"] .library-card.has-cover .library-cover.is-banner{
+        aspect-ratio:1.3 / 1 !important;
+    }
+}
+
 </style>
 </head>
 <body>
