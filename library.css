@@ -621,3 +621,26 @@
   transform:none !important;
   transform-origin:center !important;
 }
+
+
+/* Scripture Studies banners follow the same natural-proportion standard as all other collections. */
+.library-collection[data-category="biblical"] .library-cover.is-banner{
+  width:100%;
+  height:auto !important;
+  min-height:0;
+  aspect-ratio:auto !important;
+  overflow:hidden;
+  display:block;
+  padding:0;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner img,
+.library-collection[data-category="biblical"] .library-cover.is-banner img.library-banner-image{
+  display:block;
+  width:100%;
+  height:auto !important;
+  max-width:100%;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+  transform-origin:center !important;
+}
