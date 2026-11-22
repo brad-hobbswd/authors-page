@@ -463,3 +463,12 @@
 @media(max-width:700px){
   .library-card.has-cover .library-cover.is-banner{height:170px;}
 }
+
+
+/* Book One: Holy Family banner shows the complete artwork without zoom. */
+.library-card[data-title="The Rise of a Holy Family A Revival Born from Rejection"]{
+  --banner-zoom:1;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
