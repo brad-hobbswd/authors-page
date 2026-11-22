@@ -1022,6 +1022,41 @@ article.library-card[data-title="Alone at the Altar"] > .library-cover{
  }
 }
 
+
+/* FIX THE ACTUAL CARD BANNER ELEMENTS: match card attributes directly */
+article.library-card[data-series="bruised-reeds"] > .library-cover,
+article.library-card[data-series="love-that-covers"] > .library-cover,
+article.library-card[data-series="strength-in-truth"] > .library-cover,
+article.library-card[data-series="holy-family"] > .library-cover,
+article.library-card[data-series="substitute"] > .library-cover,
+article.library-card[data-category="independent"] > .library-cover{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:2.45 / 1 !important;
+  flex:0 0 auto !important;
+  align-items:stretch !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+}
+article.library-card[data-series="bruised-reeds"] > .library-cover img,
+article.library-card[data-series="love-that-covers"] > .library-cover img,
+article.library-card[data-series="strength-in-truth"] > .library-cover img,
+article.library-card[data-series="holy-family"] > .library-cover img,
+article.library-card[data-series="substitute"] > .library-cover img,
+article.library-card[data-category="independent"] > .library-cover img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+
 </style>
 </head>
 <body>
