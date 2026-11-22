@@ -393,3 +393,12 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Small Enough to Hear Him: reveal more artwork by reducing banner zoom. */
+.library-card[data-title="Small Enough to Hear Him"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
