@@ -1,0 +1,59 @@
+/* Library controls */
+.library-controls-section{background:#f7f1e7;border-bottom:1px solid rgba(16,27,43,.1)}
+.library-controls-section .section-inner{padding:16px 0 10px}
+.library-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,32%);gap:14px;align-items:end}
+.library-search label,.library-filter .filter-label{display:block;margin:0 0 6px;font-size:.7rem;line-height:1;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.library-search input,.library-filter-select{width:100%;min-height:44px;box-sizing:border-box;border:1px solid rgba(16,27,43,.16);border-radius:10px;background:#fff;color:#101b2b;padding:10px 13px;font:inherit}
+.library-filter-select{cursor:pointer;appearance:auto}
+.library-results{margin-top:7px;font-size:.72rem;line-height:1.2;color:#596273}
+.library-card.has-cover .library-text-banner{background:linear-gradient(135deg,#101b2b,#273a52 55%,#b69a63);color:#fff;padding:28px 34px;box-sizing:border-box;text-align:left}
+.library-text-banner .banner-copy{width:100%;display:flex;flex-direction:column;gap:7px}
+.library-text-banner .banner-copy span{font-size:.68rem;letter-spacing:.16em;font-weight:700;opacity:.78}
+.library-text-banner .banner-copy strong{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.45rem,2.8vw,2.35rem);line-height:1.05}
+.library-text-banner .banner-copy em{font-style:normal;font-size:.82rem;line-height:1.35;opacity:.9;max-width:720px}
+/* Single source of truth for grid and card geometry */
+.library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,260px));justify-content:center;align-items:start;gap:18px}
+.library-card{height:auto;min-width:0;max-width:100%;align-self:start}
+.library-card.has-cover{padding:0;overflow:hidden;display:flex;flex-direction:column;height:auto}
+.library-card-content{padding:24px;min-width:0;flex:1 1 auto}
+.library-card-content p{margin-bottom:10px}
+.library-card-content h3{overflow-wrap:anywhere;line-height:1.16}
+.library-cover{width:100%;background:#f5f2ec;overflow:hidden;line-height:0}
+.library-cover.is-banner{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.library-cover.is-banner img.library-banner-image{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.library-cover.is-book-cover{height:250px;display:flex;align-items:center;justify-content:center}
+.library-cover.is-book-cover img{width:auto;height:100%;max-width:100%;object-fit:contain}
+.library-card.has-cover:hover .library-cover img{transform:scale(1.025)}
+.library-card[data-series]{position:relative}
+.library-card[data-series] .book-type{display:inline-block}
+.library-card[data-series="love-that-covers"] .book-type{color:var(--gold-dark);font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
+/* Love That Covers collection: same card and banner dimensions, side by side */
+.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,260px))}
+.library-series-section[data-series-section="love-that-covers"] .library-card{width:100%;max-width:260px}
+.library-series-section[data-series-section="love-that-covers"] .library-cover.is-banner{aspect-ratio:16/9}
+.library-series-section .library-cover.is-banner img{object-fit:contain}
+@media(max-width:900px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(215px,245px));gap:14px}}
+@media(max-width:700px){
+.library-controls-section .section-inner{padding:12px 0 8px}
+.library-controls{grid-template-columns:minmax(0,1.25fr) minmax(130px,.75fr);gap:9px}
+.library-search label,.library-filter .filter-label{font-size:.62rem;margin-bottom:5px}
+.library-search input,.library-filter-select{min-height:42px;padding:9px 10px;border-radius:9px;font-size:.9rem}
+.library-results{font-size:.68rem;margin-top:5px}
+.library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.library-card-content{padding:14px}
+.library-card-content h3{font-size:clamp(1rem,4.2vw,1.3rem);line-height:1.18}
+.library-card-content p{font-size:.77rem;line-height:1.42}
+.library-cover.is-banner{aspect-ratio:1.45/1}
+.library-cover.is-book-cover{height:220px}
+.library-card.has-cover .library-text-banner{padding:20px 22px}
+.library-text-banner .banner-copy strong{font-size:1.35rem}
+.library-text-banner .banner-copy em{font-size:.74rem}
+.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.library-series-section[data-series-section="love-that-covers"] .library-card{max-width:none}
+}
+@media(max-width:420px){.library-grid{grid-template-columns:1fr}.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:1fr}}
+@media(orientation:landscape) and (max-height:700px) and (max-width:1100px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(190px,230px));gap:12px}}
+@media(orientation:landscape) and (max-height:480px) and (max-width:1100px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(175px,210px))}}
+.library-grid,.library-card,.library-card-content,.library-card-content h3{min-width:0;max-width:100%;box-sizing:border-box}
+.library-card-content h3{white-space:normal;overflow-wrap:anywhere}
+@media(max-width:560px){.library-card[data-title="Beyond Denominations"] .library-card-content h3,.library-card[data-title="No Condemnation"] .library-card-content h3{font-size:.9rem;line-height:1.18}}
