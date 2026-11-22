@@ -442,3 +442,56 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Library-wide centered layout and visual balance */
+.library-page-heading,
+.library-page-heading *{
+  text-align:center;
+}
+.collection-heading,
+.collection-heading *{
+  text-align:center;
+}
+.library-grid{
+  justify-items:center;
+}
+.library-card.has-cover{
+  text-align:center;
+}
+.library-card-content,
+.library-card-content *{
+  text-align:center;
+}
+.library-card-content{
+  align-items:center;
+}
+.library-card-content p,
+.library-card-content h3,
+.library-card-content .book-type,
+.library-card-content .book-link{
+  width:100%;
+}
+.library-card-content .book-link{
+  display:flex;
+  justify-content:center;
+}
+/* Center a lone card on an incomplete final grid row. */
+.library-grid > .library-card:last-child:nth-child(3n + 1){
+  grid-column:2;
+}
+.library-grid > .library-card:last-child:nth-child(3n + 2){
+  grid-column:2 / span 2;
+  justify-self:center;
+}
+@media(max-width:900px){
+  .library-grid > .library-card:last-child:nth-child(3n + 1),
+  .library-grid > .library-card:last-child:nth-child(3n + 2){
+    grid-column:auto;
+  }
+}
+@media(max-width:700px){
+  .library-page-heading{ text-align:center; }
+  .library-card-content{ align-items:center; }
+  .library-card-content p{ max-width:100%; }
+}
