@@ -810,6 +810,30 @@ article.library-card[data-title="The Rise of a Holy Family A Revival Born from R
     }
 }
 
+
+/* SUBSTITUTE TRILOGY: shorter, horizontal banner holders for all three books */
+.library-series-section[data-series-section="substitute"] article.library-card > .library-cover{
+    height:120px !important;
+    min-height:120px !important;
+    max-height:120px !important;
+    aspect-ratio:auto !important;
+    overflow:hidden !important;
+    padding:0 !important;
+}
+.library-series-section[data-series-section="substitute"] article.library-card > .library-cover > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+}
+@media(max-width:700px){
+    .library-series-section[data-series-section="substitute"] article.library-card > .library-cover{
+        height:105px !important;
+        min-height:105px !important;
+        max-height:105px !important;
+    }
+}
+
 </style>
 </head>
 <body>
