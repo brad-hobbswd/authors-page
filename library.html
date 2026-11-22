@@ -534,6 +534,18 @@
     }
 }
 
+
+/* SERIES AND COLLECTION CARD METADATA */
+.library-card[data-series] { position: relative; }
+.library-card[data-series] .book-type { display: inline-block; }
+.library-card[data-series="love-that-covers"] .book-type {
+  color: var(--gold-dark);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -1431,7 +1443,7 @@
       <p>Books addressing church hurt, brokenness, emotional healing, restoration, grace, and finding hope through Jesus.</p>
     </div>
     <div class="library-grid">
-<article class="library-card has-cover" data-title="Bruised Reeds How Gossip Became Violence in the Church" data-category="healing">
+<article class="library-card has-cover" data-title="Bruised Reeds How Gossip Became Violence in the Church" data-series="bruised-reeds" data-series-order="1" data-category="healing">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/bruise-reeds-gossip-violence/954CDC23-F8D5-414F-A655-02DCCB789ABF.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">BRUISED REEDS • BOOK ONE</span>
                         <h3>Bruised Reeds: How Gossip Became Violence in the Church</h3>
@@ -1443,7 +1455,7 @@
                         <a href="https://brad-hobbswd.github.io/bruise-reeds-gossip-violence/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-<article class="library-card has-cover" data-title="Bruised Reeds Holiness Is a Weapon" data-category="healing">
+<article class="library-card has-cover" data-title="Bruised Reeds Holiness Is a Weapon" data-series="bruised-reeds" data-series-order="2" data-category="healing">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/bruise-reeds-holiness-weapon/BF6DC6EE-2C2E-4956-B6DE-27B82AC5CA6F.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">BRUISED REEDS • BOOK TWO</span>
                         <h3>Bruised Reeds: Holiness Is a Weapon</h3>
@@ -1543,9 +1555,10 @@
                     </div>
                 </article>
 <article class="library-card has-cover"
-                    data-title="Love That Covers"
+                    data-title="Love That Covers" data-series="love-that-covers" data-series-order="1"
                     data-category="love">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/love-that-covers/B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
+                        <span class="book-type">LOVE THAT COVERS • COLLECTION</span>
                         <h3>
                             Love That Covers
                         </h3>
@@ -1564,7 +1577,7 @@
                     </div>
                 </article>
 <article class="library-card has-cover"
-                    data-title="Love That Covers LGBTQIA Edition"
+                    data-title="Love That Covers LGBTQIA Edition" data-series="love-that-covers" data-series-order="2"
                     data-category="love">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/0C57556B-64CB-42F0-B5E5-9DD0FEE781D7.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <h3>
@@ -1855,7 +1868,7 @@
 
 
 
-<article class="library-card has-cover" data-title="The Strength in Truth" data-category="fiction">
+<article class="library-card has-cover" data-title="The Strength in Truth" data-series="strength-in-truth" data-series-order="1" data-category="fiction">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/strength-of-the-truth/4CA866AE-17DF-48D5-A11F-B2EC3338D21F.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">STRENGTH IN TRUTH • BOOK ONE</span>
                         <h3>The Strength in Truth</h3>
@@ -1867,7 +1880,7 @@
                         <a href="https://brad-hobbswd.github.io/strength-of-the-truth/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-<article class="library-card has-cover" data-title="The Strength in Truth The Man Who Gave Too Much" data-category="fiction">
+<article class="library-card has-cover" data-title="The Strength in Truth The Man Who Gave Too Much" data-series="strength-in-truth" data-series-order="2" data-category="fiction">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/strengthtruth-man-who-gave-too-much/5A0AD872-5A59-4F76-89B1-6B7CDE906EA1.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">STRENGTH IN TRUTH • BOOK TWO</span>
                         <h3>The Strength in Truth: The Man Who Gave Too Much</h3>
@@ -1879,7 +1892,7 @@
                         <a href="https://brad-hobbswd.github.io/strengthtruth-man-who-gave-too-much/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-<article class="library-card has-cover" data-title="The Rise of a Holy Family A Revival Born from Rejection" data-category="fiction">
+<article class="library-card has-cover" data-title="The Rise of a Holy Family A Revival Born from Rejection" data-series="holy-family" data-series-order="1" data-category="fiction">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/holy-family-rejection/0EB7BA12-5534-46D0-9EED-B926C2686BDF.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">HOLY FAMILY • BOOK ONE</span>
                         <h3>The Rise of a Holy Family: A Revival Born from Rejection</h3>
@@ -1891,7 +1904,7 @@
                         <a href="https://brad-hobbswd.github.io/holy-family-rejection/" target="_blank" rel="noopener" class="book-link">Explore Book →</a>
                     </div>
                 </article>
-<article class="library-card has-cover" data-title="The Rise of a Holy Family II A Revival That Breaks Every Label" data-category="fiction">
+<article class="library-card has-cover" data-title="The Rise of a Holy Family II A Revival That Breaks Every Label" data-series="holy-family" data-series-order="2" data-category="fiction">
                     <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/holy-family-breaks-every-label/DA15EC0A-5D1B-4B25-A931-27E017461FE4.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">HOLY FAMILY • BOOK TWO</span>
                         <h3>The Rise of a Holy Family II: A Revival That Breaks Every Label</h3>
@@ -1905,7 +1918,7 @@
                 </article>
 <article
                     class="library-card has-cover"
-                    data-title="The Substitute"
+                    data-title="The Substitute" data-series="substitute" data-series-order="1"
                     data-category="fiction">
 <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/the-substitute/bookbannersubstitute.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">
@@ -1930,7 +1943,7 @@
                 </article>
 <article
                     class="library-card has-cover"
-                    data-title="The Substitute II"
+                    data-title="The Substitute II" data-series="substitute" data-series-order="2"
                     data-category="fiction">
 <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/the-sub-2/51EDB7AA-9196-4D71-A718-CE3301651819.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">
@@ -1955,7 +1968,7 @@
                 </article>
 <article
                     class="library-card has-cover"
-                    data-title="The Substitute Beyond the Substitute"
+                    data-title="The Substitute Beyond the Substitute" data-series="substitute" data-series-order="3"
                     data-category="fiction">
 <div class="library-cover"><img class="library-banner-image" src="https://brad-hobbswd.github.io/the-sub-3/947084B7-096F-46A3-A29F-6A85FA190FB6.png" alt="" loading="lazy" decoding="async"></div><div class="library-card-content">
                         <span class="book-type">
