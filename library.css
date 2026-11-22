@@ -369,3 +369,12 @@
 @media(max-width:700px){
   .library-card.has-cover .library-cover.is-banner{height:170px;}
 }
+
+
+/* Fragments of Grace: reduce zoom and reveal more of the banner artwork. */
+.library-card[data-title="Fragments of Grace"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
