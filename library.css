@@ -130,3 +130,50 @@
 .library-series-section .collection-heading p:last-child{margin:0;line-height:1.4}
 @media(max-width:1000px){.navbar{gap:10px;min-height:64px}.library-nav-controls{max-width:300px;flex-basis:300px}}
 @media(max-width:560px){.navbar{gap:6px;min-height:58px}.library-nav-controls{max-width:185px;flex-basis:150px}.library-page-heading{width:calc(100% - 28px);margin:8px auto 10px;padding:10px 14px}.library-page-heading h1{font-size:1.28rem}.library-heading-copy{font-size:.78rem;margin-bottom:4px}.library-series-section .section-inner{padding-top:8px;padding-bottom:8px}.library-series-section .collection-heading{margin-bottom:8px}}
+
+
+/* COMPACT RHYTHM BETWEEN SERIES AND BOOK SHELVES */
+.library-series-section{
+  margin:0!important;
+  padding:0!important;
+}
+.library-series-section .section-inner{
+  padding-top:clamp(8px,1vw,14px)!important;
+  padding-bottom:clamp(8px,1vw,14px)!important;
+}
+.library-series-section + .library-series-section{
+  margin-top:0!important;
+  padding-top:0!important;
+}
+.library-series-section .collection-heading{
+  margin-top:0!important;
+  margin-bottom:clamp(8px,1vw,12px)!important;
+}
+.library-series-section .collection-heading h2{
+  margin-top:0!important;
+  margin-bottom:4px!important;
+}
+.library-series-section .collection-heading p{
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
+.library-series-section .library-grid{
+  margin-top:0!important;
+  margin-bottom:0!important;
+  gap:clamp(12px,1.5vw,20px)!important;
+}
+.library-series-section .section-inner > *:last-child{
+  margin-bottom:0!important;
+}
+@media(max-width:560px){
+  .library-series-section .section-inner{
+    padding-top:7px!important;
+    padding-bottom:7px!important;
+  }
+  .library-series-section .collection-heading{
+    margin-bottom:7px!important;
+  }
+  .library-series-section .library-grid{
+    gap:12px!important;
+  }
+}
