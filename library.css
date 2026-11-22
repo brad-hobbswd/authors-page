@@ -234,3 +234,36 @@
   .library-collection[data-category="independent"] .collection-heading h2{font-size:1.05rem!important}
   .library-collection[data-category="independent"] .collection-heading p:not(.section-label){font-size:.7rem!important}
 }
+
+
+/* SMALLER COLLECTION HEADINGS THROUGHOUT THE LIBRARY */
+.library-collection:not([data-series-section]) .collection-heading .section-label{
+  font-size:.62rem!important;
+  letter-spacing:.1em!important;
+  margin-bottom:2px!important;
+}
+.library-collection:not([data-series-section]) .collection-heading h2{
+  font-size:clamp(1.05rem,1.7vw,1.4rem)!important;
+  line-height:1.16!important;
+  margin:0 0 4px!important;
+}
+.library-collection:not([data-series-section]) .collection-heading p:not(.section-label){
+  font-size:.76rem!important;
+  line-height:1.35!important;
+  margin:0!important;
+  max-width:760px;
+}
+.library-collection:not([data-series-section]) .section-inner{
+  padding-top:8px!important;
+  padding-bottom:12px!important;
+}
+.library-collection:not([data-series-section]) .collection-heading{
+  margin-top:0!important;
+  margin-bottom:9px!important;
+}
+@media(max-width:560px){
+  .library-collection:not([data-series-section]) .collection-heading h2{font-size:1.05rem!important}
+  .library-collection:not([data-series-section]) .collection-heading p:not(.section-label){font-size:.7rem!important}
+  .library-collection:not([data-series-section]) .section-inner{padding-top:5px!important;padding-bottom:9px!important}
+  .library-collection:not([data-series-section]) .collection-heading{margin-bottom:7px!important}
+}
