@@ -183,10 +183,10 @@
 }
 
 
-/* Scripture Studies: cards stretch to support full-width horizontal banners. */
+/* Scripture Studies: let each card span the collection width so banners fill the entire card top. */
 .library-collection[data-category="biblical"] .library-grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:minmax(0,1fr);
   align-items:stretch;
   width:100%;
 }
@@ -208,7 +208,4 @@
   max-width:none;
   object-fit:cover;
   object-position:center;
-}
-@media(max-width:700px){
-  .library-collection[data-category="biblical"] .library-grid{grid-template-columns:minmax(0,1fr)}
 }
