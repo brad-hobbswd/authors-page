@@ -32,8 +32,12 @@
 .library-card[data-series="love-that-covers"] .book-type{color:var(--gold-dark);font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
 
 /* LOVE THAT COVERS: TWO EVEN, ADAPTIVE CARDS */
-.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,480px));gap:24px}
-.library-series-section[data-series-section="love-that-covers"] .library-card{width:100%;max-width:480px}
+.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:minmax(0,420px) minmax(0,480px);gap:24px;align-items:start}
+.library-series-section[data-series-section="love-that-covers"] .library-card{width:100%;max-width:none}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="1"] .library-cover.is-banner{height:auto;min-height:0}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="1"] .library-cover.is-banner img{width:100%;height:auto;object-fit:cover}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner{height:220px;min-height:220px;overflow:hidden}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner img{width:100%;height:100%;object-fit:cover;object-position:center}
 .library-series-section[data-series-section="love-that-covers"] .library-cover.is-banner{height:220px;min-height:220px;overflow:hidden}\n.library-series-section[data-series-section="love-that-covers"] .library-cover.is-banner img{width:100%;height:100%;object-fit:cover;object-position:center}
 
 @media(max-width:900px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),320px));gap:16px}}
