@@ -532,3 +532,12 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* What They Said About You: show the entire banner artwork, no zoom. */
+.library-card[data-title="What They Said About You"]{
+  --banner-zoom:1;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
