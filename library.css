@@ -1,441 +1,108 @@
-/* LIBRARY CONTROLS */
-.library-controls-section{background:#f7f1e7;border-bottom:1px solid rgba(16,27,43,.1)}
-.library-controls-section .section-inner{padding:16px 0 10px}
-.library-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,32%);gap:14px;align-items:end}
-.library-search label,.library-filter .filter-label{display:block;margin:0 0 6px;font-size:.7rem;line-height:1;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.library-search input,.library-filter-select{width:100%;min-height:44px;box-sizing:border-box;border:1px solid rgba(16,27,43,.16);border-radius:10px;background:#fff;color:#101b2b;padding:10px 13px;font:inherit}
-.library-filter-select{cursor:pointer;appearance:auto}
-.library-results{margin-top:7px;font-size:.72rem;line-height:1.2;color:#596273}
+/* Library page layout
+   Collection cards reuse the site palette and card foundations from styles.css. */
 
-/* TEXT-ONLY BANNERS */
-.library-card.has-cover .library-text-banner{background:linear-gradient(135deg,#101b2b,#273a52 55%,#b69a63);color:#fff;padding:28px 34px;box-sizing:border-box;text-align:left}
-.library-text-banner .banner-copy{width:100%;display:flex;flex-direction:column;gap:7px}
-.library-text-banner .banner-copy span{font-size:.68rem;letter-spacing:.16em;font-weight:700;opacity:.78}
-.library-text-banner .banner-copy strong{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.45rem,2.8vw,2.35rem);line-height:1.05}
-.library-text-banner .banner-copy em{font-style:normal;font-size:.82rem;line-height:1.35;opacity:.9;max-width:720px}
+.library-controls-section{display:none}
+.library-nav-controls{display:flex;align-items:center;gap:8px;min-width:0;flex:0 1 410px}
+.library-nav-controls .library-controls{display:flex;align-items:center;gap:8px;width:100%;min-width:0}
+.library-nav-controls .library-search,.library-nav-controls .library-filter{flex:1 1 0;min-width:0}
+.library-nav-controls label{display:none}
+.library-nav-controls input,.library-nav-controls select{
+  box-sizing:border-box;width:100%;height:38px;min-height:38px;padding:7px 10px;
+  border:1px solid rgba(255,255,255,.24);border-radius:8px;
+  background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:.78rem
+}
+.library-nav-controls input::placeholder{color:rgba(255,255,255,.72)}
+.library-nav-controls select option{color:#101b2b;background:#fff}
+.library-results-status{margin:0;color:var(--muted,#647084);font-size:.78rem;line-height:1.4}
 
-/* CARDS: FLEXIBLE WIDTH, CONTENT-DRIVEN HEIGHT */
-.library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),340px));justify-content:center;align-items:stretch;gap:22px}
-.library-card{min-width:0;max-width:100%;height:auto;align-self:stretch}
-.library-card.has-cover{padding:0;overflow:hidden;display:flex;flex-direction:column;height:auto;border-radius:var(--radius-medium,14px);background:#fff;border:1px solid rgba(16,27,43,.12);box-shadow:var(--shadow-small,0 8px 25px rgba(16,27,43,.08))}
-.library-card-content{padding:clamp(20px,2.2vw,28px);min-width:0;flex:1 1 auto}
-.library-card-content p{margin-bottom:12px}
-.library-card-content h3{overflow-wrap:anywhere;line-height:1.16}
-.library-cover{width:100%;background:#f5f2ec;overflow:hidden;line-height:0;margin:0;flex:0 0 auto}
-.library-cover.is-banner{display:block;width:100%;height:auto;aspect-ratio:auto;min-height:0}
-.library-cover.is-banner img.library-banner-image{display:block;width:100%;height:auto;max-width:none;object-fit:cover;object-position:center}
-.library-cover.is-book-cover{height:clamp(260px,32vw,360px);display:flex;align-items:center;justify-content:center;padding:12px}
+.library-page-heading{
+  box-sizing:border-box;width:min(calc(100% - 40px),var(--max-width,1200px));
+  margin:18px auto 10px;padding:20px 24px;border-radius:12px;
+  color:#fff;background:linear-gradient(135deg,var(--navy-deep,#101b2b),var(--navy-light,#273a52))
+}
+.library-page-heading .section-label{margin:0 0 5px;color:rgba(255,255,255,.72);font-size:.7rem;letter-spacing:.12em}
+.library-page-heading h1{margin:0 0 6px;color:#fff;font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.15}
+.library-heading-copy{margin:0 0 8px;color:rgba(255,255,255,.84);font-size:.92rem;line-height:1.5}
+.library-page-heading .library-results-status{color:rgba(255,255,255,.78)}
+
+.library-collection{padding:clamp(34px,5vw,62px) 20px}
+.library-series-section{padding-top:clamp(28px,4vw,48px);padding-bottom:clamp(30px,4vw,50px)}
+.library-series-section + .library-series-section{border-top:1px solid rgba(169,126,54,.24)}
+.collection-heading{max-width:780px;margin:0 auto clamp(22px,3vw,34px);text-align:center}
+.collection-heading .section-label{margin:0 0 6px;color:var(--gold-dark,#8b6b30);font-size:.72rem;font-weight:700;letter-spacing:.12em}
+.collection-heading h2{margin:0 0 8px;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.2}
+.collection-heading p:not(.section-label){margin:0;color:var(--muted,#647084);font-size:.94rem;line-height:1.55}
+.library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:clamp(16px,2vw,24px);max-width:var(--max-width,1200px);margin:0 auto}
+.library-card{box-sizing:border-box;min-width:0;max-width:100%;height:100%;align-self:stretch}
+.library-card.has-cover{display:flex;flex-direction:column;overflow:hidden;padding:0;border:1px solid rgba(16,27,43,.12);border-radius:var(--radius-medium,14px);background:#fff;box-shadow:var(--shadow-small,0 8px 25px rgba(16,27,43,.08))}
+.library-card-content{display:flex;flex:1 1 auto;flex-direction:column;min-width:0;padding:clamp(18px,2vw,26px)}
+.library-card-content h3{margin:0 0 10px;line-height:1.2;overflow-wrap:anywhere}
+.library-card-content p{margin:0 0 12px;color:var(--muted,#647084);font-size:.92rem;line-height:1.55}
+.book-type{display:inline-block;margin:0 0 9px;color:var(--gold-dark,#8b6b30);font-size:.68rem;font-weight:700;letter-spacing:.09em;line-height:1.4}
+.book-link{margin-top:auto;padding-top:10px}
+.library-cover{width:100%;margin:0;overflow:hidden;background:#f5f2ec;line-height:0;flex:0 0 auto}
+.library-cover.is-banner{aspect-ratio:16/9}
+.library-cover.is-banner img.library-banner-image{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+.library-cover.is-book-cover{display:flex;height:clamp(250px,30vw,350px);align-items:center;justify-content:center;padding:12px}
 .library-cover.is-book-cover img{width:auto;height:100%;max-width:100%;object-fit:contain}
 .library-card.has-cover:hover .library-cover img{transform:none}
 .library-card[data-series]{position:relative}
 .library-card[data-series] .book-type{display:inline-block}
-.library-card[data-series="love-that-covers"] .book-type{color:var(--gold-dark);font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
-
-/* LOVE THAT COVERS: TWO EVEN, ADAPTIVE CARDS */
-.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:minmax(0,420px) minmax(0,480px);gap:24px;align-items:start}
+.library-card[data-series="love-that-covers"] .book-type{margin-bottom:10px;font-size:.72rem;letter-spacing:.08em}
+.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:920px}
 .library-series-section[data-series-section="love-that-covers"] .library-card{width:100%;max-width:none}
-.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="1"] .library-cover.is-banner{height:auto;min-height:0}
-.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="1"] .library-cover.is-banner img{width:100%;height:auto;object-fit:cover}
-.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner{height:220px;min-height:220px;overflow:hidden}
-.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner img{width:100%;height:100%;object-fit:cover;object-position:center}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="1"] .library-cover.is-banner{height:auto;aspect-ratio:auto}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="1"] .library-cover.is-banner img{height:auto}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner{height:220px;aspect-ratio:auto}
+.library-series-section[data-series-section="love-that-covers"] .library-card[data-series-order="2"] .library-cover.is-banner img{height:100%}
 
+/* A deliberate section break introduces Scripture Studies after the teaching shelves. */
+.library-collection[data-category="biblical"]{margin-top:clamp(30px,5vw,60px);border-top:2px solid rgba(169,126,54,.5);padding-top:clamp(34px,4vw,52px)}
+.library-collection[data-category="biblical"] .library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 
-@media(max-width:900px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),320px));gap:16px}}
-@media(max-width:920px){.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.library-series-section[data-series-section="love-that-covers"] .library-card{max-width:none}}
-@media(max-width:700px){
-.library-controls-section .section-inner{padding:12px 0 8px}
-.library-controls{grid-template-columns:minmax(0,1.25fr) minmax(130px,.75fr);gap:9px}
-.library-search label,.library-filter .filter-label{font-size:.62rem;margin-bottom:5px}
-.library-search input,.library-filter-select{min-height:42px;padding:9px 10px;border-radius:9px;font-size:.9rem}
-.library-results{font-size:.68rem;margin-top:5px}
-.library-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:14px}
-.library-card-content{padding:18px}
-.library-card-content h3{font-size:clamp(1.1rem,3.8vw,1.4rem);line-height:1.18}
-.library-card-content p{font-size:.9rem;line-height:1.5}
-.library-cover.is-book-cover{height:260px}
-.library-card.has-cover .library-text-banner{padding:20px 22px}
-.library-text-banner .banner-copy strong{font-size:1.35rem}
-.library-text-banner .banner-copy em{font-size:.74rem}
-.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.library-series-section[data-series-section="love-that-covers"] .library-card{max-width:none}
-}
-@media(max-width:480px){.library-grid{grid-template-columns:1fr}.library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:1fr}}
-.library-grid,.library-card,.library-card-content,.library-card-content h3{min-width:0;max-width:100%;box-sizing:border-box}
-.library-card-content h3{white-space:normal;overflow-wrap:anywhere}
-@media(max-width:560px){.library-card[data-title="Beyond Denominations"] .library-card-content h3,.library-card[data-title="No Condemnation"] .library-card-content h3{font-size:.9rem;line-height:1.18}}
-
-/* LIBRARY SEARCH MOVED INTO THE SITE NAVIGATION */
-.library-nav-controls{display:flex;align-items:center;gap:7px;min-width:0;flex:0 1 390px}
-.library-nav-controls .library-controls{display:flex;align-items:center;gap:7px;width:100%;min-width:0}
-.library-nav-controls .library-search,.library-nav-controls .library-filter{min-width:0;flex:1 1 0}
-.library-nav-controls label{display:none!important}
-.library-nav-controls input,.library-nav-controls select{height:36px;min-height:36px;width:100%;padding:6px 9px;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:rgba(255,255,255,.08);color:#fff;font-size:.78rem;box-sizing:border-box}
-.library-nav-controls input::placeholder{color:rgba(255,255,255,.68)}
-.library-nav-controls select option{color:#101b2b;background:#fff}
-.library-results-status{width:min(calc(100% - 40px),var(--max-width));margin:12px auto 0;padding:0;color:#596273;font-size:.75rem}
-.library-controls-section{display:none!important}
-@media(max-width:1000px){
- .library-nav-controls{flex:1 1 auto;max-width:330px}
- .library-nav-controls input,.library-nav-controls select{height:34px;min-height:34px;font-size:.74rem;padding:5px 7px}
-}
-@media(max-width:560px){
- .library-nav-controls{max-width:190px;flex:1 1 150px}
- .library-nav-controls .library-controls{gap:5px}
- .library-nav-controls input{font-size:.72rem;padding:5px 7px}
- .library-nav-controls select{font-size:.68rem;padding:4px 5px}
- .library-results-status{width:calc(100% - 28px);margin-top:8px}
-}
-@media(max-width:380px){
- .library-nav-controls{max-width:160px;flex-basis:130px}
- .library-nav-controls select{max-width:82px}
-}
-
-/* Compact library heading and results status aligned with navbar controls */
-.library-page-heading{max-width:var(--max-width,1200px);margin:10px auto 6px;padding:0 20px}
-.library-page-heading h1{font-size:1.15rem;line-height:1.2;margin:0;font-weight:650}
-.library-nav-controls{align-items:center}
-.library-results-status{white-space:nowrap;margin:0!important;padding:0!important;width:auto!important;font-size:.67rem;color:rgba(255,255,255,.72);flex:0 0 auto}
-@media(max-width:560px){.library-page-heading{margin:7px auto 4px;padding:0 14px}.library-page-heading h1{font-size:1rem}.library-results-status{font-size:.58rem;white-space:normal;max-width:58px;text-align:right}}
-
-/* Streamlined library introduction above the Who Series */
-.library-page-heading{max-width:var(--max-width,1200px);margin:14px auto 18px;padding:0 20px}
-.library-page-heading .section-label{margin:0 0 4px;font-size:.68rem;letter-spacing:.12em}
-.library-page-heading h1{font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.15;margin:0 0 5px;font-weight:700}
-.library-heading-copy{font-size:.88rem;line-height:1.45;margin:0 0 8px;color:var(--muted,#647084)}
-.library-page-heading .library-results-status{display:block!important;white-space:normal!important;margin:0!important;padding:0!important;width:auto!important;font-size:.78rem;color:var(--muted,#647084);max-width:none!important;text-align:left!important}
-@media(max-width:560px){.library-page-heading{margin:10px auto 13px;padding:0 14px}.library-page-heading h1{font-size:1.35rem}.library-heading-copy{font-size:.8rem}}
-
-/* Restore the blue Library heading strip, in a compact form */
-.library-page-heading{background:linear-gradient(135deg,var(--navy-deep,#101b2b),var(--navy-light,#273a52));color:#fff;border-radius:12px;padding:15px 22px;margin:14px auto 18px;box-sizing:border-box}
-.library-page-heading .section-label{color:rgba(255,255,255,.72)}
-.library-page-heading h1{color:#fff}
-.library-heading-copy{color:rgba(255,255,255,.82)}
-.library-page-heading .library-results-status{color:rgba(255,255,255,.8)}
-@media(max-width:560px){.library-page-heading{padding:12px 15px;border-radius:10px;margin:10px auto 13px}}
-
-/* TIGHT, CONSISTENT LIBRARY SPACING AND ALIGNMENT */
-.navbar{gap:14px;min-height:68px}
-.library-nav-controls{gap:5px;flex-basis:360px}
-.library-nav-controls .library-controls{gap:5px}
-.library-nav-controls input,.library-nav-controls select{height:34px;min-height:34px;padding:5px 8px}
-.library-page-heading{width:min(calc(100% - 40px),var(--max-width,1200px));margin:10px auto 12px;padding:12px 18px;border-radius:10px}
-.library-page-heading .section-label{margin-bottom:2px}
-.library-page-heading h1{margin-bottom:3px}
-.library-heading-copy{margin-bottom:5px;line-height:1.35}
-.library-page-heading .library-results-status{line-height:1.15}
-.library-series-section .section-inner{padding-top:12px;padding-bottom:12px}
-.library-series-section .collection-heading{margin-bottom:12px}
-.library-series-section .collection-heading .section-label{margin-bottom:3px}
-.library-series-section .collection-heading h2{margin:0 0 5px}
-.library-series-section .collection-heading p:last-child{margin:0;line-height:1.4}
-@media(max-width:1000px){.navbar{gap:10px;min-height:64px}.library-nav-controls{max-width:300px;flex-basis:300px}}
-@media(max-width:560px){.navbar{gap:6px;min-height:58px}.library-nav-controls{max-width:185px;flex-basis:150px}.library-page-heading{width:calc(100% - 28px);margin:8px auto 10px;padding:10px 14px}.library-page-heading h1{font-size:1.28rem}.library-heading-copy{font-size:.78rem;margin-bottom:4px}.library-series-section .section-inner{padding-top:8px;padding-bottom:8px}.library-series-section .collection-heading{margin-bottom:8px}}
-
-
-/* COMPACT RHYTHM BETWEEN SERIES AND BOOK SHELVES */
-.library-series-section{
-  margin:0!important;
-  padding:0!important;
-}
-.library-series-section .section-inner{
-  padding-top:clamp(8px,1vw,14px)!important;
-  padding-bottom:clamp(8px,1vw,14px)!important;
-}
-.library-series-section + .library-series-section{
-  margin-top:0!important;
-  padding-top:0!important;
-}
-.library-series-section .collection-heading{
-  margin-top:0!important;
-  margin-bottom:clamp(8px,1vw,12px)!important;
-}
-.library-series-section .collection-heading h2{
-  margin-top:0!important;
-  margin-bottom:4px!important;
-}
-.library-series-section .collection-heading p{
-  margin-top:0!important;
-  margin-bottom:0!important;
-}
-.library-series-section .library-grid{
-  margin-top:0!important;
-  margin-bottom:0!important;
-  gap:clamp(12px,1.5vw,20px)!important;
-}
-.library-series-section .section-inner > *:last-child{
-  margin-bottom:0!important;
-}
-@media(max-width:560px){
-  .library-series-section .section-inner{
-    padding-top:7px!important;
-    padding-bottom:7px!important;
-  }
-  .library-series-section .collection-heading{
-    margin-bottom:7px!important;
-  }
-  .library-series-section .library-grid{
-    gap:12px!important;
-  }
-}
-
-
-/* VISUAL SEPARATORS BETWEEN BOOK SERIES SHELVES */
-.library-series-section{
-  border-bottom:1px solid rgba(169,126,54,.28)!important;
-  position:relative;
-}
-.library-series-section + .library-series-section{
-  border-top:0!important;
-}
-.library-series-section:last-of-type{
-  border-bottom:0!important;
-}
-.library-series-section .section-inner{
-  padding-top:12px!important;
-  padding-bottom:12px!important;
-}
-@media(max-width:560px){
-  .library-series-section{
-    border-bottom:1px solid rgba(169,126,54,.24)!important;
-  }
-  .library-series-section .section-inner{
-    padding-top:8px!important;
-    padding-bottom:8px!important;
-  }
-}
-
-
-/* COMPACT INDEPENDENT WRITINGS INTRO */
-.library-collection[data-category="independent"] .section-inner{
-  padding-top:4px!important;
-  padding-bottom:10px!important;
-}
-.library-collection[data-category="independent"] .collection-heading{
-  margin-top:0!important;
-  margin-bottom:8px!important;
-}
-.library-collection[data-category="independent"] .collection-heading .section-label{
-  font-size:.62rem!important;
-  margin-bottom:2px!important;
-}
-.library-collection[data-category="independent"] .collection-heading h2{
-  font-size:clamp(1.05rem,1.8vw,1.4rem)!important;
-  line-height:1.15!important;
-  margin:0 0 3px!important;
-}
-.library-collection[data-category="independent"] .collection-heading p:not(.section-label){
-  font-size:.76rem!important;
-  line-height:1.35!important;
-  margin:0!important;
-  max-width:760px;
-}
-@media(max-width:560px){
-  .library-collection[data-category="independent"] .section-inner{padding-top:3px!important;padding-bottom:8px!important}
-  .library-collection[data-category="independent"] .collection-heading h2{font-size:1.05rem!important}
-  .library-collection[data-category="independent"] .collection-heading p:not(.section-label){font-size:.7rem!important}
-}
-
-
-/* SMALLER COLLECTION HEADINGS THROUGHOUT THE LIBRARY */
-.library-collection:not([data-series-section]) .collection-heading .section-label{
-  font-size:.62rem!important;
-  letter-spacing:.1em!important;
-  margin-bottom:2px!important;
-}
-.library-collection:not([data-series-section]) .collection-heading h2{
-  font-size:clamp(1.05rem,1.7vw,1.4rem)!important;
-  line-height:1.16!important;
-  margin:0 0 4px!important;
-}
-.library-collection:not([data-series-section]) .collection-heading p:not(.section-label){
-  font-size:.76rem!important;
-  line-height:1.35!important;
-  margin:0!important;
-  max-width:760px;
-}
-.library-collection:not([data-series-section]) .section-inner{
-  padding-top:8px!important;
-  padding-bottom:12px!important;
-}
-.library-collection:not([data-series-section]) .collection-heading{
-  margin-top:0!important;
-  margin-bottom:9px!important;
-}
-@media(max-width:560px){
-  .library-collection:not([data-series-section]) .collection-heading h2{font-size:1.05rem!important}
-  .library-collection:not([data-series-section]) .collection-heading p:not(.section-label){font-size:.7rem!important}
-  .library-collection:not([data-series-section]) .section-inner{padding-top:5px!important;padding-bottom:9px!important}
-  .library-collection:not([data-series-section]) .collection-heading{margin-bottom:7px!important}
-}
-
-
-/* RESTORE READABLE COLLECTION HEADINGS WHILE KEEPING SECTIONS COMPACT */
-.library-collection:not([data-series-section]) .collection-heading .section-label{
-  font-size:.72rem!important;
-  margin-bottom:3px!important;
-}
-.library-collection:not([data-series-section]) .collection-heading h2{
-  font-size:clamp(1.45rem,2.15vw,1.9rem)!important;
-  line-height:1.2!important;
-  margin:0 0 5px!important;
-}
-.library-collection:not([data-series-section]) .collection-heading p:not(.section-label){
-  font-size:.88rem!important;
-  line-height:1.42!important;
-  margin:0!important;
-}
-.library-collection:not([data-series-section]) .section-inner{
-  padding-top:5px!important;
-  padding-bottom:8px!important;
-}
-.library-collection:not([data-series-section]) .collection-heading{
-  margin-bottom:7px!important;
-}
-.library-collection:not([data-series-section]) .library-grid{
-  margin-top:0!important;
-  gap:clamp(12px,1.35vw,18px)!important;
-}
-.library-collection[data-category="independent"] .collection-heading h2{
-  font-size:clamp(1.45rem,2.15vw,1.9rem)!important;
-}
-@media(max-width:560px){
-  .library-collection:not([data-series-section]) .collection-heading .section-label{font-size:.68rem!important}
-  .library-collection:not([data-series-section]) .collection-heading h2{font-size:1.35rem!important;line-height:1.2!important}
-  .library-collection:not([data-series-section]) .collection-heading p:not(.section-label){font-size:.82rem!important}
-  .library-collection:not([data-series-section]) .section-inner{padding-top:4px!important;padding-bottom:7px!important}
-  .library-collection:not([data-series-section]) .collection-heading{margin-bottom:6px!important}
-  .library-collection:not([data-series-section]) .library-grid{gap:11px!important}
-  .library-collection[data-category="independent"] .collection-heading h2{font-size:1.35rem!important}
-}
-
-
-/* CLEAR BREAK BETWEEN THE SERIES SHELVES AND THE MAIN COLLECTIONS */
-.library-collection[data-category="biblical"] .section-inner{
-  padding-top:clamp(48px,6vw,80px)!important;
-}
-@media(max-width:560px){
-  .library-collection[data-category="biblical"] .section-inner{
-    padding-top:clamp(38px,9vw,58px)!important;
-  }
-}
-
-
-/* CENTER THE LIBRARY CLOSING ACTION BUTTONS */
-.library-closing-content .hero-buttons{
-  justify-content:center!important;
-  align-items:center!important;
-  width:100%;
-}
-
-
-/* DEFINITIVE DIVIDER AND SPACE BEFORE SCRIPTURE STUDIES */
-.library-collection[data-category="biblical"]{
-  margin-top:clamp(38px,5vw,68px)!important;
-  border-top:2px solid rgba(169,126,54,.45)!important;
-  padding-top:clamp(28px,3.5vw,44px)!important;
-}
-.library-collection[data-category="biblical"] .section-inner{
-  padding-top:0!important;
-}
-@media(max-width:560px){
-  .library-collection[data-category="biblical"]{
-    margin-top:34px!important;
-    padding-top:24px!important;
-  }
-}
-
-
-/* POLISH THE NEW INDEPENDENT WRITINGS AND TEACHING MATERIAL SHELVES */
-.library-collection[data-category="independent"] .library-grid{
-  grid-template-columns:repeat(3,minmax(0,340px))!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:clamp(16px,2vw,24px)!important;
-}
-.library-collection[data-category="teaching"] .library-grid{
-  grid-template-columns:repeat(2,minmax(0,420px))!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:clamp(18px,2.2vw,28px)!important;
-}
+/* Independent titles share one three-card row; teaching studies share a two-card row. */
+.library-collection[data-category="independent"] .library-grid{grid-template-columns:repeat(3,minmax(0,340px))}
+.library-collection[data-category="teaching"] .library-grid{grid-template-columns:repeat(2,minmax(0,420px))}
 .library-collection[data-category="independent"] .library-card,
-.library-collection[data-category="teaching"] .library-card{
-  width:100%!important;
-  max-width:none!important;
-  height:100%!important;
-  display:flex!important;
-  flex-direction:column!important;
-  padding:0!important;
-  overflow:hidden!important;
-  border-radius:14px!important;
-  background:#fff!important;
-}
+.library-collection[data-category="teaching"] .library-card{width:100%;max-width:none}
 .library-collection[data-category="independent"] .library-cover,
-.library-collection[data-category="teaching"] .library-cover{
-  width:100%!important;
-  aspect-ratio:16/9!important;
-  height:auto!important;
-  min-height:0!important;
-  overflow:hidden!important;
-  display:block!important;
-  padding:0!important;
-  background:#f4f0e8!important;
+.library-collection[data-category="teaching"] .library-cover{aspect-ratio:16/9}
+.library-closing-content .hero-buttons{display:flex;justify-content:center;align-items:center;gap:14px;width:100%}
+
+@media(max-width:1000px){
+  .library-nav-controls{flex:1 1 280px;max-width:340px}
+  .library-grid,.library-collection[data-category="biblical"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .library-collection[data-category="independent"] .library-grid{grid-template-columns:repeat(2,minmax(0,340px))}
+  .library-collection[data-category="teaching"] .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-.library-collection[data-category="independent"] .library-cover img,
-.library-collection[data-category="teaching"] .library-cover img{
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  object-fit:cover!important;
-  object-position:center!important;
-}
-.library-collection[data-category="independent"] .library-card-content,
-.library-collection[data-category="teaching"] .library-card-content{
-  display:flex!important;
-  flex-direction:column!important;
-  flex:1 1 auto!important;
-  padding:clamp(18px,2vw,26px)!important;
-}
-.library-collection[data-category="independent"] .book-type,
-.library-collection[data-category="teaching"] .book-type{
-  font-size:.68rem!important;
-  line-height:1.4!important;
-  letter-spacing:.1em!important;
-  margin-bottom:9px!important;
-}
-.library-collection[data-category="independent"] .library-card-content h3,
-.library-collection[data-category="teaching"] .library-card-content h3{
-  font-size:clamp(1.15rem,1.8vw,1.5rem)!important;
-  line-height:1.2!important;
-  margin:0 0 10px!important;
-}
-.library-collection[data-category="independent"] .library-card-content p,
-.library-collection[data-category="teaching"] .library-card-content p{
-  font-size:.88rem!important;
-  line-height:1.55!important;
-  margin:0 0 12px!important;
-}
-.library-collection[data-category="independent"] .book-link,
-.library-collection[data-category="teaching"] .book-link{
-  margin-top:auto!important;
-  padding-top:12px!important;
-}
-@media(max-width:900px){
-  .library-collection[data-category="independent"] .library-grid{
-    grid-template-columns:repeat(2,minmax(0,340px))!important;
-  }
-  .library-collection[data-category="teaching"] .library-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  }
+@media(max-width:700px){
+  .library-nav-controls{flex:1 1 190px;max-width:250px}
+  .library-nav-controls .library-controls{gap:5px}
+  .library-nav-controls input,.library-nav-controls select{height:34px;min-height:34px;padding:5px 7px;font-size:.72rem}
+  .library-collection{padding:32px 16px}
+  .library-series-section{padding-top:26px;padding-bottom:30px}
+  .collection-heading{margin-bottom:22px}
+  .library-grid{gap:14px}
+  .library-card-content{padding:18px}
+  .library-card-content h3{font-size:clamp(1.08rem,3.6vw,1.4rem)}
+  .library-card-content p{font-size:.88rem}
+  .library-cover.is-book-cover{height:260px}
+  .library-closing-content .hero-buttons{flex-wrap:wrap}
 }
 @media(max-width:560px){
+  .library-nav-controls{flex:1 1 140px;max-width:190px}
+  .library-nav-controls .library-controls{gap:4px}
+  .library-nav-controls input,.library-nav-controls select{padding:5px;font-size:.66rem}
+  .library-page-heading{width:calc(100% - 28px);margin:12px auto 6px;padding:15px 16px;border-radius:10px}
+  .library-page-heading h1{font-size:1.35rem}
+  .library-heading-copy{font-size:.82rem}
+  .library-results-status{font-size:.72rem}
+  .library-collection{padding:28px 14px}
+  .library-series-section{padding-top:22px;padding-bottom:25px}
+  .library-collection[data-category="biblical"]{margin-top:30px;padding-top:28px}
+  .library-grid,.library-collection[data-category="biblical"] .library-grid,
   .library-collection[data-category="independent"] .library-grid,
-  .library-collection[data-category="teaching"] .library-grid{
-    grid-template-columns:minmax(0,1fr)!important;
-    gap:14px!important;
-  }
-  .library-collection[data-category="independent"] .library-cover,
-  .library-collection[data-category="teaching"] .library-cover{
-    aspect-ratio:16/9!important;
-  }
+  .library-collection[data-category="teaching"] .library-grid{grid-template-columns:minmax(0,1fr)}
+  .library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:minmax(0,1fr)}
+  .library-cover.is-book-cover{height:250px}
 }
