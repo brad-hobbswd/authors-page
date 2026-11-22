@@ -253,3 +253,47 @@
   object-fit:contain;
   object-position:center;
 }
+
+
+/* Banner alignment and sizing refinements requested for the library shelves. */
+.library-series-section .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-series-section .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-collection[data-category="teaching"] .library-grid{justify-content:center;}
+.library-collection[data-category="teaching"] .library-card{margin-inline:auto;}
+.library-collection[data-category="teaching"] .library-cover.is-banner img.library-banner-image{object-position:center;}
+.library-series-section[data-series-section="strength-in-truth"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-series-section[data-series-section="strength-in-truth"] .library-cover.is-banner img.library-banner-image{object-fit:cover;object-position:center;}
+.library-series-section[data-series-section="holy-family"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-series-section[data-series-section="holy-family"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Still Seen Still Loved"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Still Seen Still Loved"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="What They Said About You"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="What They Said About You"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Small Enough to Hear Him"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Small Enough to Hear Him"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Faith That Sees Beyond Sight"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Faith That Sees Beyond Sight"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Seven Times Seventy"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Seven Times Seventy"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Last Agreement Careful What You Say Amen To"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Last Agreement Careful What You Say Amen To"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Beyond the Labels Becoming Who God Says You Are"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Beyond the Labels Becoming Who God Says You Are"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Kept Released Covenant"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Kept Released Covenant"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+.library-card[data-title="Sanctified"] .library-cover.is-banner{height:200px;aspect-ratio:auto;}
+.library-card[data-title="Sanctified"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+@media(max-width:700px){
+.library-series-section .library-cover.is-banner,
+.library-series-section[data-series-section="strength-in-truth"] .library-cover.is-banner,
+.library-series-section[data-series-section="holy-family"] .library-cover.is-banner,
+.library-card[data-title="Still Seen Still Loved"] .library-cover.is-banner,
+.library-card[data-title="What They Said About You"] .library-cover.is-banner,
+.library-card[data-title="Small Enough to Hear Him"] .library-cover.is-banner,
+.library-card[data-title="Faith That Sees Beyond Sight"] .library-cover.is-banner,
+.library-card[data-title="Seven Times Seventy"] .library-cover.is-banner,
+.library-card[data-title="Last Agreement Careful What You Say Amen To"] .library-cover.is-banner,
+.library-card[data-title="Beyond the Labels Becoming Who God Says You Are"] .library-cover.is-banner,
+.library-card[data-title="Kept Released Covenant"] .library-cover.is-banner,
+.library-card[data-title="Sanctified"] .library-cover.is-banner{height:170px;}
+}
