@@ -595,3 +595,29 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* MASTER BANNER STANDARD
+   Preserve each artwork's native aspect ratio. Never zoom or crop banner artwork. */
+.library-card.has-cover .library-cover.is-banner,
+.library-card[data-title] .library-cover.is-banner{
+  width:100%;
+  height:auto !important;
+  min-height:0;
+  aspect-ratio:auto !important;
+  overflow:hidden;
+  display:block;
+  padding:0;
+}
+.library-card.has-cover .library-cover.is-banner img,
+.library-card.has-cover .library-cover.is-banner img.library-banner-image,
+.library-card[data-title] .library-cover.is-banner img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  max-width:100%;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+  transform-origin:center !important;
+}
