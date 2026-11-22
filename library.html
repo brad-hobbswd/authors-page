@@ -492,7 +492,39 @@
   grid-template-columns:repeat(auto-fit,minmax(175px,210px)) !important;
   justify-content:center !important;
  }
-}</style>
+}
+/* MOBILE TITLE OVERFLOW FIX: keep long book titles fully visible */
+.library-grid,
+.library-card,
+.library-card.has-cover,
+.library-card-content,
+.library-card-content h3 {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+.library-card-content h3 {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+    line-height: 1.16 !important;
+}
+@media (max-width: 560px) {
+    .library-card-content h3 {
+        font-size: clamp(1rem, 4.2vw, 1.3rem) !important;
+        line-height: 1.18 !important;
+        letter-spacing: normal !important;
+    }
+    .library-card-content {
+        padding: 14px !important;
+        width: 100% !important;
+    }
+}
+
+</style>
 </head>
 <body>
 <!-- =========================================
