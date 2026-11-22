@@ -4602,3 +4602,73 @@ h3 {
     .section{padding:54px 18px}
     .section-heading{margin-bottom:32px}
 }
+
+
+/* =========================================================
+   SITE-WIDE SPACING SYSTEM
+   Apply consistent rhythm across every page, not only Library.
+========================================================= */
+:root{
+  --site-content-width:1240px;
+  --site-gutter:clamp(16px,2.2vw,28px);
+  --site-section-space:clamp(38px,4.4vw,64px);
+  --site-heading-gap:clamp(20px,2.4vw,30px);
+}
+html{scroll-padding-top:82px}
+body{line-height:1.55}
+main{width:100%;min-width:0}
+.container,.section-inner,.content-wrap,.page-content{
+  width:min(calc(100% - (var(--site-gutter)*2)),var(--site-content-width));
+  margin-inline:auto;
+}
+.section{
+  padding:var(--site-section-space) var(--site-gutter);
+}
+.section-heading{
+  margin:0 auto var(--site-heading-gap);
+  max-width:900px;
+}
+.section-heading h1,.section-heading h2,
+.page-heading h1,.page-heading h2{
+  margin:0 0 .55rem;
+  line-height:1.16;
+}
+.section-heading p:last-child,
+.page-heading p:last-child{margin-bottom:0}
+.section-label{margin:0 0 .45rem}
+.grid,.card-grid,.book-grid,.feature-grid{
+  gap:clamp(16px,2vw,24px);
+}
+.card,.book-card,.feature-card,.editorial-book{
+  min-width:0;
+}
+.card-content,.book-card-content,.feature-card-content{
+  padding:clamp(14px,1.7vw,22px);
+}
+section+section{margin-top:0}
+.hero{padding-block:clamp(42px,5vw,72px)}
+.hero-content{gap:clamp(14px,2vw,22px)}
+.hero h1{margin:0 0 .6rem;line-height:1.12}
+.hero p{margin:0 0 .8rem;max-width:72ch}
+.hero-buttons{gap:10px;margin-top:14px}
+footer,.site-footer{padding:clamp(26px,3.5vw,44px) var(--site-gutter)}
+footer .footer-content,.site-footer .footer-content{
+  width:min(100%,var(--site-content-width));
+  margin-inline:auto;
+  gap:clamp(14px,2vw,24px);
+}
+img,video,iframe{max-width:100%}
+@media(max-width:1000px){
+  .section{padding:42px var(--site-gutter)}
+  .section-heading{margin-bottom:24px}
+}
+@media(max-width:560px){
+  :root{--site-gutter:14px;--site-section-space:30px;--site-heading-gap:18px}
+  body{line-height:1.5}
+  .hero{padding-block:30px}
+  .hero h1{font-size:clamp(1.65rem,7vw,2.2rem)}
+  .hero p{margin-bottom:.65rem}
+  .hero-buttons{gap:8px;margin-top:10px}
+  .card-content,.book-card-content,.feature-card-content{padding:14px}
+  footer,.site-footer{padding:24px 14px}
+}
