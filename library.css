@@ -104,3 +104,11 @@
 .library-heading-copy{font-size:.88rem;line-height:1.45;margin:0 0 8px;color:var(--muted,#647084)}
 .library-page-heading .library-results-status{display:block!important;white-space:normal!important;margin:0!important;padding:0!important;width:auto!important;font-size:.78rem;color:var(--muted,#647084);max-width:none!important;text-align:left!important}
 @media(max-width:560px){.library-page-heading{margin:10px auto 13px;padding:0 14px}.library-page-heading h1{font-size:1.35rem}.library-heading-copy{font-size:.8rem}}
+
+/* Restore the blue Library heading strip, in a compact form */
+.library-page-heading{background:linear-gradient(135deg,var(--navy-deep,#101b2b),var(--navy-light,#273a52));color:#fff;border-radius:12px;padding:15px 22px;margin:14px auto 18px;box-sizing:border-box}
+.library-page-heading .section-label{color:rgba(255,255,255,.72)}
+.library-page-heading h1{color:#fff}
+.library-heading-copy{color:rgba(255,255,255,.82)}
+.library-page-heading .library-results-status{color:rgba(255,255,255,.8)}
+@media(max-width:560px){.library-page-heading{padding:12px 15px;border-radius:10px;margin:10px auto 13px}}
