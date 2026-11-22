@@ -591,3 +591,30 @@
 }
 
 
+
+
+/* Scripture Studies uses the same compact card width and centered grid as the other library collections. */
+.library-collection[data-category="biblical"] .library-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,340px));
+  justify-content:center;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  gap:clamp(16px,2vw,24px);
+}
+.library-collection[data-category="biblical"] .library-card{
+  width:100%;
+  max-width:none;
+}
+@media(max-width:900px){
+  .library-collection[data-category="biblical"] .library-grid{
+    grid-template-columns:repeat(2,minmax(0,340px));
+  }
+}
+@media(max-width:700px){
+  .library-collection[data-category="biblical"] .library-grid{
+    grid-template-columns:minmax(0,1fr);
+    max-width:420px;
+  }
+}
