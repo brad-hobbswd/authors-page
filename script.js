@@ -76,6 +76,28 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const librarySearch = document.querySelector("#library-search");
+    const librarySearchControl = document.querySelector("#library-search-control");
+    const navSearchSlot = document.querySelector("#nav-search-slot");
+    const libraryControls = document.querySelector(".library-controls");
+    const librarySearchHome = librarySearchControl?.parentElement || null;
+    const compactNav = window.matchMedia("(max-width: 1000px)");
+
+    const placeLibrarySearch = () => {
+        if (!librarySearchControl || !navSearchSlot || !librarySearchHome) {
+            return;
+        }
+
+        if (compactNav.matches) {
+            navSearchSlot.appendChild(librarySearchControl);
+            libraryControls?.classList.add("search-in-nav");
+        } else {
+            librarySearchHome.insertBefore(librarySearchControl, librarySearchHome.firstChild);
+            libraryControls?.classList.remove("search-in-nav");
+        }
+    };
+
+    placeLibrarySearch();
+    compactNav.addEventListener("change", placeLibrarySearch);
     const libraryCards = document.querySelectorAll(".library-card");
     const libraryCollections = document.querySelectorAll(".library-collection");
     const resultsCount = document.querySelector("#library-count");
