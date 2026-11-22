@@ -1091,6 +1091,61 @@ article.library-card[data-title="Love That Covers LGBTQIA Edition"] > .library-c
     object-position:center !important;
     display:block !important;
 }
+
+/* LOVE THAT COVERS COLLECTION: place the two cards side-by-side in matching spaces */
+.library-collection[data-category="series-love-that-covers"] .library-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,340px)) !important;
+    justify-content:center !important;
+    align-items:stretch !important;
+    gap:18px !important;
+}
+.library-collection[data-category="series-love-that-covers"] article.library-card[data-series="love-that-covers"]{
+    width:100% !important;
+    max-width:340px !important;
+    min-width:0 !important;
+    justify-self:stretch !important;
+}
+.library-collection[data-category="series-love-that-covers"] article.library-card[data-series="love-that-covers"] > .library-cover{
+    width:100% !important;
+    height:220px !important;
+    min-height:220px !important;
+    max-height:220px !important;
+    aspect-ratio:auto !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+    padding:0 !important;
+    flex:0 0 220px !important;
+    box-sizing:border-box !important;
+}
+.library-collection[data-category="series-love-that-covers"] article.library-card[data-series="love-that-covers"] > .library-cover > img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:100% !important;
+    max-height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+}
+@media(max-width:700px){
+    .library-collection[data-category="series-love-that-covers"] .library-grid{
+        grid-template-columns:minmax(0,1fr) !important;
+        gap:14px !important;
+    }
+    .library-collection[data-category="series-love-that-covers"] article.library-card[data-series="love-that-covers"]{
+        max-width:340px !important;
+        justify-self:center !important;
+    }
+    .library-collection[data-category="series-love-that-covers"] article.library-card[data-series="love-that-covers"] > .library-cover{
+        height:190px !important;
+        min-height:190px !important;
+        max-height:190px !important;
+        flex-basis:190px !important;
+    }
+}
+
 </style>
 </head>
 <body>
