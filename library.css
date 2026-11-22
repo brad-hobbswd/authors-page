@@ -267,3 +267,43 @@
   .library-collection:not([data-series-section]) .section-inner{padding-top:5px!important;padding-bottom:9px!important}
   .library-collection:not([data-series-section]) .collection-heading{margin-bottom:7px!important}
 }
+
+
+/* RESTORE READABLE COLLECTION HEADINGS WHILE KEEPING SECTIONS COMPACT */
+.library-collection:not([data-series-section]) .collection-heading .section-label{
+  font-size:.72rem!important;
+  margin-bottom:3px!important;
+}
+.library-collection:not([data-series-section]) .collection-heading h2{
+  font-size:clamp(1.45rem,2.15vw,1.9rem)!important;
+  line-height:1.2!important;
+  margin:0 0 5px!important;
+}
+.library-collection:not([data-series-section]) .collection-heading p:not(.section-label){
+  font-size:.88rem!important;
+  line-height:1.42!important;
+  margin:0!important;
+}
+.library-collection:not([data-series-section]) .section-inner{
+  padding-top:5px!important;
+  padding-bottom:8px!important;
+}
+.library-collection:not([data-series-section]) .collection-heading{
+  margin-bottom:7px!important;
+}
+.library-collection:not([data-series-section]) .library-grid{
+  margin-top:0!important;
+  gap:clamp(12px,1.35vw,18px)!important;
+}
+.library-collection[data-category="independent"] .collection-heading h2{
+  font-size:clamp(1.45rem,2.15vw,1.9rem)!important;
+}
+@media(max-width:560px){
+  .library-collection:not([data-series-section]) .collection-heading .section-label{font-size:.68rem!important}
+  .library-collection:not([data-series-section]) .collection-heading h2{font-size:1.35rem!important;line-height:1.2!important}
+  .library-collection:not([data-series-section]) .collection-heading p:not(.section-label){font-size:.82rem!important}
+  .library-collection:not([data-series-section]) .section-inner{padding-top:4px!important;padding-bottom:7px!important}
+  .library-collection:not([data-series-section]) .collection-heading{margin-bottom:6px!important}
+  .library-collection:not([data-series-section]) .library-grid{gap:11px!important}
+  .library-collection[data-category="independent"] .collection-heading h2{font-size:1.35rem!important}
+}
