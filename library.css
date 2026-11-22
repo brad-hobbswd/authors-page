@@ -378,3 +378,18 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Individually reduce zoom on these two banners. */
+.library-card[data-title="What They Said About You"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
+.library-card[data-title="Fear Before Fear"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
