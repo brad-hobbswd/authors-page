@@ -63,8 +63,11 @@
 /* Independent titles share one three-card row; teaching studies share a two-card row. */
 .library-collection[data-category="independent"] .library-grid{grid-template-columns:repeat(3,minmax(0,340px))}
 .library-collection[data-category="teaching"] .library-grid{grid-template-columns:repeat(2,minmax(0,420px))}
-.library-collection[data-category="family"] .library-grid{display:flex;flex-wrap:wrap;justify-content:center;width:100%;max-width:864px;margin:0 auto}
-.library-collection[data-category="family"] .library-card{flex:0 1 420px;width:100%;max-width:420px}
+/* Family & Young Readers: equal-height cards with aligned actions. */
+.library-collection[data-category="family"] .library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;width:100%;max-width:864px;margin:0 auto}
+.library-collection[data-category="family"] .library-card{height:100%;width:100%;max-width:none}
+.library-collection[data-category="family"] .library-card-content{display:flex;flex:1;flex-direction:column}
+.library-collection[data-category="family"] .library-card-content .book-link{margin-top:auto}
 .library-collection[data-category="independent"] .library-card,
 .library-collection[data-category="teaching"] .library-card{width:100%;max-width:none}
 .library-collection[data-category="independent"] .library-cover,
@@ -109,8 +112,8 @@
   .library-grid,.library-collection[data-category="biblical"] .library-grid,
   .library-collection[data-category="independent"] .library-grid,
   .library-collection[data-category="teaching"] .library-grid{grid-template-columns:minmax(0,1fr)}
-  .library-collection[data-category="family"] .library-grid{flex-direction:column;align-items:center}
-  .library-collection[data-category="family"] .library-card{flex:0 1 auto;width:100%;max-width:420px}
+  .library-collection[data-category="family"] .library-grid{grid-template-columns:minmax(0,1fr);max-width:420px}
+  .library-collection[data-category="family"] .library-card{height:auto;width:100%;max-width:none}
   .library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:minmax(0,1fr)}
   .library-cover.is-book-cover{height:250px}
 }
