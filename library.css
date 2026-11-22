@@ -297,3 +297,9 @@
 .library-card[data-title="Kept Released Covenant"] .library-cover.is-banner,
 .library-card[data-title="Sanctified"] .library-cover.is-banner{height:170px;}
 }
+
+
+/* Scripture Studies banners: reduce banner height while retaining full-width alignment. */
+.library-collection[data-category="biblical"] .library-cover.is-banner{height:180px;aspect-ratio:auto;}
+.library-collection[data-category="biblical"] .library-cover.is-banner img.library-banner-image{width:100%;height:100%;object-fit:cover;object-position:center;}
+@media(max-width:700px){.library-collection[data-category="biblical"] .library-cover.is-banner{height:145px;}}
