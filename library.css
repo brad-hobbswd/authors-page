@@ -637,3 +637,37 @@
 @media(max-width:700px){
   .library-card.has-cover .library-cover.is-banner{height:170px;min-height:170px;padding:6px;}
 }
+
+
+/* ACTUAL banner correction: artwork fills the entire uniform banner strip. */
+.library-card.has-cover .library-cover.is-banner{
+  display:block !important;
+  width:100% !important;
+  height:200px !important;
+  min-height:200px !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  background:#f2eee7;
+  border-radius:0 !important;
+}
+.library-card.has-cover .library-cover.is-banner img,
+.library-card.has-cover .library-cover.is-banner img.library-banner-image{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-width:100% !important;
+  min-height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:var(--banner-position-x,50%) var(--banner-position-y,50%) !important;
+  transform:none !important;
+  margin:0 !important;
+}
+@media(max-width:700px){
+  .library-card.has-cover .library-cover.is-banner{
+    height:170px !important;
+    min-height:170px !important;
+  }
+}
