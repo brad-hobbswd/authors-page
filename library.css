@@ -63,3 +63,29 @@
 .library-grid,.library-card,.library-card-content,.library-card-content h3{min-width:0;max-width:100%;box-sizing:border-box}
 .library-card-content h3{white-space:normal;overflow-wrap:anywhere}
 @media(max-width:560px){.library-card[data-title="Beyond Denominations"] .library-card-content h3,.library-card[data-title="No Condemnation"] .library-card-content h3{font-size:.9rem;line-height:1.18}}
+
+/* LIBRARY SEARCH MOVED INTO THE SITE NAVIGATION */
+.library-nav-controls{display:flex;align-items:center;gap:7px;min-width:0;flex:0 1 390px}
+.library-nav-controls .library-controls{display:flex;align-items:center;gap:7px;width:100%;min-width:0}
+.library-nav-controls .library-search,.library-nav-controls .library-filter{min-width:0;flex:1 1 0}
+.library-nav-controls label{display:none!important}
+.library-nav-controls input,.library-nav-controls select{height:36px;min-height:36px;width:100%;padding:6px 9px;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:rgba(255,255,255,.08);color:#fff;font-size:.78rem;box-sizing:border-box}
+.library-nav-controls input::placeholder{color:rgba(255,255,255,.68)}
+.library-nav-controls select option{color:#101b2b;background:#fff}
+.library-results-status{width:min(calc(100% - 40px),var(--max-width));margin:12px auto 0;padding:0;color:#596273;font-size:.75rem}
+.library-controls-section{display:none!important}
+@media(max-width:1000px){
+ .library-nav-controls{flex:1 1 auto;max-width:330px}
+ .library-nav-controls input,.library-nav-controls select{height:34px;min-height:34px;font-size:.74rem;padding:5px 7px}
+}
+@media(max-width:560px){
+ .library-nav-controls{max-width:190px;flex:1 1 150px}
+ .library-nav-controls .library-controls{gap:5px}
+ .library-nav-controls input{font-size:.72rem;padding:5px 7px}
+ .library-nav-controls select{font-size:.68rem;padding:4px 5px}
+ .library-results-status{width:calc(100% - 28px);margin-top:8px}
+}
+@media(max-width:380px){
+ .library-nav-controls{max-width:160px;flex-basis:130px}
+ .library-nav-controls select{max-width:82px}
+}
