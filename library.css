@@ -509,3 +509,15 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* Full artwork framing for these four living and discipleship titles. */
+.library-card[data-title="Seven Times Seventy"],
+.library-card[data-title="Faith That Sees Beyond Sight"],
+.library-card[data-title="From Milk to Meat The Call to Grow Up in Jesus"],
+.library-card[data-title="One Mouth One Message"]{
+  --banner-zoom:1;
+  --banner-object-fit:contain;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+}
