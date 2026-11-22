@@ -412,3 +412,13 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Individual banner framing for these book covers. */
+.library-card[data-title="Sanctified"],
+.library-card[data-title="NO WEAPON: The Story Behind the Song That Still Carries the Church"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
