@@ -402,3 +402,13 @@
   --banner-position-y:50%;
   --banner-object-fit:contain;
 }
+
+
+/* Reduce zoom and reveal more artwork on these two banners. */
+.library-card[data-title="Faith That Sees Beyond Sight"],
+.library-card[data-title="Seven Times Seventy"]{
+  --banner-zoom:0.88;
+  --banner-position-x:50%;
+  --banner-position-y:50%;
+  --banner-object-fit:contain;
+}
