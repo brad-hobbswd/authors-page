@@ -713,6 +713,30 @@
     object-position:center !important;
 }
 
+
+/* Love That Covers: force the actual banner holder to a shallower horizontal shape */
+article.library-card[data-title="Love That Covers"] > .library-cover{
+    height:clamp(105px, 10vw, 145px) !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    flex:none !important;
+    overflow:hidden !important;
+}
+article.library-card[data-title="Love That Covers"] > .library-cover > img{
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center !important;
+}
+@media(max-width:700px){
+    article.library-card[data-title="Love That Covers"] > .library-cover{
+        height:clamp(95px, 30vw, 125px) !important;
+    }
+}
+
 </style>
 </head>
 <body>
