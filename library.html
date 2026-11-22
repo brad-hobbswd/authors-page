@@ -1187,6 +1187,34 @@ article.library-card[data-title="Love That Covers LGBTQIA Edition"] > .library-c
     object-position:0 50% !important;
 }
 
+
+/* TARGET THE ACTUAL LOVE THAT COVERS LGBTQIA CARD: .library-cover has no is-banner class */
+article.library-card[data-title="Love That Covers LGBTQIA Edition"] > div.library-cover{
+    display:block !important;
+    width:100% !important;
+    height:105px !important;
+    min-height:105px !important;
+    max-height:105px !important;
+    aspect-ratio:auto !important;
+    flex:0 0 105px !important;
+    padding:0 !important;
+    margin:0 !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+}
+article.library-card[data-title="Love That Covers LGBTQIA Edition"] > div.library-cover > img.library-banner-image{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    min-width:100% !important;
+    min-height:100% !important;
+    max-width:none !important;
+    max-height:none !important;
+    object-fit:fill !important;
+    object-position:center !important;
+    margin:0 !important;
+}
+
 </style>
 </head>
 <body>
