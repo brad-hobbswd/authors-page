@@ -161,3 +161,23 @@
 }
 .library-collection[data-category="fiction"] .library-grid{align-items:stretch}
 .library-collection[data-category="fiction"] .library-card{height:100%}
+
+/* Family & Young Readers: keep banner artwork fully visible. */
+.library-collection[data-category="family"] .library-cover{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:#f5f2ec;
+}
+.library-collection[data-category="family"] .library-cover img.library-banner-image{
+  width:100%;
+  height:100%;
+  max-width:100%;
+  display:block;
+  object-fit:contain;
+  object-position:center;
+}
