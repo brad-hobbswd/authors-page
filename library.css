@@ -482,3 +482,13 @@
   --banner-position-x:50%;
   --banner-position-y:50%;
 }
+
+
+/* Center the Independent Writings card row within its collection. */
+.library-collection[data-category="independent"] .library-grid{
+  width:100%;
+  max-width:1100px;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  justify-content:center !important;
+}
