@@ -1085,6 +1085,32 @@ article.library-card[data-category="independent"] > .library-cover img{
     }
 }
 
+
+/* FINAL FIX: expand only the LGBTQIA+ Love That Covers card itself */
+article.library-card[data-title="Love That Covers LGBTQIA Edition"]{
+    grid-column:1 / -1 !important;
+    justify-self:center !important;
+    width:min(92vw, 560px) !important;
+    max-width:560px !important;
+    min-width:0 !important;
+}
+article.library-card[data-title="Love That Covers LGBTQIA Edition"] > .library-cover{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:2.4 / 1 !important;
+    padding:0 !important;
+    overflow:hidden !important;
+}
+article.library-card[data-title="Love That Covers LGBTQIA Edition"] > .library-cover > img{
+    width:100% !important;
+    height:100% !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center !important;
+}
+
 </style>
 </head>
 <body>
