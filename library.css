@@ -343,3 +343,99 @@
     padding-top:24px!important;
   }
 }
+
+
+/* POLISH THE NEW INDEPENDENT WRITINGS AND TEACHING MATERIAL SHELVES */
+.library-collection[data-category="independent"] .library-grid{
+  grid-template-columns:repeat(3,minmax(0,340px))!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:clamp(16px,2vw,24px)!important;
+}
+.library-collection[data-category="teaching"] .library-grid{
+  grid-template-columns:repeat(2,minmax(0,420px))!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:clamp(18px,2.2vw,28px)!important;
+}
+.library-collection[data-category="independent"] .library-card,
+.library-collection[data-category="teaching"] .library-card{
+  width:100%!important;
+  max-width:none!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border-radius:14px!important;
+  background:#fff!important;
+}
+.library-collection[data-category="independent"] .library-cover,
+.library-collection[data-category="teaching"] .library-cover{
+  width:100%!important;
+  aspect-ratio:16/9!important;
+  height:auto!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  display:block!important;
+  padding:0!important;
+  background:#f4f0e8!important;
+}
+.library-collection[data-category="independent"] .library-cover img,
+.library-collection[data-category="teaching"] .library-cover img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.library-collection[data-category="independent"] .library-card-content,
+.library-collection[data-category="teaching"] .library-card-content{
+  display:flex!important;
+  flex-direction:column!important;
+  flex:1 1 auto!important;
+  padding:clamp(18px,2vw,26px)!important;
+}
+.library-collection[data-category="independent"] .book-type,
+.library-collection[data-category="teaching"] .book-type{
+  font-size:.68rem!important;
+  line-height:1.4!important;
+  letter-spacing:.1em!important;
+  margin-bottom:9px!important;
+}
+.library-collection[data-category="independent"] .library-card-content h3,
+.library-collection[data-category="teaching"] .library-card-content h3{
+  font-size:clamp(1.15rem,1.8vw,1.5rem)!important;
+  line-height:1.2!important;
+  margin:0 0 10px!important;
+}
+.library-collection[data-category="independent"] .library-card-content p,
+.library-collection[data-category="teaching"] .library-card-content p{
+  font-size:.88rem!important;
+  line-height:1.55!important;
+  margin:0 0 12px!important;
+}
+.library-collection[data-category="independent"] .book-link,
+.library-collection[data-category="teaching"] .book-link{
+  margin-top:auto!important;
+  padding-top:12px!important;
+}
+@media(max-width:900px){
+  .library-collection[data-category="independent"] .library-grid{
+    grid-template-columns:repeat(2,minmax(0,340px))!important;
+  }
+  .library-collection[data-category="teaching"] .library-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:560px){
+  .library-collection[data-category="independent"] .library-grid,
+  .library-collection[data-category="teaching"] .library-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:14px!important;
+  }
+  .library-collection[data-category="independent"] .library-cover,
+  .library-collection[data-category="teaching"] .library-cover{
+    aspect-ratio:16/9!important;
+  }
+}
