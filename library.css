@@ -117,3 +117,25 @@
   .library-series-section[data-series-section="love-that-covers"] .library-grid{grid-template-columns:minmax(0,1fr)}
   .library-cover.is-book-cover{height:250px}
 }
+
+/* Biblical Fiction banners: show the complete artwork without cropping or zooming. */
+.library-collection[data-category="bibfiction"] .library-cover{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f5f2ec;
+  overflow:hidden;
+}
+.library-collection[data-category="bibfiction"] .library-cover img.library-banner-image{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.library-collection[data-category="bibfiction"] .library-grid{align-items:stretch}
+.library-collection[data-category="bibfiction"] .library-card{height:100%}
