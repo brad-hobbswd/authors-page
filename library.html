@@ -77,6 +77,42 @@
             aria-label="Brad Hobbs Home">
             Brad Hobbs
         </a>
+        <div class="library-nav-controls">
+<div class="library-controls">
+                <div class="library-search">
+                    <label for="library-search">Search</label>
+                    <input
+                        type="search"
+                        id="library-search"
+                        placeholder="Search books..."
+                        autocomplete="off">
+                </div>
+                <div class="library-filter">
+                    <label class="filter-label" for="library-filter">
+                        Collection
+                    </label>
+                    <select
+                        id="library-filter"
+                        class="library-filter-select"
+                        aria-label="Browse books by collection">
+                        <option value="all">All Books</option>
+                        <option value="biblical">Biblical Studies & Research</option>
+                        <option value="apostolic">Apostolic & Pentecostal Studies</option>
+                        <option value="living">Christian Living & Discipleship</option>
+                        <option value="devotional">Devotionals & Encouragement</option>
+                        <option value="healing">Healing & Restoration</option>
+                        <option value="love">Love, Relationships & Identity</option>
+                        <option value="memoir">Memoir & Personal Reflection</option>
+                        <option value="fiction">Christian Fiction</option>
+                        <option value="joseph">Joseph Bennett Stories</option>
+                        <option value="bibfiction">Biblical Fiction</option>
+                        <option value="family">Family & Young Readers</option>
+                        <option value="creative">Ministry & Creative Projects</option>
+                        <option value="independent">Independent Writings</option>
+                    </select>
+                </div>
+            </div>
+        </div>
         <button
             class="nav-toggle"
             type="button"
@@ -91,69 +127,9 @@
             class="nav-links"
             id="primary-navigation">
             <a href="index.html">
-                Home
-            </a>
-            <a href="about.html">
-                About
-            </a>
-            <a
-                href="library.html"
-                class="active"
-                aria-current="page">
-                Library
-            </a>
-            <a href="contact.html">
-                Contact
-            </a>
-        </div>
-    </nav>
-</header>
-<main>
-    <!-- =========================================
-         LIBRARY HERO
-    ========================================== -->
-    <section class="library-hero">
-        <div class="library-hero-content">
-            <p class="section-label">
-                THE Brad HOBBS LIBRARY
-            </p>
-            <h1>
-                Explore the Collection
-            </h1>
-            <p>
-                Christian books, biblical studies, devotionals, fiction, memoirs, family stories, Apostolic studies, and ministry projects centered on Scripture, faith, and Jesus Christ.
-            </p>
-        </div>
-    </section>
-    <!-- =========================================
-         LIBRARY INTRODUCTION
-    ========================================== -->
-    <section class="section">
-        <div class="section-inner narrow-content">
-            <div class="section-heading">
-                <p class="section-label">
-                    THE COLLECTION
-                </p>
-                <h2>
-                    One Library. Many Journeys.
-                </h2>
-                <p class="sectionText">
-                    The library is organized by the primary purpose of each book. Every book appears once, so you can browse the collection without seeing the same title repeated in different categories.
-                </p>
-                <p class="sectionText">
-                    Series names remain with their books as helpful labels, but a series does not create a second listing. This keeps the catalog simple, complete, and easy to browse.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- =========================================
-         SEARCH & FILTER
-    ========================================== -->
-    <section class="library-controls-section">
-        <div class="section-inner">
-            <div class="library-controls">
-                <div class="library-search">
-                    <label for="library-search">Search</label>
+     <div class="library-results library-results-status" aria-live="polite"><span id="library-count">Showing all books</span></div>
+
+rch">Search</label>
                     <input
                         type="search"
                         id="library-search"
