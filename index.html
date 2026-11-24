@@ -8,7 +8,7 @@
         </title>
         <meta name="description" content="The official website of Brad Hobbs, Christian author and biblical teacher. Explore biblical studies, Apostolic and Pentecostal studies, devotionals, fiction, memoir, Christian living, healing, family resources, and ministry projects.">
         <link rel="canonical" href="https://brad-hobbswd.github.io/authors-page/">
-        <link rel="stylesheet" href="styles.css?v=20261123-teaching-grid-fix">
+        <link rel="stylesheet" href="styles.css?v=20261124-grid-force">
     <style>
 /* HOMEPAGE TEACHING MATERIALS GRID FIX */
 @media (min-width: 761px) and (max-width: 1499px) {
@@ -44,7 +44,74 @@
   }
 }
 </style>
-    </head>
+    <style>
+/* DEFINITIVE TEACHING MATERIALS LAYOUT: explicitly switch container to grid.
+   Earlier template rules used flex sizing, so grid column declarations alone
+   did not alter the visible layout. */
+#biblical-teaching .editorial-book-grid {
+  display: grid !important;
+  grid-auto-flow: row !important;
+  gap: clamp(24px, 3vw, 44px) !important;
+  align-items: start !important;
+  justify-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#biblical-teaching .editorial-book-grid > article {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+#biblical-teaching .editorial-book-grid .showcase-book-content {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+#biblical-teaching .editorial-book-grid h3 {
+  font-size: clamp(1.6rem, 2.5vw, 2.3rem) !important;
+  line-height: 1.16 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: auto !important;
+}
+#biblical-teaching .editorial-book-grid p {
+  max-width: 100% !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  line-height: 1.75 !important;
+}
+@media (min-width: 761px) and (max-width: 1499px) {
+  #biblical-teaching .editorial-book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: min(100%, 1120px) !important;
+  }
+  #biblical-teaching .editorial-book-grid > article:nth-child(4) {
+    grid-column: 2 !important;
+  }
+}
+@media (min-width: 1500px) {
+  #biblical-teaching .editorial-book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+  #biblical-teaching .editorial-book-grid > article:nth-child(4) {
+    grid-column: auto !important;
+  }
+}
+@media (max-width: 760px) and (min-width: 561px) {
+  #biblical-teaching .editorial-book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+}
+@media (max-width: 560px) {
+  #biblical-teaching .editorial-book-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+  }
+}
+</style>
+</head>
     <body>
         <header class="site-header">
             <nav class="navbar" aria-label="Main Navigation">
