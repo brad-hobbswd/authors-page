@@ -4926,3 +4926,23 @@ img,video,iframe{max-width:100%}
     text-align: center !important;
   }
 }
+
+/* LIBRARY NAVIGATION DROPDOWN */
+.nav-dropdown{position:relative;display:flex;align-items:center;gap:2px}
+.nav-dropdown-main{display:inline-flex;align-items:center}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;justify-content:center;width:28px;height:34px;border:0;background:transparent;color:inherit;cursor:pointer;border-radius:6px;font-size:1rem}
+.nav-dropdown-toggle:hover,.nav-dropdown-toggle:focus-visible{background:rgba(198,160,82,.14);outline:2px solid rgba(198,160,82,.35);outline-offset:1px}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 9px);left:0;min-width:220px;padding:8px;background:#101b2b;border:1px solid rgba(198,160,82,.35);border-radius:12px;box-shadow:0 16px 32px rgba(0,0,0,.28);display:flex;flex-direction:column;gap:3px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s ease,transform .18s ease,visibility .18s ease;z-index:1000}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu,.nav-dropdown.is-open .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown-menu a{display:flex!important;align-items:center;justify-content:space-between;gap:12px;padding:11px 12px!important;border-radius:8px;color:#f7f0e6!important;text-decoration:none!important;white-space:nowrap}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a:focus-visible{background:rgba(198,160,82,.13);color:#dfc486!important}
+.nav-dropdown-menu a::after{display:none!important}
+.menu-coming{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:#dfc486}
+@media(max-width:1000px){
+ .nav-dropdown{width:100%;justify-content:flex-start;flex-wrap:wrap}
+ .nav-dropdown-main{flex:1}
+ .nav-dropdown-toggle{width:36px;height:38px}
+ .nav-dropdown-menu{position:static;width:100%;min-width:0;box-shadow:none;margin-top:2px;display:none;opacity:1;visibility:visible;transform:none;border-radius:8px;background:rgba(255,255,255,.035)}
+ .nav-dropdown.is-open .nav-dropdown-menu{display:flex}
+ .nav-dropdown-menu a{white-space:normal}
+}
