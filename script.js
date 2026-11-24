@@ -302,3 +302,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.classList.add("js-ready");
 
 });
+
+/* LIBRARY DROPDOWN */
+document.querySelectorAll(".nav-dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    const parent = toggle.closest(".nav-dropdown");
+    const open = parent.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+});
