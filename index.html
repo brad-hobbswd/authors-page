@@ -9,37 +9,58 @@
         <meta name="description" content="The official website of Brad Hobbs, Christian author and biblical teacher. Explore biblical studies, Apostolic and Pentecostal studies, devotionals, fiction, memoir, Christian living, healing, family resources, and ministry projects.">
         <link rel="canonical" href="https://brad-hobbswd.github.io/authors-page/">
         <link rel="stylesheet" href="styles.css?v=20261124-grid-force">
-    <style>
-/* HOMEPAGE TEACHING MATERIALS GRID FIX */
-@media (min-width: 761px) and (max-width: 1499px) {
-  #biblical-teaching .editorial-book-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    width: min(100%, 1120px) !important;
+    <style id="teaching-grid-final-2026">
+/* Unique, final homepage Teaching Materials layout. */
+#biblical-teaching .teaching-grid-final-2026 {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(22px, 3vw, 40px) !important;
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+  margin-inline: auto !important;
+  justify-items: stretch !important;
+  align-items: start !important;
+}
+#biblical-teaching .teaching-grid-final-2026 > article {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+#biblical-teaching .teaching-grid-final-2026 > article:nth-child(4) {
+  grid-column: 2 !important;
+}
+#biblical-teaching .teaching-grid-final-2026 .showcase-book-content {
+  width: 100% !important;
+  max-width: none !important;
+}
+#biblical-teaching .teaching-grid-final-2026 h3 {
+  font-size: clamp(1.55rem, 2.3vw, 2.15rem) !important;
+  line-height: 1.18 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+#biblical-teaching .teaching-grid-final-2026 p {
+  width: 100% !important;
+  max-width: 100% !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  line-height: 1.7 !important;
+}
+@media (max-width: 900px) {
+  #biblical-teaching .teaching-grid-final-2026 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    max-width: 760px !important;
   }
-  #biblical-teaching .editorial-book-grid > article:nth-child(4) {
-    grid-column: 2 !important;
-  }
-  #biblical-teaching .editorial-book .showcase-book-content {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  #biblical-teaching .editorial-book .showcase-book-content h3 {
-    font-size: clamp(1.55rem, 2.5vw, 2.2rem) !important;
-    line-height: 1.18 !important;
-    overflow-wrap: normal !important;
-    word-break: normal !important;
-  }
-  #biblical-teaching .editorial-book .showcase-book-content p {
-    max-width: 100% !important;
-    overflow-wrap: normal !important;
-    word-break: normal !important;
+  #biblical-teaching .teaching-grid-final-2026 > article:nth-child(4) {
+    grid-column: auto !important;
   }
 }
-@media (min-width: 1500px) {
-  #biblical-teaching .editorial-book-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+@media (max-width: 560px) {
+  #biblical-teaching .teaching-grid-final-2026 {
+    grid-template-columns: minmax(0, 1fr) !important;
+    max-width: 480px !important;
   }
-  #biblical-teaching .editorial-book-grid > article:nth-child(4) {
+  #biblical-teaching .teaching-grid-final-2026 > article:nth-child(4) {
     grid-column: auto !important;
   }
 }
@@ -160,7 +181,7 @@
         <p>Resources for biblical study, personal growth, and church or group teaching.</p>
       </div>
 
-      <div class="showcase-book-list teaching-publication-grid editorial-book-grid">
+      <div class="showcase-book-list teaching-publication-grid editorial-book-grid teaching-grid-final-2026">
         <article class="showcase-book editorial-book">
           <a href="https://brad-hobbswd.github.io/i-refuse-to-stay-bound/" target="_blank" rel="noopener" class="book-cover-link">
             <img src="images/irefusetostay.png" alt="I Refuse to Stay Bound by Bradley Hobbs" loading="lazy" decoding="async">
