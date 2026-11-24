@@ -4851,3 +4851,78 @@ img,video,iframe{max-width:100%}
     grid-template-columns: minmax(0, 1fr) !important;
   }
 }
+
+/* MOBILE FIX: DISCERNMENT and featured teaching cards use the full
+   available width instead of becoming narrow vertical text columns. */
+@media (max-width: 560px) {
+  .featured-teaching-top .editorial-book-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    gap: 36px !important;
+  }
+
+  .featured-teaching-top .editorial-book-grid .editorial-book {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .featured-teaching-top .editorial-book .book-cover-link {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 22px !important;
+  }
+
+  .featured-teaching-top .editorial-book .book-cover-link img {
+    width: auto !important;
+    max-width: min(72vw, 260px) !important;
+    max-height: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .featured-teaching-top .editorial-book .showcase-book-content {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .featured-teaching-top .editorial-book .showcase-book-content h3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(1.65rem, 7vw, 2.25rem) !important;
+    line-height: 1.16 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+    margin: 0 auto 16px !important;
+  }
+
+  .featured-teaching-top .editorial-book .showcase-book-content p {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto 20px !important;
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .featured-teaching-top .editorial-book .latest-type {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+  }
+}
