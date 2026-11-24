@@ -4946,3 +4946,42 @@ img,video,iframe{max-width:100%}
  .nav-dropdown.is-open .nav-dropdown-menu{display:flex}
  .nav-dropdown-menu a{white-space:normal}
 }
+
+/* FIX HOMEPAGE TEACHING GRID: four covers were forced into narrow columns,
+   causing DISCERNMENT's title and copy to wrap awkwardly. */
+@media (min-width: 761px) {
+  .featured-teaching-top .editorial-book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: start;
+  }
+  .featured-teaching-top .editorial-book-grid > .editorial-book:nth-child(4) {
+    grid-column: 2;
+  }
+  .featured-teaching-top .editorial-book-grid > .editorial-book {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .featured-teaching-top .editorial-book .showcase-book-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .featured-teaching-top .editorial-book .showcase-book-content h3,
+  .featured-teaching-top .editorial-book .showcase-book-content p {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: auto;
+  }
+}
+@media (min-width: 1500px) {
+  .featured-teaching-top .editorial-book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .featured-teaching-top .editorial-book-grid > .editorial-book:nth-child(4) {
+    grid-column: auto;
+  }
+}
+@media (max-width: 760px) {
+  .featured-teaching-top .editorial-book-grid > .editorial-book:nth-child(4) {
+    grid-column: auto;
+  }
+}
