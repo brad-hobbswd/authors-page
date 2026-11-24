@@ -107,7 +107,14 @@
             </div>
 </div>
 <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
-<div class="nav-links" id="primary-navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="library.html" class="active" aria-current="page">Library</a><a href="contact.html">Contact</a><a href="news.html" class="nav-news-link">News</a></div>
+<div class="nav-links" id="primary-navigation"><a href="index.html">Home</a><a href="about.html">About</a><div class="nav-dropdown">
+  <a href="library.html" class="nav-dropdown-main active" aria-current="page">Library</a>
+  <button class="nav-dropdown-toggle" type="button" aria-label="Open Library submenu" aria-expanded="false"><span aria-hidden="true">⌄</span></button>
+  <div class="nav-dropdown-menu">
+    <a href="library.html">Main Library</a>
+    <a href="mens-literature.html">Men's Literature <span class="menu-coming">Coming Soon</span></a>
+  </div>
+</div><a href="contact.html">Contact</a><a href="news.html" class="nav-news-link">News</a></div>
 </nav></header>
 <main>
 <section class="library-page-heading">
