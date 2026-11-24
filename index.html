@@ -8,7 +8,42 @@
         </title>
         <meta name="description" content="The official website of Brad Hobbs, Christian author and biblical teacher. Explore biblical studies, Apostolic and Pentecostal studies, devotionals, fiction, memoir, Christian living, healing, family resources, and ministry projects.">
         <link rel="canonical" href="https://brad-hobbswd.github.io/authors-page/">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css?v=20261123-teaching-grid-fix">
+    <style>
+/* HOMEPAGE TEACHING MATERIALS GRID FIX */
+@media (min-width: 761px) and (max-width: 1499px) {
+  #biblical-teaching .editorial-book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: min(100%, 1120px) !important;
+  }
+  #biblical-teaching .editorial-book-grid > article:nth-child(4) {
+    grid-column: 2 !important;
+  }
+  #biblical-teaching .editorial-book .showcase-book-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  #biblical-teaching .editorial-book .showcase-book-content h3 {
+    font-size: clamp(1.55rem, 2.5vw, 2.2rem) !important;
+    line-height: 1.18 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  #biblical-teaching .editorial-book .showcase-book-content p {
+    max-width: 100% !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+}
+@media (min-width: 1500px) {
+  #biblical-teaching .editorial-book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  #biblical-teaching .editorial-book-grid > article:nth-child(4) {
+    grid-column: auto !important;
+  }
+}
+</style>
     </head>
     <body>
         <header class="site-header">
