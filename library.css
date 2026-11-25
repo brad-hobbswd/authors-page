@@ -991,3 +991,87 @@
     justify-self:stretch !important;
   }
 }
+
+
+/* COMPLETE FINISH FOR SCRIPTURE STUDIES COLLECTION */
+.library-collection[data-category="biblical"]{
+  padding-block:clamp(36px,5vw,64px) !important;
+}
+.library-collection[data-category="biblical"] .section-inner{
+  width:min(100% - 40px,1240px) !important;
+  margin-inline:auto !important;
+}
+.library-collection[data-category="biblical"] .collection-heading{
+  text-align:center !important;
+  max-width:850px !important;
+  margin:0 auto clamp(28px,3vw,42px) !important;
+  padding:0 !important;
+}
+.library-collection[data-category="biblical"] .collection-heading .section-label{
+  margin:0 0 12px !important;
+  letter-spacing:.18em !important;
+}
+.library-collection[data-category="biblical"] .collection-heading h2{
+  margin:0 0 14px !important;
+  line-height:1.12 !important;
+}
+.library-collection[data-category="biblical"] .collection-heading > p:last-child{
+  margin:0 auto !important;
+  max-width:700px !important;
+  line-height:1.65 !important;
+}
+.library-collection[data-category="biblical"] .library-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:clamp(18px,2vw,28px) !important;
+  max-width:1160px !important;
+  margin:0 auto !important;
+  align-items:stretch !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card{
+  grid-column:auto !important;
+  width:100% !important;
+  max-width:none !important;
+  min-width:0 !important;
+  margin:0 !important;
+  justify-self:stretch !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5){
+  grid-column:1 / -1 !important;
+  width:calc((100% - clamp(18px,2vw,28px)) / 2) !important;
+  max-width:calc((100% - clamp(18px,2vw,28px)) / 2) !important;
+  justify-self:center !important;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner{
+  aspect-ratio:16 / 6 !important;
+  height:auto !important;
+  overflow:hidden !important;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+}
+.library-collection[data-category="biblical"] .library-card-content{
+  padding:clamp(20px,2.2vw,30px) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap:12px !important;
+}
+.library-collection[data-category="biblical"] .library-card-content h3,
+.library-collection[data-category="biblical"] .library-card-content p,
+.library-collection[data-category="biblical"] .library-card-content .book-type{
+  margin:0 !important;
+}
+.library-collection[data-category="biblical"] .library-card-content .book-link{
+  margin-top:8px !important;
+}
+@media(max-width:700px){
+  .library-collection[data-category="biblical"] .section-inner{width:min(100% - 28px,1240px) !important;}
+  .library-collection[data-category="biblical"] .library-grid{grid-template-columns:1fr !important;gap:18px !important;}
+  .library-collection[data-category="biblical"] .library-grid > .library-card,
+  .library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5){
+    grid-column:1 !important;width:100% !important;max-width:none !important;justify-self:stretch !important;
+  }
+}
