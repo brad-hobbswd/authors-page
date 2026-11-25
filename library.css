@@ -932,3 +932,62 @@
   .library-collection[data-category="bibfiction"] .library-card:last-child,
   .library-collection[data-category="family"] .library-card:last-child{grid-column:3 / span 2 !important;}
 }
+
+
+/* DEFINITIVE GRID REPAIR: consistent two-column layout, no stranded cards */
+.library-collection .library-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  grid-auto-flow:row !important;
+  gap:clamp(16px,2vw,26px) !important;
+  width:100% !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  align-items:stretch !important;
+  justify-content:center !important;
+}
+.library-collection .library-grid > .library-card,
+.library-collection .library-grid > .library-card:nth-child(n){
+  grid-column:auto !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin:0 !important;
+  justify-self:stretch !important;
+}
+/* Odd collections: center the final card beneath a complete row */
+.library-collection .library-grid > .library-card:last-child:nth-child(odd){
+  grid-column:1 / -1 !important;
+  width:calc(50% - (clamp(16px,2vw,26px) / 2)) !important;
+  max-width:calc(50% - (clamp(16px,2vw,26px) / 2)) !important;
+  justify-self:center !important;
+}
+/* Keep banners proportionate and cards aligned */
+.library-collection .library-cover.is-banner{
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:16 / 6 !important;
+  overflow:hidden !important;
+}
+.library-collection .library-cover.is-banner img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+}
+.library-collection .library-card .library-card-content{
+  height:auto !important;
+}
+@media(max-width:620px){
+  .library-collection .library-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:18px !important;
+  }
+  .library-collection .library-grid > .library-card,
+  .library-collection .library-grid > .library-card:nth-child(n),
+  .library-collection .library-grid > .library-card:last-child:nth-child(odd){
+    grid-column:1 !important;
+    width:100% !important;
+    max-width:none !important;
+    justify-self:stretch !important;
+  }
+}
