@@ -771,3 +771,50 @@
   .library-collection[data-category="biblical"] .library-grid > .library-card,
   .library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(n){grid-column:1 !important;width:100% !important;}
 }
+
+
+/* GLOBAL COLLAGE GAP FIX: each ten-card pattern forms complete 12-column rows. */
+.library-collection .library-grid{
+  display:grid !important;
+  grid-template-columns:repeat(12,minmax(0,1fr)) !important;
+  grid-auto-flow:row !important;
+  gap:clamp(14px,1.8vw,24px) !important;
+  width:100% !important;
+  max-width:1180px !important;
+  margin-inline:auto !important;
+  justify-content:center !important;
+}
+.library-collection .library-grid > .library-card,
+.library-collection .library-grid > .library-card:nth-child(n){
+  grid-column:span 4 !important;
+  width:auto !important;
+  max-width:none !important;
+  min-width:0 !important;
+  margin:0 !important;
+}
+/* Row 1: two featured banners */
+.library-collection .library-grid > .library-card:nth-child(10n + 1),
+.library-collection .library-grid > .library-card:nth-child(10n + 2){grid-column:span 6 !important;}
+/* Row 2: three balanced cards */
+.library-collection .library-grid > .library-card:nth-child(10n + 3),
+.library-collection .library-grid > .library-card:nth-child(10n + 4),
+.library-collection .library-grid > .library-card:nth-child(10n + 5){grid-column:span 4 !important;}
+/* Row 3: two wide cards */
+.library-collection .library-grid > .library-card:nth-child(10n + 6),
+.library-collection .library-grid > .library-card:nth-child(10n + 7){grid-column:span 6 !important;}
+/* Row 4: three cards, then repeat the pattern */
+.library-collection .library-grid > .library-card:nth-child(10n + 8),
+.library-collection .library-grid > .library-card:nth-child(10n + 9),
+.library-collection .library-grid > .library-card:nth-child(10n + 10){grid-column:span 4 !important;}
+.library-collection .library-card .library-card-content{height:100%;}
+@media(max-width:900px){
+  .library-collection .library-grid{grid-template-columns:repeat(6,minmax(0,1fr)) !important;}
+  .library-collection .library-grid > .library-card,
+  .library-collection .library-grid > .library-card:nth-child(n){grid-column:span 3 !important;}
+  .library-collection .library-grid > .library-card:nth-child(odd){grid-column:span 6 !important;}
+}
+@media(max-width:620px){
+  .library-collection .library-grid{grid-template-columns:minmax(0,1fr) !important;gap:18px !important;}
+  .library-collection .library-grid > .library-card,
+  .library-collection .library-grid > .library-card:nth-child(n){grid-column:1 !important;width:100% !important;}
+}
