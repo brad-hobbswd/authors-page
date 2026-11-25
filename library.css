@@ -888,3 +888,47 @@
   .library-collection[data-category] .library-card,
   .library-collection[data-category] .library-card:nth-child(n){grid-column:1 !important;width:100% !important;}
 }
+
+
+/* TRUE BALANCED COLLAGE: explicit row patterns, centered incomplete rows */
+.library-collection[data-category="series-who"] .library-card,
+.library-collection[data-category="series-substitute"] .library-card,
+.library-collection[data-category="bibfiction"] .library-card,
+.library-collection[data-category="family"] .library-card{grid-column:span 4 !important;}
+.library-collection[data-category="series-who"] .library-card:last-child,
+.library-collection[data-category="series-substitute"] .library-card:last-child,
+.library-collection[data-category="bibfiction"] .library-card:last-child,
+.library-collection[data-category="family"] .library-card:last-child{grid-column:5 / span 4 !important;}
+
+.library-collection[data-category="biblical"] .library-card,
+.library-collection[data-category="apostolic"] .library-card,
+.library-collection[data-category="healing"] .library-card,
+.library-collection[data-category="fiction"] .library-card{grid-column:span 4 !important;}
+.library-collection[data-category="biblical"] .library-card:nth-child(1),
+.library-collection[data-category="biblical"] .library-card:nth-child(2),
+.library-collection[data-category="apostolic"] .library-card:nth-child(1),
+.library-collection[data-category="apostolic"] .library-card:nth-child(2),
+.library-collection[data-category="healing"] .library-card:nth-child(1),
+.library-collection[data-category="healing"] .library-card:nth-child(2),
+.library-collection[data-category="fiction"] .library-card:nth-child(1),
+.library-collection[data-category="fiction"] .library-card:nth-child(2){grid-column:span 6 !important;}
+
+.library-collection[data-category="independent"] .library-card,
+.library-collection[data-category="teaching"] .library-card{grid-column:span 6 !important;}
+.library-collection[data-category="living"] .library-card,
+.library-collection[data-category="devotional"] .library-card{grid-column:span 4 !important;}
+.library-collection[data-category="living"] .library-card:nth-child(1),
+.library-collection[data-category="living"] .library-card:nth-child(2),
+.library-collection[data-category="living"] .library-card:nth-child(6),
+.library-collection[data-category="living"] .library-card:nth-child(7),
+.library-collection[data-category="devotional"] .library-card:nth-child(1),
+.library-collection[data-category="devotional"] .library-card:nth-child(2),
+.library-collection[data-category="devotional"] .library-card:nth-child(6),
+.library-collection[data-category="devotional"] .library-card:nth-child(7){grid-column:span 6 !important;}
+
+@media(max-width:900px){
+  .library-collection[data-category="series-who"] .library-card:last-child,
+  .library-collection[data-category="series-substitute"] .library-card:last-child,
+  .library-collection[data-category="bibfiction"] .library-card:last-child,
+  .library-collection[data-category="family"] .library-card:last-child{grid-column:3 / span 2 !important;}
+}
