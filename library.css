@@ -669,3 +669,54 @@
     max-width:420px !important;
   }
 }
+
+
+/* COLLAGE SHOWCASE: varied card widths create a curated editorial mosaic. */
+.library-collection .library-grid{
+  display:grid !important;
+  grid-template-columns:repeat(12,minmax(0,1fr)) !important;
+  grid-auto-flow:dense !important;
+  align-items:stretch !important;
+  gap:clamp(14px,1.8vw,24px) !important;
+  width:100% !important;
+  max-width:1180px !important;
+  margin-inline:auto !important;
+}
+.library-collection .library-grid > .library-card{
+  width:auto !important;
+  max-width:none !important;
+  min-width:0 !important;
+  margin:0 !important;
+  grid-column:span 4 !important;
+}
+/* Rotate card widths through the collection to keep the collage lively but balanced. */
+.library-collection .library-grid > .library-card:nth-child(6n + 1),
+.library-collection .library-grid > .library-card:nth-child(6n + 2){
+  grid-column:span 6 !important;
+}
+.library-collection .library-grid > .library-card:nth-child(6n + 3){
+  grid-column:span 4 !important;
+}
+.library-collection .library-grid > .library-card:nth-child(6n + 4){
+  grid-column:span 4 !important;
+}
+.library-collection .library-grid > .library-card:nth-child(6n + 5){
+  grid-column:span 4 !important;
+}
+.library-collection .library-grid > .library-card:nth-child(6n + 6){
+  grid-column:span 8 !important;
+}
+.library-collection .library-card .library-card-content{
+  height:100%;
+}
+@media(max-width:900px){
+  .library-collection .library-grid{grid-template-columns:repeat(6,minmax(0,1fr)) !important;}
+  .library-collection .library-grid > .library-card,
+  .library-collection .library-grid > .library-card:nth-child(n){grid-column:span 3 !important;}
+  .library-collection .library-grid > .library-card:nth-child(3n + 1){grid-column:span 6 !important;}
+}
+@media(max-width:620px){
+  .library-collection .library-grid{grid-template-columns:minmax(0,1fr) !important;gap:18px !important;}
+  .library-collection .library-grid > .library-card,
+  .library-collection .library-grid > .library-card:nth-child(n){grid-column:1 !important;width:100% !important;}
+}
