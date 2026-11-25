@@ -720,3 +720,54 @@
   .library-collection .library-grid > .library-card,
   .library-collection .library-grid > .library-card:nth-child(n){grid-column:1 !important;width:100% !important;}
 }
+
+
+/* SPECIAL COLLAGE TREATMENT: Scripture Studies & Biblical Interpretation */
+.library-collection[data-category="biblical"] .library-grid{
+  display:grid !important;
+  grid-template-columns:repeat(12,minmax(0,1fr)) !important;
+  grid-auto-flow:dense !important;
+  gap:clamp(14px,1.8vw,24px) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card{
+  grid-column:span 4 !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5n + 1),
+.library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5n + 2){
+  grid-column:span 6 !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5n + 3){
+  grid-column:span 4 !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5n + 4){
+  grid-column:span 4 !important;
+}
+.library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(5n + 5){
+  grid-column:span 8 !important;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner{
+  height:auto !important;
+  aspect-ratio:auto !important;
+  overflow:hidden !important;
+}
+.library-collection[data-category="biblical"] .library-cover.is-banner img{
+  width:100% !important;
+  height:auto !important;
+  object-fit:contain !important;
+}
+@media(max-width:900px){
+  .library-collection[data-category="biblical"] .library-grid{grid-template-columns:repeat(6,minmax(0,1fr)) !important;}
+  .library-collection[data-category="biblical"] .library-grid > .library-card,
+  .library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(n){grid-column:span 3 !important;}
+  .library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(3n + 1){grid-column:span 6 !important;}
+}
+@media(max-width:620px){
+  .library-collection[data-category="biblical"] .library-grid{grid-template-columns:minmax(0,1fr) !important;}
+  .library-collection[data-category="biblical"] .library-grid > .library-card,
+  .library-collection[data-category="biblical"] .library-grid > .library-card:nth-child(n){grid-column:1 !important;width:100% !important;}
+}
