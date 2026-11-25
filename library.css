@@ -643,3 +643,29 @@
     max-width:420px !important;
   }
 }
+
+
+/* UNIVERSAL GRID ALIGNMENT: every collection row is centered, including incomplete rows. */
+.library-collection .library-grid{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  align-items:stretch !important;
+  gap:clamp(16px,2vw,24px) !important;
+  width:100% !important;
+  max-width:1100px !important;
+  margin-inline:auto !important;
+}
+.library-collection .library-grid > .library-card{
+  flex:0 1 340px !important;
+  width:340px !important;
+  max-width:340px !important;
+  margin:0 !important;
+}
+@media(max-width:700px){
+  .library-collection .library-grid > .library-card{
+    flex:0 1 100% !important;
+    width:100% !important;
+    max-width:420px !important;
+  }
+}
