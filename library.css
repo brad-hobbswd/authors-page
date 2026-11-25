@@ -1221,3 +1221,50 @@
 .library-collection .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 .library-collection .library-grid>.library-card,.library-collection .library-grid>.library-card:nth-child(n){grid-column:auto!important;width:100%!important;max-width:none!important}
 .library-collection .library-grid>.library-card:last-child:nth-child(odd){grid-column:1/-1!important;width:min(100%,calc((100% - 16px)/2))!important;max-width:calc((100% - 16px)/2)!important;justify-self:center!important}}
+
+
+/* TABLET PORTRAIT REPAIR: use readable, balanced card widths between phone and desktop. */
+@media (min-width:621px) and (max-width:1024px){
+  .library-collection .section-inner{
+    width:calc(100% - 44px) !important;
+    max-width:1240px !important;
+    margin-inline:auto !important;
+  }
+  .library-collection .library-grid,
+  .library-series-section .library-grid,
+  .library-collection[data-category] .library-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-flow:row !important;
+    gap:20px !important;
+    width:100% !important;
+    max-width:1180px !important;
+    margin:0 auto !important;
+    align-items:stretch !important;
+    justify-content:center !important;
+  }
+  .library-collection .library-grid>.library-card,
+  .library-collection .library-grid>.library-card:nth-child(n),
+  .library-series-section .library-grid>.library-card,
+  .library-series-section .library-grid>.library-card:nth-child(n),
+  .library-collection[data-category] .library-grid>.library-card,
+  .library-collection[data-category] .library-grid>.library-card:nth-child(n){
+    grid-column:auto !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    flex:none !important;
+    margin:0 !important;
+    justify-self:stretch !important;
+  }
+  .library-collection .library-grid>.library-card:last-child:nth-child(odd),
+  .library-series-section .library-grid>.library-card:last-child:nth-child(odd),
+  .library-collection[data-category] .library-grid>.library-card:last-child:nth-child(odd){
+    grid-column:1 / -1 !important;
+    width:calc((100% - 20px) / 2) !important;
+    max-width:calc((100% - 20px) / 2) !important;
+    justify-self:center !important;
+  }
+  .library-card-content{min-width:0 !important;overflow-wrap:normal !important;}
+  .library-card-content h3{overflow-wrap:anywhere !important;word-break:normal !important;}
+}
